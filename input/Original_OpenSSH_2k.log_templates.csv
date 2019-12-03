@@ -1,0 +1,24 @@
+EventId,EventTemplate,Occurrences
+f7fe7f88,reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,85
+9302fad4,Invalid user <*> from <*>,113
+6b674ff1,input_userauth_request: invalid user <*> [preauth],113
+0849a7d0,pam_unix(sshd:auth): check pass; user unknown,135
+ebf067b7,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= <*>,110
+755dc626,Failed <*> for invalid user <*> from <*> port <*> ssh<*>,139
+2491ca3e,Connection closed by <*> [preauth],34
+c1a97604,Received disconnect from <*> <*>: <*> <*> <*>,414
+533c6615,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= <*> <*>,384
+ada372e1,Failed password for <*> from <*> port <*> ssh<*>,383
+b542638e,message repeated <*> times: [ Failed password for root from <*> port <*> ssh2],2
+509a487f,Disconnecting: Too many authentication failures for <*> [preauth],3
+baeb51b0,PAM <*> more authentication failures; logname= uid=<*> euid=<*> tty=ssh ruser= <*> user=root,2
+2f2318e5,PAM service(sshd) ignoring max retries; <*> > <*>,7
+c926c7d9,Did not receive identification string from <*>,10
+90101fdc,error: Received disconnect from <*> <*>: com.jcraft.jsch.JSchException: Auth fail [preauth],2
+189f897e,Received disconnect from <*> <*>: Closed due to user request. [preauth],7
+e5a48069,PAM <*> more authentication <*> logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*>,8
+effd4a15,error: Received disconnect from <*> <*>: No more user authentication methods available. [preauth],45
+bfd464ee,Accepted password for fztu from <*> port <*> ssh<*>,1
+cb82654d,pam_unix(sshd:session): session opened for user fztu by (uid=<*>),1
+cfe22f2e,pam_unix(sshd:session): session closed for user fztu,1
+f32f0642,fatal: Write failed: Connection reset by peer [preauth],1

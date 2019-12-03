@@ -1,0 +1,21 @@
+EventId,EventTemplate,Occurrences
+38dda80a,Invalid user <*> from <*> port <*>,2474
+0849a7d0,pam_unix(sshd:auth): check pass; user unknown,2480
+e0a8b45a,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*>,2480
+f0ba90fe,Failed password for invalid user <*> from <*> port <*> ssh<*>,2474
+d156dcec,Received disconnect from <*> port <*>:<*>: Bye Bye [preauth],3306
+2552eb03,Disconnected from <*> user <*> <*> port <*> [preauth],3335
+54ff4343,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*> <*>,2085
+ada372e1,Failed password for <*> from <*> port <*> ssh<*>,2085
+c257f384,pam_unix(cron:session): session opened for user root by (uid=<*>),535
+6e704123,pam_unix(cron:session): session closed for user root,535
+0054e5e2,Disconnected from <*> port <*> [preauth],10
+422afdc1,Connection closed by <*> port <*> [preauth],33
+cf94a865,Did not receive identification string from <*> port <*>,9
+fd03fc20,Invalid user from <*> port <*>,7
+9e3c1e7d,Failed <*> for invalid user from <*> port <*> ssh<*>,7
+e0308f39,Disconnected from invalid user <*> port <*> [preauth],4
+7aad7007,"Received disconnect from <*> port <*>:<*>: Normal Shutdown, Thank you for playing [preauth]",43
+31cd7a89,Connection closed by invalid user <*> <*> port <*> [preauth],11
+ce4ff18e,"Unable to negotiate with <*> port <*>: no matching cipher found. Their offer: aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,arcfour128,arcfour,3des-cbc,none [preauth]",12
+51e68d3a,Connection closed by invalid user <*> port <*> [preauth],1

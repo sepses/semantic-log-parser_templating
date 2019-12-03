@@ -1,0 +1,15 @@
+EventId,EventTemplate,Occurrences
+92ffcac4,Disconnecting: Too many authentication failures for admin [preauth],1
+2bcf6c66,PAM <*> more authentication failures; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*>,1
+2f2318e5,PAM service(sshd) ignoring max retries; <*> > <*>,1
+2491ca3e,Connection closed by <*> [preauth],5
+9302fad4,Invalid user <*> from <*>,25
+6b674ff1,input_userauth_request: invalid user <*> [preauth],25
+0849a7d0,pam_unix(sshd:auth): check pass; user unknown,25
+ebf067b7,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= <*>,25
+f0ba90fe,Failed password for invalid user <*> from <*> port <*> ssh<*>,25
+6844638c,Received disconnect from <*> <*>: Bye Bye [preauth],288
+54ff4343,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*> <*>,282
+ada372e1,Failed password for <*> from <*> port <*> ssh<*>,281
+effd4a15,error: Received disconnect from <*> <*>: No more user authentication methods available. [preauth],15
+f32f0642,fatal: Write failed: Connection reset by peer [preauth],1
