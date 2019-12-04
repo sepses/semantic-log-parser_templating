@@ -175,16 +175,28 @@ public class Main {
             if (!paramValues.isEmpty()) {
                 String[] parameterValues = paramValues.split(",");
 
-                tmpLine += ", (";
-                for (int counter = 0; counter < parameterValues.length; counter++) {
-                    String parameter = parameterValues[counter].trim();
-                    String paramValue = parameter.replaceAll("'", "");
+                if(currentTemplate.templatingId.equals("sepses:LogLine")) { // default template put all in a list
+                    tmpLine += ", (";
+                    for (int counter = 0; counter < parameterValues.length; counter++) {
+                        String parameter = parameterValues[counter].trim();
+                        String paramValue = parameter.replaceAll("'", "");
 
-                    tmpLine += "\"" + paramValue + "\"";
-                    if(counter < parameterValues.length - 1)
-                        tmpLine += ",";
+                        tmpLine += "\"" + paramValue + "\"";
+                        if (counter < parameterValues.length - 1)
+                            tmpLine += ",";
+                    }
+                    tmpLine += ")";
+                }else{ // specific template, add parameters as variables
+                    tmpLine += ", ";
+                    for (int counter = 0; counter < parameterValues.length; counter++) {
+                        String parameter = parameterValues[counter].trim();
+                        String paramValue = parameter.replaceAll("'", "");
+
+                        tmpLine += "\"" + paramValue + "\"";
+                        if (counter < parameterValues.length - 1)
+                            tmpLine += ",";
+                    }
                 }
-                tmpLine += ")";
             }
             else{
                 tmpLine += ", ()";

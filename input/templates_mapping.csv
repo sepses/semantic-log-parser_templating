@@ -1,6 +1,6 @@
 hash,content,template
 cf9c95d3bc4886c4c3ab6f199d8956919d67d4aa1aa961de609b4781a992b757,reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,sepses:LogLine
-18f9747e396f56689020ce4f2117e40bce615d00367dc79c3cf2666c8e1bfab4,Invalid user <*> from <*>,sepses:LogLine
+18f9747e396f56689020ce4f2117e40bce615d00367dc79c3cf2666c8e1bfab4,Invalid user <*> from <*>,sepses:InvalidUser
 dd6a1f6614adb1c2f93aec9fd66131e9abd2e571af4a8f6a3c4a7b584995f1b6,input_userauth_request: invalid user <*> [preauth],sepses:LogLine
 e66ffbed70a4495b92f879ced6e6495753fa53c60eeef5d3cdc32b6a1b4ae727,pam_unix(sshd:auth): check pass; user unknown,sepses:LogLine
 97023c81faef5ed35243db90351de043220be6ae0115c59a9f94e33cbbfd259a,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= <*>,sepses:LogLine

@@ -14,9 +14,22 @@
 @prefix sepses: 	  <http://sepses.com/ns#> .  
 
 sepses:LogLine[?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, List<xsd:string> ?parameters] :: {
-  ottr:Triple(?id, rdf:type, :LogEntry),
-  ottr:Triple(?id, :timestamp, ?timeStamp),
-  ottr:Triple(?id, parser:templateId, ?templateHash),
-  ottr:Triple(?id, :logMessage, ?message),
-  cross | ottr:Triple(?id, parser:connected, ++?parameters)
+      ottr:Triple(?id, rdf:type, :LogEntry),
+      ottr:Triple(?id, :timestamp, ?timeStamp),
+      ottr:Triple(?id, parser:templateId, ?templateHash),
+      ottr:Triple(?id, :logMessage, ?message),
+      cross | ottr:Triple(?id, parser:connected, ++?parameters)
+    } .
+
+sepses:InvalidUser[?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?user, xsd:string ?ip] :: {
+         ottr:Triple(?id, rdf:type, :InvalidUserLogEntry),
+         ottr:Triple(?id, :timestamp, ?timeStamp),
+         ottr:Triple(?id, parser:templateId, ?templateHash),
+         ottr:Triple(?id, :logMessage, ?message),
+         sepses:User(?id, ?user),
+         ottr:Triple(?id, parser:connectedHost, ?ip)
+       } .
+
+sepses:User[ottr:IRI ?id, xsd:string ?user] :: {
+    ottr:Triple(?id, parser:connectedUser, ?user)
 } .
