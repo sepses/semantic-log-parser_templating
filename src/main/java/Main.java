@@ -1,3 +1,5 @@
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.tokensregex.MatchedExpression;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -54,7 +56,7 @@ public class Main {
         Iterable<CSVRecord> existingTemplates = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(existingTemplateReader);
 
         List<LogLine> logLineList = new ArrayList<>();
-        logLines.forEach(logLine -> logLineList.add(LogLine.fromOpenSSH(logLine)));
+        logLines.forEach(logLine -> logLineList.add(LogLine.createFromLogline(logLine)));
 
         List<Template> templatesList = loadExistingTemplates(existingTemplates);
 
@@ -95,6 +97,7 @@ public class Main {
 
       private static void processTemplates(Iterable<CSVRecord> csvTemplates, List<LogLine> logLineList, List<Template> templatesList) throws NoSuchAlgorithmException, IOException {
         boolean change = false;
+          EntityRecognition er = EntityRecognition.getInstance();
 
         // Annotate template parameters
         for (CSVRecord csvTemplate : csvTemplates) {
@@ -118,10 +121,30 @@ public class Main {
                 }
             }
 
-            if (exists)
-                continue;
+            // TEST
+            //if (exists)
+            //    continue;
 
             change = true;
+
+            // Generate new template
+            for (LogLine logLine : logLineList) {
+                if(logLine.EventId.equals(template.TemplateId)){
+                    HashMap<String, String> matchedExpressions = er.process(logLine.Content);
+
+                    for (String key : matchedExpressions.keySet()) {
+                        System.out.println("matched expression: "+ key);
+                        System.out.println("matched expression value: "+ matchedExpressions.get(key));
+
+                        logLine.ParameterList.forEach(s -> {
+                            if(s.equals(key))
+                                System.out.println("Found: " + key);
+                        });
+                    }
+
+                    break;
+                }
+            }
 
             templatesList.add(template); // add it to the in memory list for this run
             templateIdMappings.put(template.TemplateId, template.hash);
@@ -159,7 +182,7 @@ public class Main {
             if(currentTemplate == null)
                 return;
 
-            String paramValues = logline.ParameterList.substring(1, logline.ParameterList.length() - 1); //[...]
+            String paramValues = logline.ParameterString.substring(1, logline.ParameterString.length() - 1); //[...]
 
             //sepses:LogLine(instance:Line1, \"2019-12-10\", \"Failed\", \"23f2f23f\", (\"aekelhart\", \"127.0.0.1\")) ."
             String eventTime = "";
