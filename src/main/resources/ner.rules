@@ -14,8 +14,8 @@ $USER = "/(\w+)/";
 $PORT = "/(\d+)/";
 
 # rule for recognizing company names
-{ ruleType: "tokens", pattern: ([{word:$IP_ADDRESS}]), action: Annotate($0, ner, "IP"), result: "IP_RESULT" }
-{ ruleType: "tokens", pattern: ([{word:$DOMAIN_NAME}]), action: Annotate($0, ner, "DOMAIN_NAME"), result: "DOMAIN_NAME" }
-{ ruleType: "tokens", pattern: ([{word:$URL}]), action: Annotate($0, ner, "URL"), result: "URL" }
-{ ruleType: "tokens", pattern: ([{word:/user/}]+ [{word:/:|-|=|\s/}]? ([{word:$USER}])), action: Annotate($1, ner, "USER"), result: "USER" }
-{ ruleType: "tokens", pattern: ([{word:/port/}] + ([{word:$PORT}])), action: Annotate($1, ner, "PORT"), result: "PORT" }
+{ ruleType: "tokens", pattern: ([{word:$IP_ADDRESS}]), action: Annotate($0, ner, "Ip"), result: "Ip" }
+{ ruleType: "tokens", pattern: ([{word:$DOMAIN_NAME}]), action: Annotate($0, ner, "Domain"), result: "Domain" }
+{ ruleType: "tokens", pattern: ([{word:$URL}]), action: Annotate($0, ner, "Url"), result: "Url" }
+{ ruleType: "tokens", pattern: ([{word:/user/}]+ [{word:/:|-|=|\s/}]? ([{word:$USER}])), action: Annotate($1, ner, "User"), result: "User" }
+{ ruleType: "tokens", pattern: ([{word:/port/}] + ([{word:$PORT}])), action: Annotate($1, ner, "Port"), result: "Port" }

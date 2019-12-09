@@ -13,23 +13,189 @@
 
 @prefix sepses: 	  <http://sepses.com/ns#> .  
 
-sepses:LogLine[?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, List<xsd:string> ?parameters] :: {
-      ottr:Triple(?id, rdf:type, :LogEntry),
+# Default logline
+sepses:LogLine[?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
+      sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+      sepses:Type(?id, :DefaultLogLine)
+    } .
+
+# Basic templates
+sepses:BasicLogLineInformation[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
       ottr:Triple(?id, :timestamp, ?timeStamp),
       ottr:Triple(?id, parser:templateId, ?templateHash),
-      ottr:Triple(?id, :logMessage, ?message),
+      ottr:Triple(?id, :logMessage, ?message)
+    } .
+
+sepses:Type[ottr:IRI ?id, ottr:IRI ?type] :: {
+       ottr:Triple(?id, rdf:type, ?type)
+    } .
+
+sepses:UnknownParameterList[ottr:IRI ?id, List<xsd:string> ?parameters] :: {
       cross | ottr:Triple(?id, parser:connected, ++?parameters)
     } .
 
-sepses:InvalidUser[?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?user, xsd:string ?ip] :: {
-         ottr:Triple(?id, rdf:type, :InvalidUserLogEntry),
-         ottr:Triple(?id, :timestamp, ?timeStamp),
-         ottr:Triple(?id, parser:templateId, ?templateHash),
-         ottr:Triple(?id, :logMessage, ?message),
-         sepses:User(?id, ?user),
-         ottr:Triple(?id, parser:connectedHost, ?ip)
-       } .
+sepses:UnknownConnection[ottr:IRI ?id, xsd:string ?value] :: {
+           ottr:Triple(?id, parser:connected, ?value)
+      } .
 
 sepses:User[ottr:IRI ?id, xsd:string ?user] :: {
     ottr:Triple(?id, parser:connectedUser, ?user)
+} .
+
+sepses:Ip[ottr:IRI ?id, xsd:string ?ip] :: {
+    ottr:Triple(?id, parser:hasIP, ?ip)
+} .
+
+sepses:Domain[ottr:IRI ?id, xsd:string ?domain] :: {
+       ottr:Triple(?id, parser:hasDomain, ?domain)
+   } .
+
+sepses:Port[ottr:IRI ?id, xsd:string ?port] :: {
+   ottr:Triple(?id, parser:connectedPort, ?port)
+} .
+
+sepses:Url[ottr:IRI ?id, xsd:string ?url] :: {
+       ottr:Triple(?id, parser:hasURL, ?url)
+   } .
+
+# Auto generated templates
+sepses:LogLine_f7fe7f88[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?domain, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :f7fe7f88),
+	 sepses:Domain(?id, ?domain),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_9302fad4[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?user, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :9302fad4),
+	 sepses:User(?id, ?user),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_6b674ff1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?user] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :6b674ff1),
+	 sepses:User(?id, ?user)
+} .
+
+sepses:LogLine_ebf067b7[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?param2, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :ebf067b7),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_755dc626[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?user, xsd:String ?ip, xsd:String ?port, xsd:String ?param5] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :755dc626),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:User(?id, ?user),
+	 sepses:Ip(?id, ?ip),
+	 sepses:Port(?id, ?port),
+	 sepses:UnknownConnection(?id, ?param5)
+} .
+
+sepses:LogLine_2491ca3e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :2491ca3e),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_c1a97604[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip, xsd:String ?param2, xsd:String ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :c1a97604),
+	 sepses:Ip(?id, ?ip),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+sepses:LogLine_533c6615[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?param2, xsd:String ?user] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :533c6615),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:User(?id, ?user)
+} .
+
+sepses:LogLine_ada372e1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?ip, xsd:String ?port, xsd:String ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :ada372e1),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip),
+	 sepses:Port(?id, ?port),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+sepses:LogLine_b542638e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?ip, xsd:String ?port] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :b542638e),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip),
+	 sepses:Port(?id, ?port)
+} .
+
+sepses:LogLine_baeb51b0[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?param2, xsd:String ?param3, xsd:String ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :baeb51b0),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+sepses:LogLine_2f2318e5[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :2f2318e5),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+sepses:LogLine_c926c7d9[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :c926c7d9),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_90101fdc[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :90101fdc),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_189f897e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :189f897e),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_e5a48069[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1, xsd:String ?param2, xsd:String ?param3, xsd:String ?param4, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :e5a48069),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_effd4a15[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :effd4a15),
+	 sepses:Ip(?id, ?ip)
+} .
+
+sepses:LogLine_bfd464ee[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?ip, xsd:String ?port, xsd:String ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :bfd464ee),
+	 sepses:Ip(?id, ?ip),
+	 sepses:Port(?id, ?port),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+sepses:LogLine_cb82654d[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:String ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :cb82654d),
+	 sepses:UnknownConnection(?id, ?param1)
 } .

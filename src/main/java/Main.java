@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -33,7 +34,9 @@ public class Main {
     // TODO: will be replaced by JAVA args later on
     private static String logTemplate = "./input/openSSH/OpenSSH_2k_A.log_templates.csv";
     private static String logData = "./input/openSSH/OpenSSH_2k_A.log_structured.csv";
-    private static String existingTemplatesPath = "./input/templates_mapping.csv";
+    private static String existingTemplatesPath = "./input/templatesMapping.csv";
+    private static String ottrTemplatesBasePath = "./input/templatesBase.stottr";
+    private static String ottrTemplatesPath = "./input/templates.stottr";
     private static String instancesStottr = "./input/instances.stottr";
     private static String parserFilePath = "src/main/resources/parser.ttl";
 
@@ -95,9 +98,10 @@ public class Main {
         }
     }
 
-      private static void processTemplates(Iterable<CSVRecord> csvTemplates, List<LogLine> logLineList, List<Template> templatesList) throws NoSuchAlgorithmException, IOException {
+    private static void processTemplates(Iterable<CSVRecord> csvTemplates, List<LogLine> logLineList, List<Template> templatesList) throws NoSuchAlgorithmException, IOException {
         boolean change = false;
-          EntityRecognition er = EntityRecognition.getInstance();
+        EntityRecognition er = EntityRecognition.getInstance();
+        StringBuilder ottrStringBuilding = new StringBuilder();
 
         // Annotate template parameters
         for (CSVRecord csvTemplate : csvTemplates) {
@@ -108,7 +112,7 @@ public class Main {
             String hash = DigestUtils.sha256Hex(hashbytes);
 
             template.hash = hash;
-            template.templatingId = "sepses:LogLine";
+            template.templatingId = "sepses:LogLine"; // Default
 
             boolean exists = false;
             for (Template existingTemplate : templatesList) {
@@ -121,25 +125,98 @@ public class Main {
                 }
             }
 
-            // TEST
-            //if (exists)
-            //    continue;
+            if (exists)
+                continue;
 
             change = true;
+            String specificParams = "";
+
+            StringBuilder ottrBody = new StringBuilder();
 
             // Generate new template
             for (LogLine logLine : logLineList) {
                 if(logLine.EventId.equals(template.TemplateId)){
+
                     HashMap<String, String> matchedExpressions = er.process(logLine.Content);
 
-                    for (String key : matchedExpressions.keySet()) {
-                        System.out.println("matched expression: "+ key);
-                        System.out.println("matched expression value: "+ matchedExpressions.get(key));
+                    // Do we need a new template in ottr
+                    if(logLine.ParameterList.size() > 0){
+                        String ottrTemplateName = "sepses:LogLine_" + template.TemplateId;
+                        template.templatingId = ottrTemplateName;
 
-                        logLine.ParameterList.forEach(s -> {
-                            if(s.equals(key))
-                                System.out.println("Found: " + key);
-                        });
+                        ottrBody.append("\t sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),\n");
+                        ottrBody.append("\t sepses:Type(?id, :" + logLine.EventId + ")");
+                        int paramCnt = 0;
+
+                        if(logLine.ParameterList.size() > 0)
+                            ottrBody.append(",");
+
+                        for(LogLine.Pair paramPair : logLine.ParameterList){
+                            boolean found = false;
+                            String type = "";
+                            paramCnt++;
+
+                            for (String key : matchedExpressions.keySet()) {
+                                type = matchedExpressions.get(key);
+
+                                if(paramPair.key.contains(key))
+                                {
+                                    LOG.info("Found key");
+                                    found = true;
+                                    //logLine.ParameterList.put(param, type);
+                                    break;
+                                }
+                            }
+
+                            if(found){
+                                ottrBody.append("\n\t sepses:" + type + "(?id, ?" + type.toLowerCase() + "),");
+                                specificParams += ", xsd:String ?" +  type.toLowerCase();
+                            }else{
+                                ottrBody.append("\n\t sepses:UnknownConnection" + "(?id, ?param" + paramCnt + "),");
+                                specificParams += ", xsd:String ?param" + paramCnt;
+                            }
+                        }
+
+//                        boolean found = false;
+//                        for (String key : matchedExpressions.keySet()) {
+//                            String value = matchedExpressions.get(key);
+//                            System.out.println("matched expression: "+ key);
+//                            System.out.println("matched expression value: "+ value);
+//
+//                            for (String param :logLine.ParameterList.keySet()) {
+//                                if(param.equals(key)) {
+//                                    if(!found)
+//                                        ottrBody.append(",");
+//
+//                                    System.out.println("Found: " + key);
+//                                    ottrBody.append("\n\t sepses:" + value + "(?id, ?" + value.toLowerCase() + "),");
+//
+//                                    specificParams += ", xsd:String ?" +  value.toLowerCase();
+//                                    logLine.ParameterList.replace(key, value);
+//                                    found = true;
+//                                }
+//                            }
+//                        }
+//
+                        if(specificParams.length() > 0)
+                            ottrBody.deleteCharAt(ottrBody.length()-1);
+//
+//                        boolean unknownParams = logLine.ParameterList.values()
+//                                .stream()
+//                                .anyMatch(s -> s == null);
+
+                        ottrStringBuilding.append("\n");
+
+//                        if(unknownParams){
+//                            ottrBody.append("\t sepses:UnknownParameterList(?id, ?parameters)");
+//                            ottrStringBuilding.append(ottrTemplateName + "[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash" + specificParams + ", List<xsd:string> ?parameters] :: {\n");
+//                        }
+//                        else{
+                            ottrStringBuilding.append(ottrTemplateName + "[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash" + specificParams + "] :: {\n");
+//                        }
+
+                        ottrStringBuilding.append(ottrBody.toString());
+                        ottrStringBuilding.append("\n} .\n");
                     }
 
                     break;
@@ -152,6 +229,27 @@ public class Main {
 
         if(change) {
             writeExistingTemplatesCSV(templatesList);
+            writeOttrTemplates(ottrStringBuilding.toString());
+        }
+    }
+
+    private static void writeOttrTemplates(String templatesString) {
+        String baseTemplateText = "";
+        try {
+            baseTemplateText = new String(Files.readAllBytes(Paths.get(ottrTemplatesBasePath)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (FileWriter f = new FileWriter(ottrTemplatesPath, false);
+             BufferedWriter b = new BufferedWriter(f);
+             PrintWriter p = new PrintWriter(b)) {
+
+            p.print(baseTemplateText);
+            p.print(templatesString);
+
+        } catch (IOException i) {
+            LOG.error(i.toString());
         }
     }
 
@@ -222,7 +320,7 @@ public class Main {
                 }
             }
             else{
-                tmpLine += ", ()";
+                //tmpLine += ", ()";
             }
 
             tmpLine += ") .\n";

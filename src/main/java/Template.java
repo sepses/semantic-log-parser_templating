@@ -14,6 +14,7 @@ public class Template {
     public String subject;
     public String hash;
     public String templatingId;
+    public String ottrTemplate;
 
     public Template(String TemplateId, String TemplateContent) {
         this.TemplateId = TemplateId;
