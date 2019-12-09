@@ -25,7 +25,6 @@ public class EntityRecognition {
         // get the rules files
         String[] rulesFiles = new String[1];
         rulesFiles[0] = "src/main/resources/ner.rules";
-        //                props.getProperty("rulesFiles").split(",");
 
         // set up an environment with reasonable defaults
         Env env = TokenSequencePattern.getNewEnv();
@@ -46,39 +45,20 @@ public class EntityRecognition {
     }
 
     public HashMap<String, String> process(String inputSentence){
-        //String exampleSentences = "There will be a big announcement by Apple Inc today at 5:00pm."; //IOUtils.stringFromFile(props.getProperty("inputText"));
         Annotation exampleSentencesAnnotation = new Annotation(inputSentence);
         pipeline.annotate(exampleSentencesAnnotation);
 
         // for each sentence in the input text, run the TokensRegex pipeline
-        int sentNum = 0;
-
         HashMap<String, String> nerList = new HashMap<>();
 
         CoreMap sentence = exampleSentencesAnnotation.get(CoreAnnotations.SentencesAnnotation.class).get(0);
-
-//            System.out.println("---");
-//            System.out.println("sentence number: "+sentNum);
-//            System.out.println("sentence text: "+sentence.get(CoreAnnotations.TextAnnotation.class));
-            sentNum++;
             List<MatchedExpression> matchedExpressions = extractor.extractExpressions(sentence);
-            // print out the results of the rules actions
 
             for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
-//                System.out.println(token.word() + "\t" + token.tag() + "\t" + token.ner());
                 if(token.ner() != null){
                     nerList.put(token.word(), token.ner());
                 }
             }
-
-            // print out the matched expressions
-//            for (MatchedExpression me : matchedExpressions) {
-//                System.out.println("matched expression: "+me.getText());
-//                System.out.println("matched expression value: "+me.getValue());
-//                System.out.println("matched expression char offsets: "+me.getCharOffsets());
-//                System.out.println("matched expression tokens:" +
-//                        me.getAnnotation().get(CoreAnnotations.TokensAnnotation.class));
-//            }
 
         return nerList;
     }

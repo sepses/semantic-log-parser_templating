@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Class representation of a logline
@@ -37,11 +39,17 @@ public class LogLine {
 
         this.ParameterList = new ArrayList<Pair>();
 
-        for (String param : Arrays.asList(ParameterString.substring(1, ParameterString.length() - 1).split(","))) {
-            if(!param.trim().equals(""))
-                //
-                this.ParameterList.add(new Pair(param.trim().replaceAll("'", ""), null));
+        Pattern pattern = Pattern.compile("\'([^\'^,]*)\'");
+        Matcher matcher = pattern.matcher(ParameterString);
+        while(matcher.find()) {
+            //System.out.println(matcher.group(1));
+            this.ParameterList.add(new Pair(matcher.group(1), null));
         }
+
+//        for (String param : Arrays.asList(ParameterString.substring(1, ParameterString.length() - 1).split(","))) {
+//            if(!param.trim().equals(""))
+//                this.ParameterList.add(new Pair(param.trim().replaceAll("'", ""), null));
+//        }
     }
 
     public static LogLine createFromLogline(CSVRecord logLine) {
