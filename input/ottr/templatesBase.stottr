@@ -14,7 +14,7 @@
 @prefix sepses: 	  <http://sepses.com/ns#> .  
 
 # Default logline
-sepses:LogLine[?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
+sepses:LogLine[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
       sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
       sepses:Type(?id, :DefaultLogLine)
     } .

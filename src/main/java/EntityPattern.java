@@ -12,12 +12,8 @@ public class EntityPattern implements Cloneable {
     public EnumPatternType type;
     public int position;
 
-    public EntityPattern(){
+    public EntityPattern() {
 
-    }
-
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     public EntityPattern(String className, String propertyName, Boolean isObject, Pattern pattern,
@@ -27,5 +23,9 @@ public class EntityPattern implements Cloneable {
         this.pattern = pattern;
         this.isObject = isObject;
         this.type = type;
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
