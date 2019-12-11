@@ -28,6 +28,6 @@ hs_err_pid*
 .idea/vcs.xml
 .idea/workspace.xml
 
-input/ottr/templates.stottr
-input/ottr/out.stottr
-input/ottr/instances.stottr
+ottr/templates.stottr
+ottr/out.stottr
+ottr/instances.stottr

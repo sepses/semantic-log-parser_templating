@@ -197,6 +197,7 @@ public class Main {
 
         // *** create StringBuilder to be passed to the method caller
         ottrStringBuilding.append("\n");
+        ottrStringBuilding.append(String.format("# Example: %s\n", template.TemplateContent));
         ottrStringBuilding.append(ottrTemplateName
                 + "[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash"
                 + specificParams + "] :: {\n");
