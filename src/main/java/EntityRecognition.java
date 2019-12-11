@@ -1,18 +1,25 @@
-import edu.stanford.nlp.ling.*;
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.tokensregex.*;
-import edu.stanford.nlp.pipeline.*;
-import edu.stanford.nlp.util.*;
+import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+import edu.stanford.nlp.util.CoreMap;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
 public class EntityRecognition {
-    private static EntityRecognition singleton = null;
-    StanfordCoreNLP pipeline = null;
-    CoreMapExpressionExtractor extractor = null;
 
-    private EntityRecognition(){
+    // *** rules for text extraction
+    private final static String ruleFile = "src/main/resources/ner.rules";
+
+    private static EntityRecognition singleton = null;
+    private StanfordCoreNLP pipeline = null;
+    private CoreMapExpressionExtractor extractor = null;
+
+    private EntityRecognition() {
         Properties pipelineProps = new Properties();
 
         pipelineProps.setProperty("annotators", "tokenize,ssplit,pos");
@@ -24,10 +31,11 @@ public class EntityRecognition {
 
         // get the rules files
         String[] rulesFiles = new String[1];
-        rulesFiles[0] = "src/main/resources/ner.rules";
+        rulesFiles[0] = ruleFile;
 
         // set up an environment with reasonable defaults
         Env env = TokenSequencePattern.getNewEnv();
+
         // set to case insensitive
         env.setDefaultStringMatchFlags(NodePattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
         env.setDefaultStringPatternFlags(Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
@@ -36,15 +44,21 @@ public class EntityRecognition {
         extractor = CoreMapExpressionExtractor.createExtractorFromFiles(env, rulesFiles);
     }
 
-    public static EntityRecognition getInstance(){
-        if(singleton == null) {
+    public static EntityRecognition getInstance() {
+        if (singleton == null) {
             singleton = new EntityRecognition();
         }
 
         return singleton;
     }
 
-    public HashMap<String, String> process(String inputSentence){
+    /**
+     * Annotate a sentence according to ruleFile.
+     *
+     * @param inputSentence
+     * @return a map of <param-value, param-type>
+     */
+    public HashMap<String, String> annotateSentence(String inputSentence) {
         Annotation exampleSentencesAnnotation = new Annotation(inputSentence);
         pipeline.annotate(exampleSentencesAnnotation);
 
@@ -52,13 +66,13 @@ public class EntityRecognition {
         HashMap<String, String> nerList = new HashMap<>();
 
         CoreMap sentence = exampleSentencesAnnotation.get(CoreAnnotations.SentencesAnnotation.class).get(0);
-            List<MatchedExpression> matchedExpressions = extractor.extractExpressions(sentence);
+        List<MatchedExpression> matchedExpressions = extractor.extractExpressions(sentence);
 
-            for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
-                if(token.ner() != null){
-                    nerList.put(token.word(), token.ner());
-                }
+        for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
+            if (token.ner() != null) {
+                nerList.put(token.word(), token.ner());
             }
+        }
 
         return nerList;
     }

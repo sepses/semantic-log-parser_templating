@@ -1,0 +1,100 @@
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> . 
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix owl:       <http://www.w3.org/2002/07/owl#> . 
+
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix schema:  <http://schema.org/> .
+@prefix ottr: <http://ns.ottr.xyz/0.4/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+@prefix ex: <http://example.com/ns#> .
+@prefix : <http://example.com/resource/> .
+
+
+###################################################### CLASSES
+
+foaf:Person a owl:Class .
+ex:Username a owl:Class .
+ex:IpAddress a owl:Class .
+ex:MacAddress a owl:Class .
+ex:Host a owl:Class .
+ex:Computer a owl:Class .
+	
+ex:NetworkObject a owl:Class ;
+	rdfs:subClassOf time:TemporalRelation ;
+	rdfs:comment """ Temporal relation between Mac address, Host, and IP address """ .
+#	ex:mac <mac-address> ;
+#	ex:host <hostname> ;
+#	ex:ip <ip-address> .
+
+ex:ComputerObject a owl:Class ;
+	rdfs:subClassOf time:TemporalRelation ;
+	rdfs:comment """ Temporal relation between Mac address and a machine (e.g., PC, Mobile, Tablet) """ .
+#	ex:computer <computer-id> ;
+#	ex:mac <ip-address> .
+
+ex:UsernameObject a owl:Class ;
+	rdfs:subClassOf time:TemporalRelation ;
+	rdfs:comment """ Temporal relation between Computer, Person, and Username """ .
+#	ex:computer <computer-id> ;
+#	ex:mac <ip-address> .
+
+
+###################################################### (OBJECT) PROPERTIES
+
+ex:mac a owl:ObjectProperty ;
+	rdfs:domain time:TemporalRelation ;
+	rdfs:range ex:MacAddress ;
+.
+ex:computer a owl:ObjectProperty ;
+	rdfs:domain time:TemporalRelation ;
+	rdfs:range ex:Computer ;
+.
+ex:ip a owl:ObjectProperty ;
+	rdfs:domain time:TemporalRelation ;
+	rdfs:range ex:IpAddress ;
+.
+ex:host a owl:ObjectProperty ;
+	rdfs:domain time:TemporalRelation ;
+	rdfs:range ex:Host ;
+.
+
+###################################################### INSTANCES
+
+:IP_1 a ex:IpAddress .
+:Host_1 a ex:Host .
+:Mac_1 a ex:MacAddress .
+:Comp_1 a ex:IpAddress .
+:Username_1 a ex:Username .
+:Person_1 a foaf:Person .
+
+:UsernameObject_1 a ex:UsernameObject ;
+	time:hasBeginning [ 
+		time:inXSDDateTimeStamp "2017-04-12T10:30:00"^^xsd:dateTimeStamp
+	] ;
+	time:hasEnd [ 
+		time:inXSDDateTimeStamp "2020-04-12T10:30:00"^^xsd:dateTimeStamp
+	] ;
+	ex:person :Person_1 ;
+	ex:Username :Username_1 ;
+	ex:computer :Computer_1 ;
+.
+
+:ComputerObject_1 a ex:ComputerObject ;
+	time:hasBeginning [
+		time:inXSDDateTimeStamp "2017-04-12T10:30:00"^^xsd:dateTimeStamp
+	] ;
+	ex:computer :Computer_1 ;
+	ex:mac :Mac_1 ;
+.
+
+:NetworkObject_1 a ex:NetworkObject ;
+	time:hasBeginning [
+		time:inXSDDateTimeStamp "2017-04-12T10:30:00"^^xsd:dateTimeStamp
+	] ;
+	ex:mac :Mac_1 ;
+	ex:host :Host_1 ;
+	ex:ip :IP_1 ;
+.
+
