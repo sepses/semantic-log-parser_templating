@@ -68,11 +68,20 @@ public class EntityRecognition {
         CoreMap sentence = exampleSentencesAnnotation.get(CoreAnnotations.SentencesAnnotation.class).get(0);
         List<MatchedExpression> matchedExpressions = extractor.extractExpressions(sentence);
 
-        for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
-            if (token.ner() != null) {
-                nerList.put(token.word(), token.ner());
+        for (MatchedExpression nerMatch: matchedExpressions) {
+            for(CoreLabel token : nerMatch.getAnnotation().get(CoreAnnotations.TokensAnnotation.class)){
+                if (token.ner() != null) {
+                    nerList.put(token.word(), token.ner());
+                    //System.out.println(token.word() + " - " + token.ner());
+                }
             }
         }
+
+//        for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
+//            if (token.ner() != null) {
+//               System.out.println(token.word() + " - " + token.ner());
+//            }
+//        }
 
         return nerList;
     }
