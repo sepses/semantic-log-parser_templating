@@ -14,13 +14,13 @@
 @prefix sepses: 	  <http://sepses.com/ns#> .  
 
 # Default logline
-sepses:LogLine[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
+sepses:LogLine[ottr:IRI ?id, xsd:dateTime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
       sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
       sepses:Type(?id, :DefaultLogLine)
     } .
 
 # Basic templates
-sepses:BasicLogLineInformation[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
+sepses:BasicLogLineInformation[ottr:IRI ?id, xsd:dateTime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
       ottr:Triple(?id, :timestamp, ?timeStamp),
       ottr:Triple(?id, parser:templateId, ?templateHash),
       ottr:Triple(?id, :logMessage, ?message)

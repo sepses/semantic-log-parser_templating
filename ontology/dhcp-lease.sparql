@@ -1,0 +1,25 @@
+PREFIX parser: <http://w3id.org/sepses/vocab/log/parser#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ex: <http://w3id.org/sepses/vocab/log/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX : <http://w3id.org/sepses/vocab/log/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+#select DISTINCT ?logline
+construct {
+    ?logline ex:backgroundIP ?ipAddress .
+}
+where {
+	?dhcp a ex:DhcpLease ;
+       ex:assignedIp ?ipAddress;
+       time:hasBeginning/time:inXSDDateTime ?begin
+       OPTIONAL { ?dhcp time:hasEnd/time:inXSDDateTime ?end }
+    .
+    ?ipAddress rdfs:label ?ip .
+    ?logline a :Logline ;
+       parser:hasIP ?ip ;
+       :timestamp ?timestamp
+    .
+    BIND (xsd:dateTime(?timestamp) as ?ts)
+    FILTER((?ts > ?begin && !BOUND(?end)) || (BOUND(?end) && ?ts < ?end))
+}
