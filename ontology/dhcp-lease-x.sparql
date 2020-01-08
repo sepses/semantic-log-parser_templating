@@ -1,0 +1,20 @@
+PREFIX ex: <http://w3id.org/sepses/vocab/log/core#>
+PREFIX parser: <http://w3id.org/sepses/vocab/log/parser#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://w3id.org/sepses/vocab/log/core#>
+
+construct {
+  ?logline ex:backgroundIP ?ip .
+}
+where {
+  BIND(<<?device ex:assignedIp ?ip>> as ?assignedIP) .
+  ?assignedIP ex:validFrom ?from .
+  OPTIONAL { ?assignedIP ex:validUntil ?until }
+  ?ip rdfs:label ?ipLabel .
+  
+  ?logline a :Logline ;
+             parser:hasIP ?ipLabel ;
+             :timestamp ?timestamp .
+  BIND (xsd:dateTime(?timestamp) as ?ts)
+  FILTER((?ts > ?from && !BOUND(?until)) || (BOUND(?until) && ?ts < ?until))
+}

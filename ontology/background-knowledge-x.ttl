@@ -1,0 +1,95 @@
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix ex:   <http://w3id.org/sepses/vocab/log/core#> .
+@prefix :     <http://example.com/resource/> .
+
+####### !!! Assumption: one device only have one mac address, and therefore one IP
+####### this is due to the lack of info about mac address in the log
+####### also, username is attached to a device/computer, and therefore it's probably unnecessary to have the mac address
+
+###################################################### CLASSES
+
+foaf:Person a owl:Class .
+ex:IpAddress a owl:Class .
+ex:Device a owl:Class .
+
+ex:PersonAccount a owl:Class ;
+	rdfs:subClassOf time:TemporalEntity ;
+	rdfs:comment """ Temporal relation between Person and Username """ .
+
+ex:DhcpLease a owl:Class ;
+	rdfs:subClassOf time:TemporalEntity ;
+	rdfs:comment """ Temporal relation between Device and IP address """ .
+
+ex:AssignedHostName a owl:Class ;
+	rdfs:subClassOf time:TemporalEntity ;
+	rdfs:comment """ Temporal relation between IP address and Host """ .
+
+
+###################################################### (OBJECT) PROPERTIES
+
+ex:assignedIp a owl:ObjectProperty ;
+	rdfs:domain ex:Device ;
+	rdfs:range ex:IpAddress ;
+.
+
+###################################################### (DATATYPE) PROPERTIES
+
+ex:hostname a owl:DatatypeProperty ;
+	rdfs:domain ex:IpAddress ;
+	rdfs:range xsd:string ;
+.
+ex:username a owl:DatatypeProperty ;
+	rdfs:domain foaf:Person ;
+	rdfs:range xsd:string ;
+.
+ex:validFrom a owl:DatatypeProperty ;
+	rdfs:range xsd:dateTime ;
+.
+ex:validUntil a owl:DatatypeProperty ;
+	rdfs:range xsd:dateTime ;
+.
+
+###################################################### INSTANCES
+
+# ---------------
+:Server_1 a ex:Device ;
+	rdfs:label "Server 1" ;
+	rdfs:comment "Main Server" ;
+.
+:Server_2 a ex:Device ;
+	rdfs:label "Server 2" ;
+	rdfs:comment "Test Server" ;
+.
+:IP_1 a ex:IpAddress ;
+	rdfs:label "202.100.179.208" ;
+.
+:IP_2 a ex:IpAddress ;
+	rdfs:label "187.141.143.180" ;
+.
+:IP_3 a ex:IpAddress ;
+	rdfs:label "103.99.0.122" ;
+.
+:Person_1 a foaf:Person ;
+	rdfs:label "Fajar J." ;
+.
+:Person_2 a foaf:Person ;
+	rdfs:label "Andreas E." ;
+.
+
+<< :Server_1 ex:assignedIp :IP_3 >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime ;
+	ex:validUntil "2018-04-12T10:30:00"^^xsd:dateTime .
+<< :Server_1 ex:assignedIp :IP_1 >> ex:validFrom "2018-04-12T10:30:01"^^xsd:dateTime .
+<< :Server_2 ex:assignedIp :IP_2 >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime .
+<< :IP_1 ex:hostname "data.ifs.tuwien.ac.at" >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime .
+<< :Person_1 ex:username "oracle" >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime ;
+	ex:validUntil "2018-04-12T10:30:00"^^xsd:dateTime .
+<< :Person_1 ex:username "admin" >> ex:validFrom "2018-04-12T10:30:01"^^xsd:dateTime .
+<< :Person_2 ex:username "support" >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime .
+# ---------------
+
+
