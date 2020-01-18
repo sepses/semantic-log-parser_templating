@@ -15,6 +15,7 @@ public class Template {
     public String hash;
     public String templatingId;
     public String ottrTemplate;
+    public String[] keywords;
 
     public Template(String TemplateId, String TemplateContent) {
         this.TemplateId = TemplateId;
@@ -22,13 +23,31 @@ public class Template {
         parameterDict = new ArrayList<>();
     }
 
-    public Template(String TemplateId, String TemplateContent, String hash, String templatingId) {
+    public Template(String TemplateId, String TemplateContent, String hash, String templatingId, String keywords) {
         this(TemplateId, TemplateContent);
         this.hash = hash;
         this.templatingId = templatingId;
+
+        if(!keywords.isEmpty())
+            this.keywords = keywords.split("|");
     }
 
     public static Template parse(CSVRecord template) {
-        return new Template("", template.get(1), template.get(0), template.get(2));
+        return new Template("", template.get(1), template.get(0), template.get(2), template.get(3));
+    }
+
+    public String getKeywordString(){
+        String keywordString = "";
+        boolean first = true;
+
+        for(String keyword : this.keywords){
+            if(!first)
+                keywordString += "|";
+
+            first = false;
+            keywordString += keyword;
+        }
+
+        return keywordString;
     }
 }

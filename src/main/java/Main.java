@@ -23,7 +23,7 @@ public class Main {
 
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
-    static String[] HEADERS = { "hash", "content", "template" };
+    static String[] HEADERS = { "hash", "content", "template", "keywords" };
 
     // *** temporary mappings between existing (stored) templateId and csv templateId
     private static Map<String, String> templateIdMappings = new HashMap<>();
@@ -90,6 +90,7 @@ public class Main {
 
             // (0) -> hash; (1) -> content
             Template template = new Template(csvTemplate.get(0), csvTemplate.get(1));
+            //System.out.println(template.TemplateContent);
 
             // *** create hash out of content
             final MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -99,20 +100,23 @@ public class Main {
             template.hash = hash;
             template.templatingId = "sepses:LogLine"; // default template id
 
-            boolean isExists = false;
+            boolean templateExists = false;
             for (Template existingTemplate : existingTemplates) {
                 if (existingTemplate.hash.equals(template.hash)) {
-                    isExists = true;
+                    templateExists = true;
                     // store (temporary) mappings from templateId to Hash for this run
                     templateIdMappings.put(template.TemplateId, existingTemplate.hash);
                     break;
                 }
             }
 
-            if (!isExists) {
+            if (!templateExists) {
                 isChanged = true;
                 String specificParams = "";
                 StringBuilder ottrBody = new StringBuilder();
+
+                // Keyword extraction
+                template.keywords = entityRecognition.extractKeywords(template, existingTemplates);
 
                 // Generate new template
                 for (LogLine logLine : inputLogData) {
@@ -355,7 +359,7 @@ public class Main {
         try (CSVPrinter printer = new CSVPrinter(out, CSVFormat.DEFAULT.withHeader(HEADERS))) {
             templates.forEach(template -> {
                 try {
-                    printer.printRecord(template.hash, template.TemplateContent, template.templatingId);
+                    printer.printRecord(template.hash, template.TemplateContent, template.templatingId, template.getKeywordString());
                 } catch (IOException e) {
                     LOG.error(e.toString());
                 }
