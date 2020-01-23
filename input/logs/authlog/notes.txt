@@ -1,0 +1,12 @@
+file: auth-year.csv
+size: 9,3 mb
+logpai-time: 0:00:24.460283
+ottr-preprocess-time: 0:00:22.837
+ottr-time: 117.96s
+
+file: auth-dec.csv
+size: 110,1 mb
+logpai time: [Time taken: 0:07:13.924018]
+ottr-preprocess-time: 0:01:27.619
+ottr-time: java.lang.OutOfMemoryError: Java heap space
+

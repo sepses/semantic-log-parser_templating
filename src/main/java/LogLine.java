@@ -1,11 +1,8 @@
 import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Class representation of a logline
@@ -21,7 +18,6 @@ public class LogLine {
     public String Content;
     public String EventId;
     public String EventTemplate;
-    public String ParameterString;
     public List<Pair> ParameterList;
 
     public LogLine(String LineId, String EventMonth, String EventDay, String EventTime, String Level,
@@ -35,21 +31,7 @@ public class LogLine {
         this.Content = Content;
         this.EventId = EventId;
         this.EventTemplate = EventTemplate;
-        this.ParameterString = ParameterString;
-
-        this.ParameterList = new ArrayList<Pair>();
-
-        Pattern pattern = Pattern.compile("\'([^\'^,]*)\'");
-        Matcher matcher = pattern.matcher(ParameterString);
-        while(matcher.find()) {
-            //System.out.println(matcher.group(1));
-            this.ParameterList.add(new Pair(matcher.group(1), null));
-        }
-
-//        for (String param : Arrays.asList(ParameterString.substring(1, ParameterString.length() - 1).split(","))) {
-//            if(!param.trim().equals(""))
-//                this.ParameterList.add(new Pair(param.trim().replaceAll("'", ""), null));
-//        }
+        this.ParameterList = splitParameter(ParameterString);
     }
 
     public static LogLine createFromLogline(CSVRecord logLine) {
@@ -57,13 +39,47 @@ public class LogLine {
                 logLine.get(5), logLine.get(6), logLine.get(7), logLine.get(8), logLine.get(9));
     }
 
-    class Pair{
-        public String key;
-        public String value;
+    public static List<Pair> splitParameter(String paramList) {
 
-        public Pair(String key, String value){
-            this.key = key;
-            this.value = value;
+        List<Pair> finalParams = new ArrayList<>();
+        paramList = cleanString(paramList);
+        if (!paramList.isEmpty()) {
+
+            String otherThanQuote = " [^'] ";
+            String quotedString = String.format(" ' %s* ' ", otherThanQuote);
+            String regex = String.format("(?x) " + // enable comments, ignore white spaces
+                            ",                         " + // match a comma
+                            "(?=                       " + // start positive look ahead
+                            "  (?:                     " + //   start non-capturing group 1
+                            "    %s*                   " + //     match 'otherThanQuote' zero or more times
+                            "    %s                    " + //     match 'quotedString'
+                            "  )*                      " + //   end group 1 and repeat it zero or more times
+                            "  %s*                     " + //   match 'otherThanQuote'
+                            "  $                       " + // match the end of the string
+                            ")                         ", // stop positive look ahead
+                    otherThanQuote, quotedString, otherThanQuote);
+
+            String[] paramValues = paramList.split(regex, -1);
+
+            for (String paramValue : paramValues) {
+                paramValue = cleanString(paramValue);
+                if (paramValue.contains(" ")) {
+                    String[] internalParamValues = paramValue.split(" ");
+                    for (String internalParamValue : internalParamValues) {
+                        if (!internalParamValue.isEmpty())
+                            finalParams.add(Pair.of(internalParamValue, null));
+                    }
+                } else {
+                    finalParams.add(Pair.of(paramValue, null));
+                }
+            }
         }
+
+        return finalParams;
+    }
+
+    private static String cleanString(String string) {
+        string = string.trim().substring(1);
+        return string.substring(0, string.length() - 1).trim();
     }
 }

@@ -3,6 +3,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,17 +23,18 @@ import java.util.*;
 public class Main {
 
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
+    private static final int maxLineCount = 50000;
 
     static String[] HEADERS = { "hash", "content", "template", "keywords" };
 
     // *** temporary mappings between existing (stored) templateId and csv templateId
     private static Map<String, String> templateIdMappings = new HashMap<>();
 
-    private static String logTemplate = "./input/Logs/openSSH/OpenSSH_2k_A.log_templates.csv";
-    private static String logData = "./input/Logs/openSSH/OpenSSH_2k_A.log_structured.csv";
+    private static String logTemplate = "./input/Logs/authlog/auth_dec_templates.csv";
+    private static String logData = "./input/Logs/authlog/auth_dec_structured.csv";
     private static String existingTemplatesPath = "./input/templatesMapping.csv";
     private static String ottrTemplatesPath = "./input/ottr/templates.stottr";
-    private static String instancesStottr = "./input/ottr/instances.stottr";
+    private static String instancesStottr = "./input/ottr/instances";
 
     /**
      * Main function - will be updated later to allow args parameterization
@@ -41,6 +43,8 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
+
+        Long start = System.currentTimeMillis();
 
         // *** load existing log templates into template list
         Reader existingTemplateReader = new FileReader(Paths.get(existingTemplatesPath).toFile());
@@ -67,6 +71,11 @@ public class Main {
 
         // *** start extraction of log lines
         parseLogLines(inputLogData, existingTemplates);
+
+        Long finish = (System.currentTimeMillis() - start);
+        Date date = new Date(finish);
+        String formattedDate = new SimpleDateFormat("'0':mm:ss.SSS").format(date);
+        LOG.info("time needed: " + formattedDate);
     }
 
     /**
@@ -172,14 +181,14 @@ public class Main {
             ottrBody.append(",");
 
         // *** add all parameters into template
-        for (LogLine.Pair paramPair : logLine.ParameterList) {
+        for (Pair pair : logLine.ParameterList) {
             boolean found = false;
             String type = "";
             paramCounts++;
 
             for (String key : matchedExpressions.keySet()) {
                 type = matchedExpressions.get(key);
-                if (paramPair.key.contains(key)) {
+                if (pair.getLeft().toString().contains(key)) {
                     LOG.info("Found key");
                     found = true;
                     break;
@@ -220,60 +229,69 @@ public class Main {
      */
     public static void parseLogLines(List<LogLine> logLines, List<Template> templatesList) {
         ArrayList<String> parsedLogLines = new ArrayList<>();
+        int counter = 0;
+        int fileCounter = 0;
 
         for (LogLine logline : logLines) {
-            LOG.info("Process logline: " + logline.LineId);
+            if (counter < maxLineCount) {
+                counter++;
 
-            String tmpLine = "";
+                LOG.info("Process logline: " + logline.LineId);
 
-            // *** get the template for the log line
-            String loglineTemplateHash = templateIdMappings.get(logline.EventId); // Get hash from mapping
-            Template currentTemplate =
-                    templatesList.stream().filter(template -> template.hash.equals(loglineTemplateHash)).findFirst()
-                            .orElse(null);
+                String tmpLine = "";
 
-            if (currentTemplate == null)
-                return;
+                // *** get the template for the log line
+                String loglineTemplateHash = templateIdMappings.get(logline.EventId); // Get hash from mapping
+                Template currentTemplate =
+                        templatesList.stream().filter(template -> template.hash.equals(loglineTemplateHash))
+                                .findFirst().orElse(null);
 
-            // *** removing surrounding brackets
-            String paramValues = logline.ParameterString.substring(1, logline.ParameterString.length() - 1); //[...]
-            //sepses:LogLine(instance:Line1, \"2019-12-10\", \"Failed\", \"23f2f23f\", (\"aekelhart\", \"127.0.0.1\")) ."
+                if (currentTemplate == null)
+                    return;
 
-            // *** pre-process time format
-            String eventTime = "";
-            try {
-                eventTime = getDate(logline.EventMonth, logline.EventDay, logline.EventTime);
-            } catch (ParseException e) {
-                LOG.error(e.toString());
-            }
-
-            // *** creating standard log line template
-            tmpLine = currentTemplate.templatingId + "(instance:Logline_" + UUID.randomUUID() + ",\"" + eventTime
-                    + "\",\"" + logline.Content + "\",\"" + currentTemplate.hash + "\"";
-
-            // *** process all parameters
-            if (!paramValues.isEmpty()) {
-                String[] parameterValues = paramValues.split(",");
-                // default template put all in a list
-                if (currentTemplate.templatingId.equals("sepses:LogLine")) {
-                    tmpLine += ", (";
-                    tmpLine = createTemplate(parameterValues, tmpLine);
-                    tmpLine += ")";
-                } else { // specific template, add parameters as variables
-                    tmpLine += ", ";
-                    tmpLine = createTemplate(parameterValues, tmpLine);
+                // *** pre-process time format
+                String eventTime = "";
+                try {
+                    eventTime = getDate(logline.EventMonth, logline.EventDay, logline.EventTime);
+                } catch (ParseException e) {
+                    LOG.error(e.toString());
                 }
-            }
 
-            // *** close line & add into parsedLogLines
-            tmpLine += ") .\n";
-            parsedLogLines.add(tmpLine);
+                // *** creating standard log line template
+                tmpLine = currentTemplate.templatingId + "(instance:Logline_" + UUID.randomUUID() + ",\"" + eventTime
+                        + "\",\"" + logline.Content + "\",\"" + currentTemplate.hash + "\"";
+
+                // *** process all parameters
+                if (!logline.ParameterList.isEmpty()) {
+
+                    if (currentTemplate.templatingId.equals("sepses:LogLine")) {
+                        tmpLine += ", (";
+                        tmpLine = createTemplate(logline.ParameterList, tmpLine);
+                        tmpLine += ")";
+                    } else { // specific template, add parameters as variables
+                        tmpLine += ", ";
+                        tmpLine = createTemplate(logline.ParameterList, tmpLine);
+                    }
+                }
+
+                // *** close line & add into parsedLogLines
+                tmpLine += ") .\n";
+                parsedLogLines.add(tmpLine);
+            } else {
+                writeFile(parsedLogLines, ++fileCounter);
+                parsedLogLines = new ArrayList<>();
+                counter = 0;
+            }
         }
+
+    }
+
+    public static void writeFile(ArrayList<String> parsedLogLines, Integer series) {
 
         // *** write down all instances into an output sttottr file
         FileWriter out = null;
         try {
-            out = new FileWriter(instancesStottr);
+            out = new FileWriter(instancesStottr + "-" + series + ".stottr");
             out.write("@prefix instance: \t <http://w3id.org/sepses/id/> .\n"
                     + "@prefix sepses: \t  <http://sepses.com/ns#> . \n");
             for (String line : parsedLogLines) {
@@ -307,14 +325,12 @@ public class Main {
      * @param tmpLine
      * @return
      */
-    private static String createTemplate(String[] parameterValues, String tmpLine) {
+    private static String createTemplate(List<Pair> parameterValues, String tmpLine) {
 
-        for (int counter = 0; counter < parameterValues.length; counter++) {
-            String parameter = parameterValues[counter].trim();
-            String paramValue = parameter.replaceAll("'", "");
-
-            tmpLine += "\"" + paramValue + "\"";
-            if (counter < parameterValues.length - 1)
+        for (int counter = 0; counter < parameterValues.size(); counter++) {
+            String parameter = parameterValues.get(counter).getLeft().toString().trim();
+            tmpLine += "\"" + parameter + "\"";
+            if (counter < parameterValues.size() - 1)
                 tmpLine += ",";
         }
 
@@ -359,7 +375,8 @@ public class Main {
         try (CSVPrinter printer = new CSVPrinter(out, CSVFormat.DEFAULT.withHeader(HEADERS))) {
             templates.forEach(template -> {
                 try {
-                    printer.printRecord(template.hash, template.TemplateContent, template.templatingId, template.getKeywordString());
+                    printer.printRecord(template.hash, template.TemplateContent, template.templatingId,
+                            template.getKeywordString());
                 } catch (IOException e) {
                     LOG.error(e.toString());
                 }

@@ -1,0 +1,23 @@
+EventId,EventTemplate,Occurrences
+c257f384,pam_unix(cron:session): session opened for user root by (uid=<*>),778
+6e704123,pam_unix(cron:session): session closed for user root,778
+2491ca3e,Connection closed by <*> [preauth],1957
+6844638c,Received disconnect from <*> <*>: Bye Bye [preauth],46509
+9302fad4,Invalid user <*> from <*>,12165
+6b674ff1,input_userauth_request: invalid user <*> [preauth],12165
+c926c7d9,Did not receive identification string from <*>,683
+a998e480,fatal: Read from socket failed: Connection reset by peer [preauth],2391
+9998416d,warning: can't get client address: Connection reset by peer,4
+ed6767ee,Could not write ident string to <*>,9
+f7fe7f88,reverse mapping checking getaddrinfo for <*> [<*>] failed - POSSIBLE BREAK-IN ATTEMPT!,5157
+75558802,Received disconnect from <*> <*>: com.jcraft.jsch.JSchException: Auth fail [preauth],157
+f32f0642,fatal: Write failed: Connection reset by peer [preauth],2
+b5660ce6,Address <*> maps to <*> but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!,725
+7d3c9f7d,Bad protocol version identification ' ' from <*>,1
+222fbbee,Bad protocol version identification 'GET / HTTP/<*>.<*>' from <*>,9
+ea4aa83d,Disconnecting: Too many authentication failures for root [preauth],2575
+142422c8,Corrupted MAC on input. [preauth],35
+cf1f4ed4,Received disconnect from <*> <*>: [preauth],11
+4a915938,Received disconnect from <*> <*>: java.net.SocketTimeoutException: Read timed out [preauth],1
+073ba47a,Received disconnect from <*> <*>: No supported authentication methods available [preauth],7
+7953c2d1,Received disconnect from <*> <*>: ok [preauth],32

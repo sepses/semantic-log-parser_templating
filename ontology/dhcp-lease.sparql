@@ -15,6 +15,7 @@ where {
        time:hasBeginning/time:inXSDDateTime ?begin
        OPTIONAL { ?dhcp time:hasEnd/time:inXSDDateTime ?end }
     .
+
     ?ipAddress rdfs:label ?ip .
     ?logline a :Logline ;
        parser:hasIP ?ip ;

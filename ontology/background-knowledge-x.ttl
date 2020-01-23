@@ -81,8 +81,10 @@ ex:validUntil a owl:DatatypeProperty ;
 	rdfs:label "Andreas E." ;
 .
 
-<< :Server_1 ex:assignedIp :IP_3 >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime ;
+<< :Server_1 ex:assignedIp :IP_3 >>
+    ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime ;
 	ex:validUntil "2018-04-12T10:30:00"^^xsd:dateTime .
+
 << :Server_1 ex:assignedIp :IP_1 >> ex:validFrom "2018-04-12T10:30:01"^^xsd:dateTime .
 << :Server_2 ex:assignedIp :IP_2 >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime .
 << :IP_1 ex:hostname "data.ifs.tuwien.ac.at" >> ex:validFrom "2017-04-12T10:30:00"^^xsd:dateTime .
