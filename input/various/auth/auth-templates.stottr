@@ -1,0 +1,1182 @@
+@prefix rdf: 	  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 	  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 	  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 	  <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ottr: 	  <http://ns.ottr.xyz/0.4/> .
+@prefix ax: 	  <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix rstr: 	  <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+
+@prefix :  <http://w3id.org/sepses/vocab/log/core#> .
+@prefix parser:  <http://w3id.org/sepses/vocab/log/parser#> .
+@prefix instance:  <http://w3id.org/sepses/id/> .
+
+@prefix sepses: 	  <http://sepses.com/ns#> .
+
+# Default logline
+sepses:LogLine[ottr:IRI ?id, xsd:dateTime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
+    sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+    sepses:Type(?id, :DefaultLogLine)
+} .
+
+# Basic templates
+sepses:BasicLogLineInformation[ottr:IRI ?id, xsd:dateTime ?timeStamp, xsd:string ?message, xsd:string ?templateHash] :: {
+    ottr:Triple(?id, :timestamp, ?timeStamp),
+    ottr:Triple(?id, parser:templateId, ?templateHash),
+    ottr:Triple(?id, :logMessage, ?message)
+} .
+
+sepses:Type[ottr:IRI ?id, ottr:IRI ?type] :: {
+    ottr:Triple(?id, rdf:type, ?type)
+} .
+
+sepses:UnknownParameterList[ottr:IRI ?id, List<xsd:string> ?parameters] :: {
+    cross | ottr:Triple(?id, parser:connected, ++?parameters)
+} .
+
+sepses:UnknownConnection[ottr:IRI ?id, xsd:string ?value] :: {
+    ottr:Triple(?id, parser:connected, ?value)
+} .
+
+sepses:User[ottr:IRI ?id, xsd:string ?user] :: {
+    ottr:Triple(?id, parser:connectedUser, ?user)
+} .
+
+sepses:Ip[ottr:IRI ?id, xsd:string ?ip] :: {
+    ottr:Triple(?id, parser:hasIP, ?ip)
+} .
+
+sepses:Domain[ottr:IRI ?id, xsd:string ?domain] :: {
+    ottr:Triple(?id, parser:hasDomain, ?domain)
+} .
+
+sepses:Port[ottr:IRI ?id, xsd:string ?port] :: {
+    ottr:Triple(?id, parser:connectedPort, ?port)
+} .
+
+sepses:Url[ottr:IRI ?id, xsd:string ?url] :: {
+    ottr:Triple(?id, parser:hasURL, ?url)
+} .
+
+# Auto generated templates
+
+# New Templates: 2020-02-19T12:40:16.059+01:00
+# Example: pam_unix(cron:session): session opened for user root by (uid=<*>)
+sepses:LogLine_c257f384[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: Invalid user <*> from <*>
+sepses:LogLine_9302fad4[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?user1, xsd:string ?ip2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:User(?id, ?user1),
+	 sepses:Ip(?id, ?ip2)
+} .
+
+# Example: input_userauth_request: invalid user <*> [preauth]
+sepses:LogLine_6b674ff1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?user1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:User(?id, ?user1)
+} .
+
+# Example: pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*>
+sepses:LogLine_e0a8b45a[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?ip3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:Ip(?id, ?ip3)
+} .
+
+# Example: Failed <*> for invalid user <*> from <*> port <*> ssh<*>
+sepses:LogLine_755dc626[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?user2, xsd:string ?ip3, xsd:string ?port4, xsd:string ?param5] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:User(?id, ?user2),
+	 sepses:Ip(?id, ?ip3),
+	 sepses:Port(?id, ?port4),
+	 sepses:UnknownConnection(?id, ?param5)
+} .
+
+# Example: Received disconnect from <*> port <*>:<*>: <*> <*> <*>
+sepses:LogLine_c0a756ec[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+# Example: Disconnected from <*> port <*> [preauth]
+sepses:LogLine_0054e5e2[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: refused connect from <*> (<*>)
+sepses:LogLine_95184834[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?ip2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Ip(?id, ?ip2)
+} .
+
+# Example: Connection <*> by <*> port <*> [preauth]
+sepses:LogLine_0a7846c3[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?ip2, xsd:string ?port3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3)
+} .
+
+# Example: fatal: Unable to negotiate with <*> port <*>: no matching cipher found. Their offer: aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,arcfour128,arcfour,3des-cbc,none [preauth]
+sepses:LogLine_21b7e1d1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*> <*>
+sepses:LogLine_54ff4343[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?user3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:User(?id, ?user3)
+} .
+
+# Example: Failed password for <*> from <*> port <*> ssh<*>
+sepses:LogLine_ada372e1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?ip2, xsd:string ?port3, xsd:string ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+# Example: Did not receive identification string from <*>
+sepses:LogLine_c926c7d9[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1)
+} .
+
+# Example: Bad protocol version identification '\<*>\253d\241EZC\333M\<*>\<*>^\<*>\<*>\<*> X\<*>>\<*>\<*>\<*><\<*>\<*>\<*>' from <*> port <*>
+sepses:LogLine_6927e4a0[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?ip10, xsd:string ?port11] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:Ip(?id, ?ip10),
+	 sepses:Port(?id, ?port11)
+} .
+
+# Example: Bad protocol version identification <*> from <*> port <*>
+sepses:LogLine_bf9b6a0d[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?ip2, xsd:string ?port3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3)
+} .
+
+# Example: error: Received disconnect from <*> port <*>:<*>: Service not available [preauth]
+sepses:LogLine_aa869e2e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: message repeated <*> times: [ Failed password for root from <*> port <*> ssh2]
+sepses:LogLine_b542638e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?ip2, xsd:string ?port3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3)
+} .
+
+# Example: error: maximum authentication attempts exceeded for root from <*> port <*> ssh2 [preauth]
+sepses:LogLine_cc5fc443[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: PAM <*> more authentication failures; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*> user=root
+sepses:LogLine_cbf938f4[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?ip4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:Ip(?id, ?ip4)
+} .
+
+# Example: PAM service(sshd) ignoring max retries; <*> > <*>
+sepses:LogLine_2f2318e5[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: Invalid user from <*>
+sepses:LogLine_656c9596[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1)
+} .
+
+# Example: Failed password for invalid user from <*> port <*> ssh<*>
+sepses:LogLine_5a9ee5c4[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: invalid public DH value: <= <*> [preauth]
+sepses:LogLine_d6c4c090[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: fatal: ssh_dispatch_run_fatal: Connection from <*> port <*>: incomplete message [preauth]
+sepses:LogLine_e9a14f03[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: Received disconnect from <*> port <*>:<*>: Normal Shutdown, Thank you for playing [preauth]
+sepses:LogLine_7aad7007[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: Received disconnect from <*> port <*>:<*>: Client disconnecting normally [preauth]
+sepses:LogLine_759cf92f[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: Accepted password for fekaputr from <*> port <*> ssh<*>
+sepses:LogLine_f1e55f2a[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: pam_unix(sshd:session): session opened for user fekaputr by (uid=<*>)
+sepses:LogLine_1ac6a9ee[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: New session <*> of user fekaputr.
+sepses:LogLine_3e503675[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: pam_unix(systemd-user:session): session opened for user fekaputr by (uid=<*>)
+sepses:LogLine_254911f8[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*>
+sepses:LogLine_74d07e77[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: pam_unix(sudo:session): session opened for user root by fekaputr(uid=<*>)
+sepses:LogLine_e4bceaa2[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: Server listening on <*> port <*>.
+sepses:LogLine_8938d159[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*>
+sepses:LogLine_bff67196[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: Disconnected from <*> port <*>
+sepses:LogLine_aeebac42[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/home/fekaputr ; USER=root ; COMMAND=/usr/bin/apt-get purge linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_5243dad2[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34, xsd:string ?param35, xsd:string ?param36, xsd:string ?param37, xsd:string ?param38, xsd:string ?param39, xsd:string ?param40, xsd:string ?param41, xsd:string ?param42, xsd:string ?param43, xsd:string ?param44, xsd:string ?param45, xsd:string ?param46, xsd:string ?param47, xsd:string ?param48, xsd:string ?param49, xsd:string ?param50, xsd:string ?param51, xsd:string ?param52, xsd:string ?param53, xsd:string ?param54, xsd:string ?param55, xsd:string ?param56, xsd:string ?param57, xsd:string ?param58, xsd:string ?param59] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34),
+	 sepses:UnknownConnection(?id, ?param35),
+	 sepses:UnknownConnection(?id, ?param36),
+	 sepses:UnknownConnection(?id, ?param37),
+	 sepses:UnknownConnection(?id, ?param38),
+	 sepses:UnknownConnection(?id, ?param39),
+	 sepses:UnknownConnection(?id, ?param40),
+	 sepses:UnknownConnection(?id, ?param41),
+	 sepses:UnknownConnection(?id, ?param42),
+	 sepses:UnknownConnection(?id, ?param43),
+	 sepses:UnknownConnection(?id, ?param44),
+	 sepses:UnknownConnection(?id, ?param45),
+	 sepses:UnknownConnection(?id, ?param46),
+	 sepses:UnknownConnection(?id, ?param47),
+	 sepses:UnknownConnection(?id, ?param48),
+	 sepses:UnknownConnection(?id, ?param49),
+	 sepses:UnknownConnection(?id, ?param50),
+	 sepses:UnknownConnection(?id, ?param51),
+	 sepses:UnknownConnection(?id, ?param52),
+	 sepses:UnknownConnection(?id, ?param53),
+	 sepses:UnknownConnection(?id, ?param54),
+	 sepses:UnknownConnection(?id, ?param55),
+	 sepses:UnknownConnection(?id, ?param56),
+	 sepses:UnknownConnection(?id, ?param57),
+	 sepses:UnknownConnection(?id, ?param58),
+	 sepses:UnknownConnection(?id, ?param59)
+} .
+
+# Example: fekaputr : (command continued) linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_da707c9e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/home/fekaputr ; USER=root ; COMMAND=/usr/bin/apt-get purge linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_016faa83[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34, xsd:string ?param35, xsd:string ?param36, xsd:string ?param37, xsd:string ?param38, xsd:string ?param39, xsd:string ?param40, xsd:string ?param41, xsd:string ?param42, xsd:string ?param43, xsd:string ?param44, xsd:string ?param45, xsd:string ?param46, xsd:string ?param47, xsd:string ?param48, xsd:string ?param49] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34),
+	 sepses:UnknownConnection(?id, ?param35),
+	 sepses:UnknownConnection(?id, ?param36),
+	 sepses:UnknownConnection(?id, ?param37),
+	 sepses:UnknownConnection(?id, ?param38),
+	 sepses:UnknownConnection(?id, ?param39),
+	 sepses:UnknownConnection(?id, ?param40),
+	 sepses:UnknownConnection(?id, ?param41),
+	 sepses:UnknownConnection(?id, ?param42),
+	 sepses:UnknownConnection(?id, ?param43),
+	 sepses:UnknownConnection(?id, ?param44),
+	 sepses:UnknownConnection(?id, ?param45),
+	 sepses:UnknownConnection(?id, ?param46),
+	 sepses:UnknownConnection(?id, ?param47),
+	 sepses:UnknownConnection(?id, ?param48),
+	 sepses:UnknownConnection(?id, ?param49)
+} .
+
+# Example: fekaputr : (command continued) linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_370ced88[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*> <*>
+sepses:LogLine_87649ba7[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+# Example: fekaputr : (command continued) linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_a65460a2[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/home/fekaputr ; USER=root ; COMMAND=/usr/bin/apt purge apache2.<*>-common apt-xapian-index aptitude aspell-en bsh-gcj dictionaries-common emacsen-common gksu icedtea-netx-common indicator-application libboost-filesystem1.<*>.<*> libboost-iostreams1.<*>.<*> libboost-program-options1.<*>.<*> libboost-system1.<*>.<*> libboost-thread1.<*>.<*> libcdparanoia0:amd64 libcommons-validator-java libcwidget3 libept1.<*>.<*>:amd64 libgcj12 libgcj16:amd64 libgd2-xpm:amd64 libgeoclue0:amd64 libgif4:amd64 libgksu2-<*> libgnome-keyring0:amd64 libicu48 libidl0:amd64 libiec61883-<*>:amd64 libmysqlclient18:amd64 libnotify4:amd64 libpcrecpp0:amd64 libpython3.<*>-minimal:amd64 libsamplerate0:amd64 libshout3:amd64 libsigc++<*>.<*>-0c2a:amd64 libsnappy1 libspeex1:amd64 libstartup-notification0:amd64 libt1-<*> libtag1v5-vanilla:amd64 libtiff4:amd64 libxapian22 libxcb-util1:amd64 linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_e9f4370c[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19)
+} .
+
+# Example: fekaputr : (command continued) linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_9f2e08c1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34, xsd:string ?param35, xsd:string ?param36, xsd:string ?param37, xsd:string ?param38, xsd:string ?param39, xsd:string ?param40, xsd:string ?param41, xsd:string ?param42, xsd:string ?param43, xsd:string ?param44, xsd:string ?param45, xsd:string ?param46, xsd:string ?param47, xsd:string ?param48, xsd:string ?param49, xsd:string ?param50, xsd:string ?param51, xsd:string ?param52] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34),
+	 sepses:UnknownConnection(?id, ?param35),
+	 sepses:UnknownConnection(?id, ?param36),
+	 sepses:UnknownConnection(?id, ?param37),
+	 sepses:UnknownConnection(?id, ?param38),
+	 sepses:UnknownConnection(?id, ?param39),
+	 sepses:UnknownConnection(?id, ?param40),
+	 sepses:UnknownConnection(?id, ?param41),
+	 sepses:UnknownConnection(?id, ?param42),
+	 sepses:UnknownConnection(?id, ?param43),
+	 sepses:UnknownConnection(?id, ?param44),
+	 sepses:UnknownConnection(?id, ?param45),
+	 sepses:UnknownConnection(?id, ?param46),
+	 sepses:UnknownConnection(?id, ?param47),
+	 sepses:UnknownConnection(?id, ?param48),
+	 sepses:UnknownConnection(?id, ?param49),
+	 sepses:UnknownConnection(?id, ?param50),
+	 sepses:UnknownConnection(?id, ?param51),
+	 sepses:UnknownConnection(?id, ?param52)
+} .
+
+# Example: fekaputr : (command continued) linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic
+sepses:LogLine_445915cc[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34, xsd:string ?param35, xsd:string ?param36, xsd:string ?param37, xsd:string ?param38, xsd:string ?param39, xsd:string ?param40, xsd:string ?param41, xsd:string ?param42, xsd:string ?param43, xsd:string ?param44, xsd:string ?param45, xsd:string ?param46, xsd:string ?param47, xsd:string ?param48, xsd:string ?param49, xsd:string ?param50, xsd:string ?param51, xsd:string ?param52, xsd:string ?param53, xsd:string ?param54] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34),
+	 sepses:UnknownConnection(?id, ?param35),
+	 sepses:UnknownConnection(?id, ?param36),
+	 sepses:UnknownConnection(?id, ?param37),
+	 sepses:UnknownConnection(?id, ?param38),
+	 sepses:UnknownConnection(?id, ?param39),
+	 sepses:UnknownConnection(?id, ?param40),
+	 sepses:UnknownConnection(?id, ?param41),
+	 sepses:UnknownConnection(?id, ?param42),
+	 sepses:UnknownConnection(?id, ?param43),
+	 sepses:UnknownConnection(?id, ?param44),
+	 sepses:UnknownConnection(?id, ?param45),
+	 sepses:UnknownConnection(?id, ?param46),
+	 sepses:UnknownConnection(?id, ?param47),
+	 sepses:UnknownConnection(?id, ?param48),
+	 sepses:UnknownConnection(?id, ?param49),
+	 sepses:UnknownConnection(?id, ?param50),
+	 sepses:UnknownConnection(?id, ?param51),
+	 sepses:UnknownConnection(?id, ?param52),
+	 sepses:UnknownConnection(?id, ?param53),
+	 sepses:UnknownConnection(?id, ?param54)
+} .
+
+# Example: fekaputr : (command continued) linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic mysql-server-<*>.<*> notification-daemon openjdk-<*>-jre-headless:amd64 openjdk-<*>-jre-headless:amd64 oracle-java7-set-default perl-modules python3.<*> python3.<*>-minimal systemd-services velocity wordpress xterm y-ppa-manager
+sepses:LogLine_22a4ced2[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17)
+} .
+
+# Example: Received signal <*>; terminating.
+sepses:LogLine_903531a0[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: Removed session <*>.
+sepses:LogLine_168e7166[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: PAM unable to <*> <*> cannot open shared object file: No such file or directory
+sepses:LogLine_210f0e15[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?domain1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Domain(?id, ?domain1)
+} .
+
+# Example: PAM adding faulty module: <*>
+sepses:LogLine_9841f12c[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?domain1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Domain(?id, ?domain1)
+} .
+
+# Example: pam_unix(su:session): session opened for user postgres by (uid=<*>)
+sepses:LogLine_77428942[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: user 'root' (login 'fekaputr' on pts/<*>) <*> to group <*>
+sepses:LogLine_26b1a3de[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: group added to /etc/group: <*> GID=<*>
+sepses:LogLine_b72edb09[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: group added to /etc/gshadow: <*>
+sepses:LogLine_7b1cd48d[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: new group: <*> GID=<*>
+sepses:LogLine_724c882e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: new user: <*> UID=<*>, GID=<*>, <*> <*>
+sepses:LogLine_74f6c0c1[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?user1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:User(?id, ?user1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+# Example: change user <*> password
+sepses:LogLine_c1056d3a[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: changed password expiry for <*>
+sepses:LogLine_82466679[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: Watching system buttons on /dev/input/event1 (AT Translated Set <*> keyboard)
+sepses:LogLine_4f3050d4[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: rexec line <*>: Deprecated option <*>
+sepses:LogLine_24e5bf62[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: reprocess config line <*>: Deprecated option <*>
+sepses:LogLine_5ff0ad5e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .
+
+# Example: Invalid user <*> from <*> port <*>
+sepses:LogLine_38dda80a[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?user1, xsd:string ?ip2, xsd:string ?port3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:User(?id, ?user1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3)
+} .
+
+# Example: Disconnected from <*> user <*> <*> port <*> [preauth]
+sepses:LogLine_2552eb03[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?ip2, xsd:string ?port3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*> <*> <*> <*>
+sepses:LogLine_cc0d4f22[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?domain4, xsd:string ?domain5] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:Domain(?id, ?domain4),
+	 sepses:Domain(?id, ?domain5)
+} .
+
+# Example: Connection closed by <*> user <*> <*> port <*> [preauth]
+sepses:LogLine_f000e4fa[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?ip2, xsd:string ?port3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:Ip(?id, ?ip2),
+	 sepses:Port(?id, ?port3)
+} .
+
+# Example: Did not receive identification string from <*> port <*>
+sepses:LogLine_cf94a865[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: pam_unix(sudo:auth): authentication failure; logname=fekaputr uid=<*> euid=<*> tty=/dev/pts/<*> ruser=fekaputr rhost= user=fekaputr
+sepses:LogLine_723587a4[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: Disconnected from user fekaputr <*> port <*>
+sepses:LogLine_94546794[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*> <*> <*>
+sepses:LogLine_4ef4ebe6[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?domain4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:Domain(?id, ?domain4)
+} .
+
+# Example: Registered Authentication Agent for unix-process:<*>:<*> (system bus name :<*>.<*> [/usr/bin/pkttyagent --notify-fd <*> --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C.UTF-<*>)
+sepses:LogLine_d99aa8f9[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4)
+} .
+
+# Example: Operator of unix-process:<*>:<*> successfully authenticated as unix-user:fekaputr to gain ONE-SHOT authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::<*>.<*> [systemctl <*> apache2] (owned by unix-user:fekaputr)
+sepses:LogLine_cd0bc9b6[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: Unregistered Authentication Agent for unix-process:<*>:<*> (system bus name :<*>.<*>, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C.UTF-<*>) (disconnected from bus)
+sepses:LogLine_35340d74[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/var/www ; USER=root ; COMMAND=/bin/mv cv.html ekaw14-queries.html index.html links.html research.html teaching.html tester.html old-website/
+sepses:LogLine_78b3fa21[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/var/www/wordpress ; USER=root ; COMMAND=/bin/chown www-data:www-data cityspin-net juang-id obaris-org -R
+sepses:LogLine_4a8d65bf[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1)
+} .
+
+# Example: Unable to negotiate with <*> port <*>: no matching cipher found. Their offer: aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,arcfour128,arcfour,3des-cbc,none [preauth]
+sepses:LogLine_ce4ff18e[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/var/log ; USER=root ; COMMAND=/bin/cp alternatives.log alternatives.log.<*> alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz apache2 apport.log apport.log.<*> apport.log.<*>.gz apport.log.<*>.gz apt auth.log auth.log.<*> auth.log.<*>.gz auth.log.<*>.gz auth.log.<*>.gz boot boot.log btmp btmp.<*> dbconfig-common denyhosts denyhosts.<*> denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz dist-upgrade dmesg dmesg.<*> dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dpkg.log dpkg.log.<*> dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz fail2ban.log fail2ban.log.<*> fail2ban.log.<*>.gz fail2ban.log.<*>.gz
+sepses:LogLine_274644bc[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34, xsd:string ?param35, xsd:string ?param36, xsd:string ?param37, xsd:string ?param38, xsd:string ?param39, xsd:string ?param40, xsd:string ?param41, xsd:string ?param42, xsd:string ?param43, xsd:string ?param44, xsd:string ?param45, xsd:string ?param46, xsd:string ?param47, xsd:string ?param48] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34),
+	 sepses:UnknownConnection(?id, ?param35),
+	 sepses:UnknownConnection(?id, ?param36),
+	 sepses:UnknownConnection(?id, ?param37),
+	 sepses:UnknownConnection(?id, ?param38),
+	 sepses:UnknownConnection(?id, ?param39),
+	 sepses:UnknownConnection(?id, ?param40),
+	 sepses:UnknownConnection(?id, ?param41),
+	 sepses:UnknownConnection(?id, ?param42),
+	 sepses:UnknownConnection(?id, ?param43),
+	 sepses:UnknownConnection(?id, ?param44),
+	 sepses:UnknownConnection(?id, ?param45),
+	 sepses:UnknownConnection(?id, ?param46),
+	 sepses:UnknownConnection(?id, ?param47),
+	 sepses:UnknownConnection(?id, ?param48)
+} .
+
+# Example: fekaputr : (command continued) fail2ban.log.<*>.gz faillog fontconfig.log fsck installer journal kern.log kern.log.<*> kern.log.<*>.gz kern.log.<*>.gz kern.log.<*>.gz landscape lastlog mail.err mail.log mongodb mysql mysql.err mysql.log mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz news postgresql syslog syslog.<*> syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz sysstat tallylog ufw.log ufw.log.<*> ufw.log.<*>.gz ufw.log.<*>.gz ufw.log.<*>.gz unattended-upgrades upgrade upstart vmware-install.log vmware-tools-upgrader.log vmware-vmsvc-root.<*>.log vmware-vmsvc-root.<*>.log vmware-vmsvc-root.<*>.log vmware-vmsvc-root.log vmware-vmsvc.<*>.log vmware-vmsvc.<*>.log vmware-vmsvc.<*>.log vmware-vmsvc.log vmware-vmtoolsd-root.log wtmp wtmp.<*> /home/fekaputr/log-backup/
+sepses:LogLine_63bca440[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/var/log ; USER=root ; COMMAND=/bin/cp -rf alternatives.log alternatives.log.<*> alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz apache2 apport.log apport.log.<*> apport.log.<*>.gz apport.log.<*>.gz apt auth.log auth.log.<*> auth.log.<*>.gz auth.log.<*>.gz auth.log.<*>.gz boot boot.log btmp btmp.<*> dbconfig-common denyhosts denyhosts.<*> denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz dist-upgrade dmesg dmesg.<*> dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dpkg.log dpkg.log.<*> dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz fail2ban.log fail2ban.log.<*> fail2ban.log.<*>.gz fail2ban.log.<*>.gz
+sepses:LogLine_a189c27a[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7, xsd:string ?param8, xsd:string ?param9, xsd:string ?param10, xsd:string ?param11, xsd:string ?param12, xsd:string ?param13, xsd:string ?param14, xsd:string ?param15, xsd:string ?param16, xsd:string ?param17, xsd:string ?param18, xsd:string ?param19, xsd:string ?param20, xsd:string ?param21, xsd:string ?param22, xsd:string ?param23, xsd:string ?param24, xsd:string ?param25, xsd:string ?param26, xsd:string ?param27, xsd:string ?param28, xsd:string ?param29, xsd:string ?param30, xsd:string ?param31, xsd:string ?param32, xsd:string ?param33, xsd:string ?param34, xsd:string ?param35, xsd:string ?param36, xsd:string ?param37, xsd:string ?param38, xsd:string ?param39, xsd:string ?param40, xsd:string ?param41, xsd:string ?param42, xsd:string ?param43, xsd:string ?param44, xsd:string ?param45, xsd:string ?param46, xsd:string ?param47, xsd:string ?param48] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7),
+	 sepses:UnknownConnection(?id, ?param8),
+	 sepses:UnknownConnection(?id, ?param9),
+	 sepses:UnknownConnection(?id, ?param10),
+	 sepses:UnknownConnection(?id, ?param11),
+	 sepses:UnknownConnection(?id, ?param12),
+	 sepses:UnknownConnection(?id, ?param13),
+	 sepses:UnknownConnection(?id, ?param14),
+	 sepses:UnknownConnection(?id, ?param15),
+	 sepses:UnknownConnection(?id, ?param16),
+	 sepses:UnknownConnection(?id, ?param17),
+	 sepses:UnknownConnection(?id, ?param18),
+	 sepses:UnknownConnection(?id, ?param19),
+	 sepses:UnknownConnection(?id, ?param20),
+	 sepses:UnknownConnection(?id, ?param21),
+	 sepses:UnknownConnection(?id, ?param22),
+	 sepses:UnknownConnection(?id, ?param23),
+	 sepses:UnknownConnection(?id, ?param24),
+	 sepses:UnknownConnection(?id, ?param25),
+	 sepses:UnknownConnection(?id, ?param26),
+	 sepses:UnknownConnection(?id, ?param27),
+	 sepses:UnknownConnection(?id, ?param28),
+	 sepses:UnknownConnection(?id, ?param29),
+	 sepses:UnknownConnection(?id, ?param30),
+	 sepses:UnknownConnection(?id, ?param31),
+	 sepses:UnknownConnection(?id, ?param32),
+	 sepses:UnknownConnection(?id, ?param33),
+	 sepses:UnknownConnection(?id, ?param34),
+	 sepses:UnknownConnection(?id, ?param35),
+	 sepses:UnknownConnection(?id, ?param36),
+	 sepses:UnknownConnection(?id, ?param37),
+	 sepses:UnknownConnection(?id, ?param38),
+	 sepses:UnknownConnection(?id, ?param39),
+	 sepses:UnknownConnection(?id, ?param40),
+	 sepses:UnknownConnection(?id, ?param41),
+	 sepses:UnknownConnection(?id, ?param42),
+	 sepses:UnknownConnection(?id, ?param43),
+	 sepses:UnknownConnection(?id, ?param44),
+	 sepses:UnknownConnection(?id, ?param45),
+	 sepses:UnknownConnection(?id, ?param46),
+	 sepses:UnknownConnection(?id, ?param47),
+	 sepses:UnknownConnection(?id, ?param48)
+} .
+
+# Example: Invalid user from <*> port <*>
+sepses:LogLine_fd03fc20[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: Connection closed by invalid user <*> port <*> [preauth]
+sepses:LogLine_51e68d3a[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?ip1, xsd:string ?port2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:Ip(?id, ?ip1),
+	 sepses:Port(?id, ?port2)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; <*> ; USER=root ; COMMAND=/usr/bin/auditbeat setup -e -E <*> -E output.elasticsearch.hosts=[localhost:<*>] -E <*> -E <*> -E setup.kibana.host=localhost:<*>
+sepses:LogLine_19a6fb73[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2, xsd:string ?param3, xsd:string ?param4, xsd:string ?param5, xsd:string ?param6, xsd:string ?param7] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2),
+	 sepses:UnknownConnection(?id, ?param3),
+	 sepses:UnknownConnection(?id, ?param4),
+	 sepses:UnknownConnection(?id, ?param5),
+	 sepses:UnknownConnection(?id, ?param6),
+	 sepses:UnknownConnection(?id, ?param7)
+} .
+
+# Example: fekaputr : TTY=pts/<*> ; PWD=/etc/logstash ; USER=root ; COMMAND=/usr/bin/auditbeat setup -e -E output.file.enabled=true -E setup.kibana.host=localhost:<*>
+sepses:LogLine_5e32d106[ottr:IRI ?id, xsd:datetime ?timeStamp, xsd:string ?message, xsd:string ?templateHash, xsd:string ?param1, xsd:string ?param2] :: {
+	 sepses:BasicLogLineInformation(?id, ?timeStamp, ?message, ?templateHash),
+	 sepses:Type(?id, :Logline),
+	 sepses:UnknownConnection(?id, ?param1),
+	 sepses:UnknownConnection(?id, ?param2)
+} .

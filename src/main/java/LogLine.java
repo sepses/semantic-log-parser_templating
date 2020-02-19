@@ -1,11 +1,8 @@
 import org.apache.commons.csv.CSVRecord;
+import org.apache.jena.base.Sys;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Class representation of a logline
@@ -35,21 +32,41 @@ public class LogLine {
         this.Content = Content;
         this.EventId = EventId;
         this.EventTemplate = EventTemplate;
-        this.ParameterString = ParameterString;
+//        this.ParameterString = ParameterString;
+
+//        if(EventId.equals("bf9b6a0d")) {
+//            System.out.println("---");
+//        }
+
+        // *** creating standard log line template
+//        if(Content.contains("from 164.52.24.164 port 53342")) {
+//            System.out.println("___");
+//        }
 
         this.ParameterList = new ArrayList<Pair>();
+        String paramStringValue = ParameterString.replaceAll("\", '", "', '");
+        paramStringValue = paramStringValue.replaceAll("', \"", "', '");
+        this.ParameterString = paramStringValue;
 
-        Pattern pattern = Pattern.compile("\'([^\'^,]*)\'");
-        Matcher matcher = pattern.matcher(ParameterString);
-        while(matcher.find()) {
-            //System.out.println(matcher.group(1));
-            this.ParameterList.add(new Pair(matcher.group(1), null));
+        if (paramStringValue.length() > 4) { // basically if it's not empty
+            String rawParams = paramStringValue.trim().substring(2, ParameterString.length() - 2);
+            String[] params = rawParams.split("', '");
+            for (String param : params) {
+                this.ParameterList.add(new Pair(param, null));
+            }
         }
 
-//        for (String param : Arrays.asList(ParameterString.substring(1, ParameterString.length() - 1).split(","))) {
-//            if(!param.trim().equals(""))
-//                this.ParameterList.add(new Pair(param.trim().replaceAll("'", ""), null));
-//        }
+        //        Pattern pattern = Pattern.compile("\'([^\'^,]*)\'");
+        //        Matcher matcher = pattern.matcher(ParameterString);
+        //        while(matcher.find()) {
+        //            //System.out.println(matcher.group(1));
+        //            this.ParameterList.add(new Pair(matcher.group(1), null));
+        //        }
+
+        //        for (String param : Arrays.asList(ParameterString.substring(1, ParameterString.length() - 1).split(","))) {
+        //            if(!param.trim().equals(""))
+        //                this.ParameterList.add(new Pair(param.trim().replaceAll("'", ""), null));
+        //        }
     }
 
     public static LogLine createFromLogline(CSVRecord logLine) {
@@ -57,11 +74,11 @@ public class LogLine {
                 logLine.get(5), logLine.get(6), logLine.get(7), logLine.get(8), logLine.get(9));
     }
 
-    class Pair{
+    class Pair {
         public String key;
         public String value;
 
-        public Pair(String key, String value){
+        public Pair(String key, String value) {
             this.key = key;
             this.value = value;
         }

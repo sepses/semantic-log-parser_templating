@@ -1,0 +1,423 @@
+hash,content,template,keywords
+f2877db7eb951ed38844aab6c40bf16945164d5d31960d5ff442341c3fe9d1da,[<*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:ec:bd:1d:<*>:<*>:d4:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 SYN URGP=<*>,sepses:LogLine_e2534081,UFW BLOCK
+338c0959f5e2028c5647a83aa4188a052acf26eee8d851a75b5387b765ac2aab,[<*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:ec:bd:1d:<*>:<*>:d4:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x02 PREC=0x00 TTL=<*> ID=<*> DF PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 CWR ECE SYN URGP=<*>,sepses:LogLine_691600d7,UFW BLOCK|df cwr ece syn
+30959976ed56fc19d013f1866d4b6a42a988fc31a4313e6544cd6bdbfef003a8,[<*>.<*>] [UFW BLOCK] IN=ens160 OUT= <*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> DF PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 SYN URGP=<*>,sepses:LogLine_8045ca6d,UFW BLOCK|df syn
+59d7c7e931c6d13483e3c84ac7c6a96956d8d7134655edadc4e1730d9ab50bf7,[<*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:<*>:<*>:<*>:<*>:<*>:<*>:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> PROTO=<*>,sepses:LogLine_41e742d2,UFW BLOCK
+83f54fc91d93d3d50d876ebc247c7f5203f0bafe4d3954faca83e6e71dd31144,[<*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:ec:bd:1d:<*>:<*>:d4:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> DF PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 ACK PSH URGP=<*>,sepses:LogLine_68878c94,UFW BLOCK|df ack psh
+cbce27ab89a9d180c258099e20ed9096f35b31c95c85641d6fbcccc8d533f70a,[ <*>.<*>] Initializing cgroup subsys <*>,sepses:LogLine_7de1c901,initialize cgroup subsy
+60cc65b54de7c4e99a190fe7a4b8c874c09aeacb0bddd890d8cfd4d05cb99305,[ <*>.<*>] Linux version <*>.<*>.<*>-<*>-generic (buildd@lgw01-amd64-<*>) (gcc version <*>.<*>.<*> <*> (Ubuntu <*>.<*>.<*>-6ubuntu1~<*>.<*>.<*>) ) #<*>-Ubuntu SMP Wed Jan <*> <*>:<*>:<*> UTC <*> (Ubuntu <*>.<*>.<*>-<*>.<*>-generic <*>.<*>.<*>),sepses:LogLine_8a8c25cc,linux version|gcc version|ubuntu1 ~|ubuntu smp wed Jan
+c6c6ff0e3fe83ec82e035a7a8a5b5d69c11fd5fe9f9fdef6f726c057e25c778d,[ <*>.<*>] Command line: BOOT_IMAGE=/vmlinuz-<*>.<*>.<*>-<*>-generic root=/dev/mapper/fajar--server--vg-root ro,sepses:LogLine_34a9bed2,command line
+3ca581e7e50644ce21c1d2d566da26b366a1c840dd7eb51c42153846ba9c4c60,[ <*>.<*>] KERNEL supported cpus:,sepses:LogLine_965b1ec6,kernel support cpus
+71d4de40c0674544a36faaf0aa6e0356c18a95e3289274a881116ca9f8882544,[ <*>.<*>] <*> <*>,sepses:LogLine_936b8562,
+124b190cf1cc392edce7d6c3d570dd5cfdd6fec3bb88945bd8760350e1ebbf94,[ <*>.<*>] <*> fast <*> <*>,sepses:LogLine_5ee2d27d,
+334eb822ab4960da04952cadb4aace24445070d015b83da73fecccc7693aadd3,"[ <*>.<*>] x86/fpu: xstate_offset[<*>]: <*>, xstate_sizes[<*>]: <*>",sepses:LogLine_94e7a6df,xstate _ offset
+7388b7ce0130f892ac842692d7b22133129c44485c7e03fdddf9891d5919f87e,[ <*>.<*>] x86/fpu: Supporting XSAVE feature <*> 'x87 floating point registers',sepses:LogLine_3ed8a386,support XSAVE feature|x87 float point register
+a75aea12e086b7cad3b4bb2b6be71f3b3662c9ee2090f104e6ba82bf8d28efba,[ <*>.<*>] x86/fpu: Supporting XSAVE feature <*> <*> registers',sepses:LogLine_c809b8c8,support XSAVE feature
+bf9fe9b9434f3ce689be7411f4295e510482b3ffa8d893d218d46af10a9d4625,"[ <*>.<*>] x86/fpu: Enabled xstate features 0x7, context size is <*> bytes, using 'standard' format.",sepses:LogLine_37817a0a,enable xstate feature 0x7|context size be
+c5e5c699d71b8d60c8dff966a5809235c47cf65a8cfc5ff431d900e8c102fb2c,[ <*>.<*>] e820: BIOS-provided physical RAM map:,sepses:LogLine_0fc7c202,bios-provided physical RAM map
+8f7fa3be7d7d83ec1d66b8d3161c720011e8f92acfa26f5921b52882e532a674,[ <*>.<*>] BIOS-e820: [mem <*> <*>,sepses:LogLine_d4d60197,
+64b1a84eb44906d82eb531067349d4fc2a2302842ce52a4b61cc94d61f3d9e4f,[ <*>.<*>] BIOS-e820: [mem <*> ACPI <*>,sepses:LogLine_976560cf,
+a7b20a877d1a193f0f94f897e4043d9db55c94085e2531cb65e03721813730e5,[ <*>.<*>] NX (Execute Disable) protection: active,sepses:LogLine_a2cd9fdb,execute disable
+2db31d52007dc890a9d5f0a258f172c24c2bb05701bbaceed180c36afbe20c9a,[ <*>.<*>] SMBIOS <*>.<*> present.,sepses:LogLine_271e8bd5,
+4dae96b852ccbfbcdea62af1988124d337fce5558a86187800e945358dd80f13,"[ <*>.<*>] DMI: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS <*>.<*> <*>/<*>/<*>",sepses:LogLine_6e92fae4,VMware Virtual Platform/440BX Desktop Reference Platform
+a8ae75dc887c0a6b7eda7bc7c7c46603fdc614d5d601fe0ca5a17fe1198af7c4,[ <*>.<*>] Hypervisor detected: VMware,sepses:LogLine_813dc429,hypervisor detect
+e64d33280cabaa92ee5750bbe4d91da13b8218a3c5de33f3648036d0ec69240f,[ <*>.<*>] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved,sepses:LogLine_66439c35,usable reserve
+90bca318950de2f220402f5f1aa9d4a1a9a2b56f2ad05d5b0339fb0110abd2e0,[ <*>.<*>] e820: remove [mem 0x000a0000-0x000fffff] usable,sepses:LogLine_1f70e9aa,
+16a9b3dee4ed6995443ca1542784f220ae31133e75c27b7b2727ecc704d64460,[ <*>.<*>] e820: last_pfn = 0x80000 max_arch_pfn = 0x<*>,sepses:LogLine_d7329b75,last _ pfn|arch _ pfn 0x
+97202cc7698f417546251f1ad744a392a8f823d2a378c09f684e39b6be68f070,[ <*>.<*>] MTRR <*> <*> <*>,sepses:LogLine_1dbe8e7a,
+c6237dd9fc35042931a5b7b9035f5643525c02bebbc6ebba8e2feb4b5aecbcc5,[ <*>.<*>] <*> base <*> mask FF80000000 write-back,sepses:LogLine_eefc9f89,mask ff80000000 write-back
+a93c52b2e589632e636e8a729bdf7b086ec746d6203fa4a1c67fa170c47f8f2e,"[ <*>.<*>] x86/PAT: PAT MSR is <*>, disabled.",sepses:LogLine_f40d2f68,PAT msr be
+c7851ab5d6ec618328aadebacb93e9d62157c00b854826536c31f434128cbd38,[ <*>.<*>] x86/PAT: Configuration [<*>-<*>]: WB WT UC- UC WB WT UC- UC,sepses:LogLine_8e352167,WB WT uc|uc WB WT uc
+592df76cc1f0a3143620ea8d6b8a1ba2a91ef2dc70833fcb618be71674db686d,[ <*>.<*>] found SMP MP-table at [mem 0x000f6bf0-0x000f6bff] mapped at [ffff8800000f6bf0],sepses:LogLine_ae149550,find smp mp-table
+ff546f088a3b6c5488590d7f2addf1936958c52eb79059b889c5dfb2494e6fe5,[ <*>.<*>] Scanning <*> areas for low memory corruption,sepses:LogLine_858533db,low memory corruption
+1d9bf18dd87d2dd31c5630c603460b4c47d68ae296cd704684e2f952404aa060,[ <*>.<*>] Base memory trampoline at [ffff880000098000] <*> size <*>,sepses:LogLine_abff00c8,Base memory trampoline
+af8a37989fe383a35d49aa91cbc836e054cd1b96399345b4b7773299965f40b2,[ <*>.<*>] BRK <*> <*> PGTABLE,sepses:LogLine_bd206d38,
+f38a91fa42cd56146ba2d091810a612c9e5ce2aa1fb136c6ea558b30fd5e79ed,[ <*>.<*>] <*> [mem <*>,sepses:LogLine_1c598435,
+7265eb722f61471fa843cc7832f81630bc394c4b10135413fe6245946c90322e,[ <*>.<*>] ACPI: Early table checksum verification disabled,sepses:LogLine_5e4615b4,early table checksum verification disabled
+f054c64d8fb10ab3964053946a897e9a05de7c347c289fbfdecdc7a53a78703f,[ <*>.<*>] ACPI: RSDP 0x00000000000F6B80 <*> (v02 PTLTD ),sepses:LogLine_7126fd9e,rsdp 0x00000000000f6b80|v02 ptltd
+483398966dd664721c10a0081489481a5c5eda2e1b2757f0d43af2d8f0772624,[ <*>.<*>] ACPI: XSDT 0x000000007FEF117A 00005C (v01 INTEL 440BX <*> VMW <*>),sepses:LogLine_34a2ae9e,xsdt 0x000000007fef117a 00005c|v01 intel 440bx
+81921f251d18b3408f9714698bb9f584272fe012a4050f6041c2c5f1cf159224,[ <*>.<*>] ACPI: FACP 0x000000007FEFEE73 0000F4 (v04 INTEL 440BX <*> PTL 000F4240),sepses:LogLine_cc3c28fc,facp 0x000000007fefee73 0000f4|v04 intel 440bx|PTL 000f4240
+2d4832d7ca5901805e756fdd7ae43832664e20f6f5630110878313dad2f61808,[ <*>.<*>] ACPI: <*> <*> <*> (v01 PTLTD <*> <*> <*> <*>),sepses:LogLine_b36c548c,v01 ptltd
+6f06c3ad1d05ec2ca6ce3e814ea05f75842da7c0018d84e66e3f399a63360389,[ <*>.<*>] ACPI: <*> <*> <*>,sepses:LogLine_384a7d61,
+5e52d7ace9406dd74be8f72fecca5f58422438e56780cb6ff3f664147e25b8fb,[ <*>.<*>] ACPI: APIC 0x000000007FEF137A 00005E (v01 PTLTD ? APIC <*> LTP <*>),sepses:LogLine_595e0b06,APIC 0x000000007FEF137A 00005e|v01 ptltd
+b866be4532d537b485b1a13785ed62c2925d409aeb355dcdbec2af0c3f1c2448,[ <*>.<*>] ACPI: SRAT 0x000000007FEF1276 0000C8 (v02 VMWARE MEMPLUG <*> VMW <*>),sepses:LogLine_36f4b3e5,srat 0x000000007fef1276 0000c8|v02 vmware memplug
+df1627cc57bcc37159e158efa2a599e32c4fd6fad706eac5b0f4d4b62473eb9c,[ <*>.<*>] ACPI: <*> <*> <*> (v01 VMWARE VMW <*> <*> VMW <*>),sepses:LogLine_6b96fb92,v01 vmware vmw
+fcecce57b6d1c15846bd9eed3d8ce65fd0b539a60a257ec6db4d152241065e18,[ <*>.<*>] ACPI: Local APIC address 0xfee<*>,sepses:LogLine_33c2304b,local APIC address 0xfee
+8783bf2d4d7aac8135c57adf818a9b9474bd5dfef11552dc3966581eec11081f,[ <*>.<*>] SRAT: PXM <*> -> APIC <*> -> Node <*>,sepses:LogLine_3a0052b7,
+adcc80c5fdcd7bd8ca9785a5160b466b4d28034335a1250f6a40de388e5131e2,[ <*>.<*>] SRAT: Node <*> PXM <*> [mem <*>,sepses:LogLine_4280e377,
+9dd30324e084868b2a8936a6b06949d89db4f0ce7703573e20582fc859941e94,[ <*>.<*>] NUMA: Node <*> [mem <*> + [mem <*> -> [mem <*>,sepses:LogLine_01621e8e,
+619782a37776bceb96edeeb0a219bf341775c536a235b36ca6bca86687321997,[ <*>.<*>] <*> <*> [mem <*>,sepses:LogLine_b6667f9b,
+7f0d9761f1bd4da248d266b93cbe17229bef3350aecc67bae15f890fb91c5073,[ <*>.<*>] Movable zone start for each node,sepses:LogLine_64c52242,movable zone start
+52e20d80be1db1ea3b31d41314496e8723d1a3ab04eca846bd27faed7d699757,[ <*>.<*>] Early memory node ranges,sepses:LogLine_a091d2c8,memory node range
+262b61e44d146655b2ec6d774bb5a2417e9269a0e513235cdeda0c19b4d2dac6,[ <*>.<*>] Initmem setup node <*> [mem 0x0000000000001000-0x000000007fffffff],sepses:LogLine_7fbedda6,Initmem setup node
+a7402a5159ed6d1f4044bc5b96207bdc343e06fbfafe12894c1d87438dd224b3,[ <*>.<*>] On node <*> totalpages: <*>,sepses:LogLine_6d7e682c,
+11ca43ecb00ad5e631b75d0d90be53d22ef0b268d69013ab19b088890270ff74,[ <*>.<*>] <*> zone: <*> pages used for memmap,sepses:LogLine_8f605fdb,page use
+59aa6e037cace971a11fbba3df27e01d13b2a8ce96d41eba91b303e9c99503c4,[ <*>.<*>] DMA zone: <*> pages reserved,sepses:LogLine_4f135b04,DMA zone|page reserve
+692553ace2852e3bfba77eb66d6d9d718307aeb377e99dcb8b51dceb38ea04ba,"[ <*>.<*>] <*> zone: <*> pages, LIFO batch:<*>",sepses:LogLine_c61c09e1,LIFO batch
+2d55f6f68b17dad07f1083602452bd562c5234f1e9ab28d7e13f9f3436b7b73d,[ <*>.<*>] ACPI: PM-Timer IO Port: 0x<*>,sepses:LogLine_b78b9daf,pm-timer io Port
+bb7c5b6cd3fef22eb703271c8ef9a045a8606744ad977526f45534944ad325cd,[ <*>.<*>] ACPI: LAPIC_NMI <*> high edge lint[0x1]),sepses:LogLine_51efaf41,high edge lint
+888c6dc6da96e1e04a35af9a88a7c5f33f9f84815e63687a8e54c6c215e2b88c,"[ <*>.<*>] IOAPIC[<*>]: apic_id <*>, version <*>, address 0xfec00000, GSI <*>-<*>",sepses:LogLine_a7e15138,apic _ id|address 0xfec00000
+072d2e7b0b664507448674da0bbdebd93b8f9e6f708676fcbfdf7e4df5340606,[ <*>.<*>] ACPI: INT_SRC_OVR (bus <*> bus_irq <*> global_irq <*> high edge),sepses:LogLine_956ed7df,global _ irq|high edge
+bc886832d97ad586c3f0258a0ca1ec1088666ffd18150374924c20f5ffe86175,[ <*>.<*>] ACPI: <*> used by override.,sepses:LogLine_908df579,
+74a6bb223cc3c725b01199ecdec6a4839f87aba448062fbaeee29a00b9465912,[ <*>.<*>] Using ACPI (MADT) for SMP configuration information,sepses:LogLine_2d06faa7,use acpi|smp configuration information
+600bdee49b0236b12be8ad6dcee0174409c2a35e72eec7857b0c2e1ba651343d,[ <*>.<*>] ACPI: HPET id: 0x8086af01 base: 0xfed<*>,sepses:LogLine_ecd5c8ee,HPET id|0x8086af01 base
+979a4255c02f992110c641f3d5051641129405e8076f4fd6f1d9812c5e79ccf1,"[ <*>.<*>] smpboot: Allowing <*> CPUs, <*> hotplug CPUs",sepses:LogLine_9b8c143d,hotplug cpus
+bf4b471a6cd8424a0b05d1cf48aa2f12949a69e932fa3ca2147ae2769a4001ea,[ <*>.<*>] PM: Registered nosave memory: [mem <*>,sepses:LogLine_adb3b7e0,Registered nosave memory
+413f38e2b353ad517f6ac8808c79eeaa34e988996a5e4a394fb4d17bcb640873,[ <*>.<*>] e820: [mem 0x80000000-0xefffffff] available for PCI devices,sepses:LogLine_a1dfe2a5,pci device
+2e158169cf0d93db33f4d186283790dba89a94e7ef2978e71d42af0368f88d07,[ <*>.<*>] Booting paravirtualized kernel on <*> <*>,sepses:LogLine_4a78850e,boot paravirtualized kernel
+ef2d9aaa9c72a0a5ca34746e8e9e9ad786c9af02b95df34f704804837f8e40e2,[ <*>.<*>] clocksource: <*> mask: <*> max_cycles: <*> max_idle_ns: <*> ns,sepses:LogLine_86aa80c1,max _ cycle|idle _ n
+1c912864bfeec746e09887d3cb3c8c1a68a6433a6253c6b43f4b38f726aa5d49,[ <*>.<*>] setup_percpu: NR_CPUS:<*> nr_cpumask_bits:<*> nr_cpu_ids:<*> nr_node_ids:<*>,sepses:LogLine_179bb8e8,setup _ percpu|nr _ cpumask|nr _ node _ id
+e9f68273772e5b5b82fade1a9b681aad77bf26f83135ba0432a2b38f3974b563,[ <*>.<*>] PERCPU: Embedded <*> pages/cpu @ffff88007fc00000 s95448 r8192 d31528 u<*>,sepses:LogLine_1b9d80aa,s95448 r8192 d31528 u
+ce2a565de7550a8b8eba55389768d1334c884e031d32d48e1f8ad46aa76fce73,[ <*>.<*>] pcpu-alloc: <*> r8192 <*> u1048576 alloc=<*>*<*>,sepses:LogLine_77eecf37,
+b43dbb256464ca206bd79c48699b0aa8ea1910e88adc4b400d1e89e89008cdda,[ <*>.<*>] pcpu-alloc: [<*>] <*> <*>,sepses:LogLine_2386911f,
+b1e359f339b8b7f6f3eef44842104ddecc5d735969ef47e9ee78701eda6e7c8b,"[ <*>.<*>] Built <*> zonelists in Node order, mobility grouping on. Total pages: <*>",sepses:LogLine_e201648d,Node order|mobility group|total page
+20eb8712e6517e4ea7e54fa283947823e95730156ddd9bb5519587df0b73cff3,[ <*>.<*>] Policy zone: DMA<*>,sepses:LogLine_da25381a,Policy zone
+293b197572e3a5cbc1a33d464515e3c81f8dcf1e8674bd9999dd864565cfa9c0,[ <*>.<*>] Kernel command line: BOOT_IMAGE=/vmlinuz-<*>.<*>.<*>-<*>-generic root=/dev/mapper/fajar--server--vg-root ro,sepses:LogLine_1d9945ee,Kernel command line
+84cac3f8288907f27eea38f558666c28b806f45b03cd669ce26902499f86501f,"[ <*>.<*>] <*> hash table entries: <*> (order: <*>, <*> bytes)",sepses:LogLine_6a78c96c,hash table entry
+21a232df236346c3ade16ed86f454aa4c674a39cb533ca3c0373aa1f5b32f380,[ <*>.<*>] Calgary: detecting Calgary via BIOS EBDA area,sepses:LogLine_0ab61629,detect Calgary|BIOS EBDA area
+c617e4f3e46ba62752473040127517abfd7f4054d8c843d0066d65c912958751,[ <*>.<*>] Calgary: Unable to locate Rio Grande table in EBDA - bailing!,sepses:LogLine_610ef30a,locate Rio Grande table
+ceaea9f7f3184be53d2363ee500e1b1cf35b03673acd479e87bfd7f1448d67f0,"[ <*>.<*>] Memory: <*> available <*> kernel code, <*> rwdata, <*> rodata, <*> init, <*> bss, <*> reserved, 0K cma-reserved)",sepses:LogLine_1f3e77cc,kernel code|0k cma-reserved
+35793aa3465f6bf5e8a62bce54520ff47d0c2364405c80853d740609d9045634,"[ <*>.<*>] SLUB: HWalign=<*>, Order=<*>-<*>, MinObjects=<*>, CPUs=<*>, Nodes=<*>",sepses:LogLine_0650e733,
+7661453864f06506ce3de1ded82216bf9ddf096bdb5bd32296ba0147eb2c4714,[ <*>.<*>] Kernel/User page tables isolation: enabled,sepses:LogLine_1c356206,Kernel/User page table isolation
+df732ed7580aa043cc70d0f0bb474fe89ad9dff15171050bd3ccece08ca76289,[ <*>.<*>] <*> RCU <*>,sepses:LogLine_6255ba77,
+063295bba61da6fb4d167e0fc8950b19363e2deaa84213461f5a067ce4dc0ec7,[ <*>.<*>] Build-time adjustment of leaf fanout to <*>.,sepses:LogLine_a0a81951,build-time adjustment|leaf fanout
+bbb1d0a6098009440d2956f961b1305a5d572b4458d5890238b12007a987f665,[ <*>.<*>] RCU restricting CPUs from NR_CPUS=<*> to nr_cpu_ids=<*>.,sepses:LogLine_e070cd54,rcu restrict cpus
+a604acac63024fa07e51373fc1e83b4719ef80fe4f2acba5194325a4097121ba,"[ <*>.<*>] RCU: Adjusting geometry for rcu_fanout_leaf=<*>, nr_cpu_ids=<*>",sepses:LogLine_1a1f9c67,adjust geometry
+70eec449b63d6df9923364295fadd52d1356f52fd8cbbdcbb083a20bc4e4ca5c,[ <*>.<*>] NR_IRQS:<*> nr_irqs:<*> <*>,sepses:LogLine_3af28b0e,nr _ irq
+ddb0e6f5568f23d441448daf1df050a0c160e8960bacd37856f421f71c52e73c,[ <*>.<*>] Console: colour VGA+ 80x<*>,sepses:LogLine_ba5a5b44,colour VGA
+42193de9a8399b643a2144c5903e5597506e5f93ce2aa5573ec37fda3cf2d8bf,[ <*>.<*>] <*> <*> enabled,sepses:LogLine_611864d2,
+4be307fb32ec5de09696ff3cdbf434c6532ff66a8728fb6f1ee0f826879e2e77,[ <*>.<*>] hpet clockevent registered,sepses:LogLine_d9ee28bb,hpet clockevent register
+7da9fc4320084736e5fcc54af1222718f2a12fa491ce788b563cd5282d12a3a1,[ <*>.<*>] TSC freq read from hypervisor : <*>.<*> MHz,sepses:LogLine_e41e0dc1,TSC freq read
+488cda6bc3081719e90a6e3919b5ab9fb60dd4da81a971261c190bc9524a6fed,[ <*>.<*>] tsc: Detected <*>.<*> MHz processor,sepses:LogLine_835ab552,mhz processor
+0a51f3dbacbf9b9d6ccf47007b46d17b63cc62cc87e1c9e3e7c610ea56602111,[ <*>.<*>] Calibrating delay loop (skipped) preset value.. <*>.<*> BogoMIPS (lpj=<*>),sepses:LogLine_c7b610db,calibrate delay loop|preset value
+e76faa10caafb9272ee3ffc8d18ca0e16eb65065382242ef1bcef02791f37a52,[ <*>.<*>] pid_max: default: <*> minimum: <*>,sepses:LogLine_f518058d,
+cbf6be942cf27222632a944df5f21439f9ba1718300b11925d30b370c1803cbd,[ <*>.<*>] ACPI: <*> ACPI AML tables successfully acquired and loaded,sepses:LogLine_bfc45663,ACPI aml table
+d7a13cdd7762c3c9ae89e659ebfaf22a650be3d24fd092381c352a67d7799d58,[ <*>.<*>] <*> <*> initialized,sepses:LogLine_39dbb8e6,
+7511a0cc7b9cb62120b43537102ba9d345722b2ab394cede7d06a71ca43d69aa,[ <*>.<*>] Yama: becoming mindful.,sepses:LogLine_2824e23c,become mindful
+6ab5a67acdb4ff8b12ef6edf160f6cf8ea52b35e84615f6eca86fe85fd195f94,"[ <*>.<*>] <*> <*> hash table entries: <*> <*> <*>, <*> bytes)",sepses:LogLine_e2564448,hash table entry
+8a89dc54950bbf4b655f7b8e27f96a44fe74348fa96029be8064d0ce1dd46ef8,"[ <*>.<*>] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'",sepses:LogLine_e473cce0,
+32a7650bad7ba2c1be357050df57f742cf9f534e2945dac89c2ade560be48232,[ <*>.<*>] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(<*>),sepses:LogLine_af6445fd,
+99c9d6b9820e75cd3bc251f58ed9caca6ee8f77794190b53717afa151ff09029,[ <*>.<*>] mce: CPU supports <*> MCE banks,sepses:LogLine_5418bced,CPU support|MCE bank
+b64d285656c69e9e9518a37028724730ff1b25c309e4681bf2ca4494b2398cc5,"[ <*>.<*>] Last level iTLB entries: 4KB <*>, 2MB <*>, 4MB <*>",sepses:LogLine_fd5fafaf,last level itlb entry
+3b8ac30c889a1f92e3691341967419b6e69ac41bad0ae1f90cb2b4345e9151fb,"[ <*>.<*>] Last level dTLB entries: 4KB <*>, 2MB <*>, 4MB <*>, 1GB <*>",sepses:LogLine_7e4285f0,last level dtlb entry
+30149a7d1c5d2a54880648f51569c053e6e82c9fb84220f2758b5093ef8be9db,[ <*>.<*>] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization,sepses:LogLine_0a5fefa9,Spectre V1|usercopy/swapgs barrier|__ user pointer sanitization
+20036be6abcdcc3664e52a909aa5b9e6d8ed3d74847353741af053d376ae4e38,[ <*>.<*>] Spectre V2 : Mitigation: Full generic retpoline,sepses:LogLine_2b81bf58,Spectre V2|full generic retpoline
+ab31c17bbc0a9658810ccb178cb9804810e29d7c0fb8ad73727e930ee39bd1c5,[ <*>.<*>] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch,sepses:LogLine_0b47a21f,Spectre V2|Spectre v2|spectrersb mitigation|fill rsb|context switch
+701cbbf1b09ec43bd163857159df70c3907f105127e0ef87302737fa7982184b,[ <*>.<*>] Speculative Store Bypass: Vulnerable,sepses:LogLine_e996fac8,speculative store bypass
+153b8cda6e365d11c4f0b15140e6036d1211f48bc9d55b2294cf0e95188cbd82,"[ <*>.<*>] MDS: Vulnerable: Clear CPU buffers attempted, no microcode",sepses:LogLine_645d03ba,clear CPU buffer attempt
+88ea3096d14a44c9d2c3b81a426c05e8a59a60567e9448cd69094dd9690c8ea5,[ <*>.<*>] Freeing <*> <*> memory: <*>,sepses:LogLine_b69059a5,
+8db53c583d60cb6a798d4003681b0ca64a4e7c8dea7f206c7af7886f4ac4e2f7,[ <*>.<*>] ftrace: allocating <*> entries in <*> pages,sepses:LogLine_bff63748,
+2ccef8d83a380ab97902490d2bde6870830bd3d487afcad742c528627678e52d,[ <*>.<*>] smpboot: APIC(<*>) Converting physical <*> to logical package <*>,sepses:LogLine_3a4be9c9,convert physical|logical package
+135e52129608f104f59766b58c0251210ab132bc25f5a06cee84430c97448e72,[ <*>.<*>] smpboot: Max logical packages: <*>,sepses:LogLine_bb2b44d1,Max logical package
+cd340a50206af313aa066b74186c82e0cb24107491763356c2b2a011e46e3f88,[ <*>.<*>] ..TIMER: vector=0x30 apic1=<*> pin1=<*> apic2=<*> pin2=-<*>,sepses:LogLine_78ea5c8e,
+baafda99a81f35e7896483665ba6c006f02961f6b20f789b6f23dbe156cd00ae,"[ <*>.<*>] smpboot: CPU0: Intel(R) Xeon(R) CPU E5-<*> <*> @ <*>.00GHz (family: 0x6, model: 0x2d, stepping: 0x7)",sepses:LogLine_1bd5346d,
+27dfb9c2e74d843b2b9766835f1a111c9f2287efc0655a6332fbe3b5a674104b,"[ <*>.<*>] Performance Events: <*>-deep LBR, SandyBridge events, core PMU driver.",sepses:LogLine_fd3c01e2,Performance event|deep lbr|SandyBridge event|core pmu driver
+fcd7af332f4198a946cc753dfd27c6e8ee955a305249ba43ca091c4899eafe7a,[ <*>.<*>] core: CPUID marked event: <*> <*> unavailable,sepses:LogLine_e249c6cf,CPUID mark event
+d4eae70b309b33cb11f28f152379fd0d0d15199d6f0c7e771134513c47c04bd6,[ <*>.<*>] core: CPUID marked event: 'instructions' unavailable,sepses:LogLine_d469deb6,CPUID mark event
+db145b66efecfa9042b81c619ba0d4f422db8a9d48edae7a2ad3c1a5fd395e70,[ <*>.<*>] ... version: <*>,sepses:LogLine_13ebd8b6,
+fd438b15c653e1efa17728b409fbc377e6ac628b2282103f51a260663e5e9a14,[ <*>.<*>] ... <*> <*> <*>,sepses:LogLine_adabb75c,
+2b614ccb3021f9c5f498e8cb9849952a9de9d0bab35a4bba06e2c6523f509582,[ <*>.<*>] NMI watchdog: disabled (cpu0): hardware events not enabled,sepses:LogLine_fde8afe0,NMI watchdog|hardware event
+5e33d1639104b6e50367317926cd5ce5983a5f9967ca7a8625bc18e38d0c6b59,[ <*>.<*>] NMI watchdog: Shutting down hard lockup detector on all cpus,sepses:LogLine_0cbed20b,NMI watchdog|lockup detector
+8484b1dcd1bfe9127b27fc8837c605ec2d802289036047d145c3e604dfeba23a,[ <*>.<*>] x86: Booting SMP configuration:,sepses:LogLine_0a1ec610,boot smp configuration
+a21098bb90d65d3988232e2ae1bb97100d57c9d18a13870d5f6957e4402ff60a,"[ <*>.<*>] .... node #<*>, CPUs: #<*>",sepses:LogLine_3388cb84,
+89f45dcbbc59b8e36a5f15485c3b09fb823c02123138ae445a1ac7f49d2dcdd4,[ <*>.<*>] Skipped synchronization checks as TSC is reliable.,sepses:LogLine_767a86b4,skip synchronization check|TSC be reliable
+ac91cdabeb3c439cd39a3bb834a2c2fa83a99f9e9102c7122fb46278888b259e,"[ <*>.<*>] <*> <*> up <*> node, <*> CPUs",sepses:LogLine_d691e0ee,
+64e05b5be63f99bd49232df0b792982d3786e9f7f706f6ff9dd72b9bc0251ead,[ <*>.<*>] smpboot: Total of <*> processors activated (<*>.<*> BogoMIPS),sepses:LogLine_674ff42a,processor activate
+0166975b279801be0e938f51cbff6477b7a191bb8ed8183620cd8e3dce0d60be,[ <*>.<*>] PM: Registering ACPI NVS region [mem 0x7feff000-0x7fefffff] (<*> bytes),sepses:LogLine_0d9b56a5,register ACPI NVS region|mem 0x7feff000-0x7fefffff
+16b5c8dc89366f292b5fb3746e0eb454953f0d68ff2c085af2e95065bd35f72e,[ <*>.<*>] pinctrl core: initialized pinctrl subsystem,sepses:LogLine_09628428,pinctrl core|initialize pinctrl subsystem
+8f8e815e03332e3bba7b25de903faf61e5f889262ec49b6745ef39615986b827,"[ <*>.<*>] RTC time: <*>:<*>:<*>, date: <*>/<*>/<*>",sepses:LogLine_0e55be4e,RTC time
+ceef31530becd637ffc3a5e63f03d2e51d334430033e59b1860e0712b4ddb0b4,[ <*>.<*>] NET: Registered protocol family <*>,sepses:LogLine_87d471e6,Registered protocol family
+5b031fd15d780f4948175315a342434eb4446a31f94c1d90e9340ee7e5d6bc1b,[ <*>.<*>] <*> using <*> <*>,sepses:LogLine_749fb7cd,
+152fde8cd17b35f1f1a52ebad58c87ea25aa9cffbfb1d7946149e2827665ab6d,[ <*>.<*>] <*> <*> not <*>,sepses:LogLine_f3689f48,
+c30dfff141518f800e8bdce0446b93360ecebb593b7fb0d85e70b0f94a7c7f6f,[ <*>.<*>] Simple Boot Flag at 0x36 set to 0x<*>,sepses:LogLine_39f16fb9,simple Boot Flag
+1fb711e56d46865079cf274f0a475a5782033d77b8ab014eac1302b752379feb,[ <*>.<*>] ACPI: bus type <*> registered,sepses:LogLine_6bbb3907,bus type
+db75ca7d7923616200acbb61fd824811e0beba0825dccfeb68c2a4edcf003921,[ <*>.<*>] <*> <*> <*> <*> <*> Controller Driver version: <*>.<*>,sepses:LogLine_7d7d0bad,controller driver version
+8cc87da06b5e38f6f7762252f23a09d976bdedb4fc7716c701e9eeec91d14248,[ <*>.<*>] PCI: MMCONFIG for domain <*> [bus <*>-7f] at [mem 0xf0000000-0xf7ffffff] (base 0xf0000000),sepses:LogLine_f6c1bca1,mem 0xf0000000-0xf7ffffff|base 0xf0000000
+e123a1f35a1372b42b8a8f2908b9305081d769dbb2dbe417e4aec557710fd4d8,[ <*>.<*>] PCI: MMCONFIG at [mem 0xf0000000-0xf7ffffff] reserved in E<*>,sepses:LogLine_7780451e,
+5510d7f1078073a0ba846f95d1e7d3a5f2954a861c1f6e21d0fffad1d0607e53,[ <*>.<*>] PCI: Using configuration type <*> for base access,sepses:LogLine_4e0fd40b,use configuration type|base access
+bc4f43d1c94904e2019db0b73f72a1866bc376131e3ebb0665ff91de79afd745,"[ <*>.<*>] core: PMU erratum BJ122, BV98, HSD29 workaround disabled, HT off",sepses:LogLine_ca5b8c2a,pmu erratum bj122|hsd29 workaround disabled
+e3c6c14d6950e8a345fe64a66c7539d98efbc93a1037abe03a61d55423da8ed5,[ <*>.<*>] mtrr: your CPUs had inconsistent variable MTRR settings,sepses:LogLine_7a01730e,cpus have inconsistent variable mtrr setting
+3d4dd37fd54653346a13f795cae3e42f5d8e4030c7bc8b703b8d3c1b646af405,[ <*>.<*>] mtrr: probably your BIOS does not setup all CPUs.,sepses:LogLine_a77b3f8e,bios do
+ecb7a8bdeed96c10051b0051b63c5ce9a54f9ca5047fe1336023e4a12e59f527,[ <*>.<*>] mtrr: corrected configuration.,sepses:LogLine_35d2915a,correct configuration
+b289d1e068ef774cb93fc72ab065407cafca59ecf30be473e2257a0c1fb6db2c,[ <*>.<*>] ACPI: Added <*> <*> <*>,sepses:LogLine_382e1fc9,
+3ab92e62ff84b46b02815ba3e89ca69dd6416cdac883319c3405b5a001fb78f7,[ <*>.<*>] <*> <*> <*> BIOS _OSI(Linux) query ignored,sepses:LogLine_e24b9f08,bio _ OSI|query ignore
+9d2ab8415edb80e60fd0f116b7712a0144e847486fe3b5ca49e9fcad91a16be4,[ <*>.<*>] ACPI: (supports S0 S1 S4 S5),sepses:LogLine_ab3133a9,support s0 s1 s4 s5
+cb4fdba9cd05e581d7ea79a250fa91ed5d35748abb7baa11bae9090fb71471b1,[ <*>.<*>] <*> Using <*> for <*> routing,sepses:LogLine_a19890d6,
+f93f162831129dfd294d6747049fc44aa9cc2383f50a43cf26218303b618e8d4,"[ <*>.<*>] PCI: Using host bridge windows from ACPI; if necessary, use ""pci=nocrs"" and report a bug",sepses:LogLine_7ca6598a,use host bridge window
+e1f7576d5a09bd2e382c78b395486b4c91dd3ccc5439099f11a67f1405707b54,[ <*>.<*>] ACPI: PCI Root Bridge [PCI0] (domain <*> [bus <*>-7f]),sepses:LogLine_cf4a2a09,pci root bridge
+18fb4b4cd06da6da700fa185bff45edffd1bbb72c5f956e454d9cc6e1b0e8a41,[ <*>.<*>] acpi <*> _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI],sepses:LogLine_44db36a9,os support|ExtendedConfig ASPM ClockPM Segments MSI
+484e020cfaf868ce7db32900edfc839fc54d89d09be3ee7f6661aa09fa103402,[ <*>.<*>] acpi <*> _OSC: platform does not support [AER],sepses:LogLine_6600d7ba,platform do
+b3d966c869d2dea1c28811149547406621552e54d767696823d774dbd567390c,[ <*>.<*>] acpi <*> _OSC: OS now controls [PCIeHotplug PME PCIeCapability],sepses:LogLine_7ff7b7e7,pciehotplug pme pciecapability
+b2b18cfcfe75e25c8dc8e821eb6736564e7c9a4a0b9e9b95bb2e4ebfb2d8a33f,[ <*>.<*>] PCI host bridge to bus <*>:<*>,sepses:LogLine_7c45b630,pci host bridge
+a012295c590d409ae7fd95b3cb59d607263ac9789445a47732ffb933bba85c41,[ <*>.<*>] pci_bus <*>:<*>: root bus resource <*> <*> window],sepses:LogLine_6124e846,root bus resource
+d70e2b2d0196599cef85efaa8b28735c83c112df44a5ceb8443204bb6b712318,[ <*>.<*>] pci_bus <*>:<*>: root bus resource [bus <*>-7f],sepses:LogLine_c1d2b6b9,root bus resource
+bcf68968e3cf57eee8235cd6274a8e67f467ebb14eacdd6ba3756081483ce6e2,[ <*>.<*>] pci <*> <*> type <*> class <*>,sepses:LogLine_aa827f26,
+c0a7dee7e6cd18c6f65d8038f9c7a17c9f99d3ddee5a13bd31903f117238e42b,[ <*>.<*>] pci <*> reg <*> <*> <*>,sepses:LogLine_7ffd691c,
+dfdda67880b301cfa5f67e17eb44350bea7680890384ec43074fc929ed40068d,[ <*>.<*>] pci <*>:<*>:<*>.<*>: legacy IDE quirk: reg <*> [io <*>,sepses:LogLine_181635a5,legacy ide quirk
+a585c1d83e1aa1b1c6c97f1fc8a28ef83ea8d52893cad2a1cbd931db32a5f292,[ <*>.<*>] pci <*>:<*>:<*>.<*>: quirk: [io <*> claimed by PIIX4 <*>,sepses:LogLine_b5f395e1,
+2e952534a3e2f7cc609a97715afcd5228a4a85d19af5eb644758a0d6bd3f5dad,[ <*>.<*>] pci <*> reg <*> [mem <*> <*>,sepses:LogLine_7e1a24b0,
+35ed116266aed0da403d093c7351ecdfb9dc3b542d36974871a4065ef4ebb617,[ <*>.<*>] pci <*>:<*>:<*>.<*>: System wakeup disabled by ACPI,sepses:LogLine_434921be,system wakeup disable
+0b4933999750ceb4358f9b3f49a656b92ffc4da8e058ba0209086cc31e450f5d,[ <*>.<*>] pci <*>:<*>:<*>.<*>: PME# supported from D0 D3hot D3cold,sepses:LogLine_6ea9aba3,d0 d3hot d3cold
+ac5cbdd286c08249db1ba7bc8dbe276d4f6e035e96f64a8f2a1c65ed8758901c,[ <*>.<*>] pci <*>:<*>:<*>.<*>: PCI bridge to [bus <*>,sepses:LogLine_43a333c5,pci bridge
+48f2c280726583ffc067d34bf36d843d5682d0da70d45ec75af586cd0c23eb8d,[ <*>.<*>] <*> <*> <*> registered,sepses:LogLine_dbd17d1c,
+356a1554ef6679c9081e646319df9593f5d41155c4e07767a95b983f4235d584,[ <*>.<*>] pci <*>:<*>:<*>.<*>: <*> <*> <*> <*> <*> (subtractive decode),sepses:LogLine_324e5dc8,subtractive decode
+0a65fcbff25909d4b192c873dfbdbc9475e3bf9964742ad497950f058b2515b2,[ <*>.<*>] pci <*>:<*>:<*>.<*>: <*> <*> <*> <*>,sepses:LogLine_32a4060e,
+b7d695fcdf6310bcb3314de8c2aa1ad6ad3b19a0753e9ca09f3cefa4a3a45eed,[ <*>.<*>] <*> <*> <*> <*> [mem <*> 64bit pref],sepses:LogLine_25ee4b72,
+f0ab2680e9e4e0e0a523503877aa6da88e39c3d1c1729e3636ad348e981149d8,[ <*>.<*>] pci <*>:<*>:<*>.<*>: supports D1 D<*>,sepses:LogLine_a7ced90a,support d1 d
+fa4a54064d0a6896e90ff4a6b835941e300869df71f9e00cc83d2332f1f12b1a,[ <*>.<*>] pci <*>:<*>:<*>.<*>: PME# supported from D0 D1 D2 D3hot D3cold,sepses:LogLine_eb82a5aa,d0 d1 d2 d3hot d3cold
+16436d76f13fe6a5b20ec9e51814a2e575349857d1ab3834082f5f0df856d47e,[ <*>.<*>] pci <*>:<*>:<*>.<*>: disabling ASPM on pre-<*>.<*> PCIe device. You can enable it with 'pcie_aspm=force',sepses:LogLine_bc87d2f2,disable ASPM|pcie device
+b642edb24ac223bcd621a76253a61ce8b058c3a0f984fb4aa4563c5589f69464,[ <*>.<*>] ACPI: PCI Interrupt Link [LNKA] (IRQs <*> <*> <*> <*> <*> *<*> <*> <*> <*> <*>),sepses:LogLine_a18a491c,PCI Interrupt link
+070d5f72bb3736528c0172eabd22dceb63d8be340ea9a641f641d192f38c8d33,[ <*>.<*>] ACPI: PCI Interrupt Link [LNKB] (IRQs <*> <*> <*> <*> <*> <*> <*> *<*> <*> <*>),sepses:LogLine_9a433613,PCI Interrupt link
+e1e2a4a6782cb2d641510fce165932dc1126ffcfa7c74765add277aa82053183,[ <*>.<*>] ACPI: PCI Interrupt Link [LNKC] (IRQs <*> <*> <*> <*> <*> <*> *<*> <*> <*> <*>),sepses:LogLine_90dd8aeb,PCI Interrupt link
+d2810de8b4c29b7ad7fba8fb47ad8128e9eca42b60394987cfd2dfd70832c547,"[ <*>.<*>] ACPI: PCI Interrupt Link [LNKD] (IRQs <*> <*> <*> <*> <*> <*> <*> <*> <*> <*>) *<*>, disabled.",sepses:LogLine_3287e46c,PCI Interrupt link
+d29ea9c1d5e2c447a6f7f71b0e4f2c1b087e3c83829689ceab671edd8d069e09,[ <*>.<*>] ACPI: Enabled <*> GPEs in block <*> to 0F,sepses:LogLine_dd22b4d7,
+a685c3a23b3fcfe4b87d5caacc1d7d31961e730d0adb39ce141b0f1580896f3b,[ <*>.<*>] vgaarb: setting as boot device: PCI:<*>:<*>:0f.<*>,sepses:LogLine_1a154d48,boot device
+6f813d3145547708e3ce533a8533611021270bd3e829c6c27407cc1f3cbdf338,"[ <*>.<*>] vgaarb: device added: PCI:<*>:<*>:0f.<*>,decodes=io+mem,owns=io+mem,locks=none",sepses:LogLine_6fb2a77a,device add
+e13ebdcc3ec7a30c49ef3a743c518614bd47bfd292ba86d33def94435608449e,[ <*>.<*>] vgaarb: bridge control possible <*>:<*>:0f.<*>,sepses:LogLine_b2d60953,bridge control possible
+bf874cb484903333a522d0993414172a68ac3ea1983b0423d0f76cc780fecf22,[ <*>.<*>] <*> <*> <*>.<*> <*>,sepses:LogLine_4a6409f7,
+037e9bb49692bd8ccaae4366398a1a59669273e11d8279b6c3671766b2448a00,[ <*>.<*>] usbcore: registered new <*> driver <*>,sepses:LogLine_eb4307e3,register new
+79eae5338c8217081e8ca18afcf411d57918597d1f0b671399116fd5828ae6e5,[ <*>.<*>] PCI: pci_cache_line_size set to <*> bytes,sepses:LogLine_a5db758e,pcus _ cache _ line _ size set
+1beeae0953570bb5a04d187adc27cc562564841b62e269deda69449297993d55,[ <*>.<*>] e820: reserve RAM buffer [mem <*>,sepses:LogLine_4790cbc8,reserve RAM buffer
+aca583da7d450ea1c1f59c57b7a75c779612a2673f55fee019e58de4708ac047,[ <*>.<*>] NetLabel: domain hash size = <*>,sepses:LogLine_47e096b1,domain hash size
+d2c63f46c52c02abbaabc7293494026fe4f4df4c1b0335c276594e02873036ae,[ <*>.<*>] NetLabel: protocols = UNLABELED CIPSOv<*>,sepses:LogLine_0364604f,protocol unlabele cipsov
+28ba78235f916dc0250575158f4bc518ba800e2f5810fdef30c71c32300f0751,[ <*>.<*>] NetLabel: unlabeled traffic allowed by default,sepses:LogLine_68b4478a,unlabeled traffic allow
+75dbe8f2a73d40f956d2e5600530634703a33b608c27e8d2440250d45eedd0e5,"[ <*>.<*>] hpet0: at MMIO 0xfed00000, IRQs <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>, <*>",sepses:LogLine_7eb4fb72,
+b98b402f6d42e794bc28654182e3165ffea76b15a1f8e09f6773e5f91a1b1304,"[ <*>.<*>] hpet0: <*> comparators, <*>-bit <*>.<*> MHz counter",sepses:LogLine_bc548c7d,mhz counter
+f3065a074b967e8ac64dcec23ee20d3fe66e2e10bf9676e2a274c50a0cecb76b,[ <*>.<*>] amd_nb: Cannot enumerate AMD northbridges,sepses:LogLine_059a9407,enumerate AMD northbridge
+bf2227ba21f4960b6b33e4655325a0960a802860d5f8e6da79c53215640dc40c,[ <*>.<*>] clocksource: Switched to clocksource <*>,sepses:LogLine_88047c89,
+3e5e2ed237135768b6469c841b13e5c4dbd40a38ff15276f153bed28399ee3c7,[ <*>.<*>] AppArmor: AppArmor Filesystem Enabled,sepses:LogLine_83ce5f94,AppArmor Filesystem enable
+9d63394ac88268285cfa85a5bba176f71806cd2b0fc63ed0d04af6858e4de43b,[ <*>.<*>] pnp: PnP ACPI init,sepses:LogLine_1faaa63f,pnp acpi init
+f5daaefaed3ad43876abea5ceda6ffb958c13a5ca50f804697347d7dc98976fb,[ <*>.<*>] system <*>:<*>: <*> <*> has been reserved,sepses:LogLine_d9819c5a,have be reserve
+0bb19a0cf6a716815cadcbd049bd10d9759c4e3a6ca8df833bd9b9b30c7e7bf6,"[ <*>.<*>] <*> <*>:<*>: Plug and Play ACPI device, IDs <*> (active)",sepses:LogLine_bddfdc42,play acpi device
+72ccd636579a211821e8834299abc7fb9367b5d8c63ff8a4aab2a0fc54038f20,"[ <*>.<*>] system <*>:<*>: Plug and Play ACPI device, IDs PNP0103 PNP0c01 (active)",sepses:LogLine_09d5df2b,play acpi device|id pnp0103 pnp0c01
+9ee353e7b945a2e1b5bfdc3eb1257c2b90189bdb0e973024162bc782632c5dbe,[ <*>.<*>] pnp <*>:<*>: [dma <*>],sepses:LogLine_0c328929,
+828f18c4ca3c4109669dd29d4ce17ff77eb412e27a8b6fb47521e564c33da351,[ <*>.<*>] pnp: PnP ACPI: found <*> devices,sepses:LogLine_f89824e6,pnp acpi
+dfb56817510cf4fc7bbf63a353e507cd7ae7d578d59e4d45783c361196d4582f,[ <*>.<*>] pci <*>:<*>:<*>.<*>: bridge window [io 0x1000-0x0fff] to [bus <*> add_size <*>,sepses:LogLine_d5af3992,bridge window|io 0x1000-0x0fff
+5a58bd4deda855d6e24da3bc79da0bbe8a565ae4e1867f1a4baad24537982627,[ <*>.<*>] pci <*>:<*>:<*>.<*>: res[<*>]=[io <*> res_to_dev_res add_size <*> min_align <*>,sepses:LogLine_5eb87ed1,dev _ re add
+a792ea3578ae2564ee3cd690021b5f4f2b7e87774f1555c5cd7038ceca5cbe9a,[ <*>.<*>] pci <*> BAR <*>: assigned [mem <*> pref],sepses:LogLine_b444dd0a,
+e26cbb3ee1b16dde6ab1c3a67e7baa6fd1e9ccc97a38f73a887f6e85d047a30b,[ <*>.<*>] pci <*>:<*>:<*>.<*>: BAR <*>: <*> <*> <*> [io size 0x1000],sepses:LogLine_8f3a80ec,io size 0x1000
+1d253d50b4044a8883352f08f40f5189ace5b4f2bec5ed8f43b4cf58b4cfd93f,[ <*>.<*>] pci_bus <*>:<*>: resource <*> <*> <*> window],sepses:LogLine_b390ddbe,
+80bd7dd57ab336be04fca3d9a1922ec3099ca5475fff15a8050dd6b4c3ee031e,[ <*>.<*>] pci_bus <*> resource <*> <*> <*>,sepses:LogLine_0aaa46c9,
+2d1d406ffa84687852607eb3ce27ae0b751af3666025beeac613fb05bf60c1ca,[ <*>.<*>] TCP: Hash tables configured (established <*> bind <*>),sepses:LogLine_a9c6a646,hash table configure
+2cc5e627238ab96b63b35728ccbc6279976e382c2eea8f8904039f3477dad380,[ <*>.<*>] pci <*>:<*>:0f.<*>: Video device with shadowed ROM,sepses:LogLine_01129a15,Video device|shadowed rom
+1e4bf512303567046e66f3326b9a93430814b1f2cef7dacd5c1e77a8b7b3c1ce,"[ <*>.<*>] PCI: CLS <*> bytes, default <*>",sepses:LogLine_4158f22b,
+c98a22c2b58044b88cb7eea2aadf590eed0a46993317d436243a14dfa4772293,[ <*>.<*>] Freeing initrd memory: <*>,sepses:LogLine_76917a1e,free initrd memory
+09b8903c371414ca13c63000f780ff75e7249012b9ac813e38e5e8acc6a9196d,"[ <*>.<*>] RAPL PMU detected, API unit is <*>^<*> Joules, <*> fixed counters <*> ms ovfl timer",sepses:LogLine_054e0507,rapl pmu detect|API unit be|fix counter|ms ovfl timer
+cc3122218fbdf2424bd57d607924952e51a562961d5d3d0d3c48e345ae30317b,[ <*>.<*>] hw unit of domain <*> <*>^<*> Joules,sepses:LogLine_6fb6fa64,hw unit
+1b3398893769e924965f789eea6e6246d348182fa5efb37c3098d09239e1880e,[ <*>.<*>] Scanning for low memory corruption every <*> seconds,sepses:LogLine_2ffd08cd,low memory corruption
+5a1df3095e9b0b978da9d13f5880daea38625fc3721b7aeba0771e521e0ab42b,[ <*>.<*>] audit: initializing netlink subsys (disabled),sepses:LogLine_4b0e5b36,initialize netlink subsy
+ed7c7f1e54a097f07ed18f544d81aa36e308e3cba5559f4af4bf3db853d4889d,[ <*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): initialized,sepses:LogLine_b90438b6,
+f4fb636d69c6295d7da34a5d39e0677fb66afe4e7955643742a51a2b6e47a606,[ <*>.<*>] Initialise system trusted <*>,sepses:LogLine_4718357f,initialise system trust
+889873532d837f122dd74399144d3acb48f121fa94e74d9b5707d6eace354484,"[ <*>.<*>] HugeTLB registered <*> <*> page size, pre-allocated <*> pages",sepses:LogLine_5797ac7b,hugetlb register|page size
+b52910ea70ab9c374f73f4bd90b16ccead07d17af696d8ee1765c40f8c0a2c4a,[ <*>.<*>] VFS: Disk quotas dquot_<*>.<*>.<*>,sepses:LogLine_33812074,disk quota dquot
+5db58690966cf2d2111fb697abcc62eb38c7f05c0e3664aaf863baae6d3554b3,[ <*>.<*>] squashfs: version <*>.<*> (<*>/<*>/<*>) Phillip Lougher,sepses:LogLine_f4b6394d,Phillip Lougher
+184e7b065dfe4528fb5b68f2c1997f12ad7efdf024e262c1a2eab2f3ef9ab06d,[ <*>.<*>] fuse init (API version <*>.<*>),sepses:LogLine_2d9471a3,fuse init|api version
+4f6c5858f9f676e8fb438ec0f454525af1fe09458b02ee3c7c4b59fbdb614f32,[ <*>.<*>] Allocating IMA MOK and blacklist keyrings.,sepses:LogLine_9ca705f8,allocate IMA MOK|blacklist keyring
+dd3e8c191a2f91da6e78a277719a23ef8da66902ac8b01648c0199bef7cefe5c,[ <*>.<*>] Asymmetric key parser 'x509' registered,sepses:LogLine_3ecc6026,asymmetric key parser
+a3ea53c330b67b676fcc2551052c57e27bfaba5bfed7759d54437e8f14998c73,[ <*>.<*>] Block layer SCSI generic (bsg) driver version <*>.<*> loaded (major <*>),sepses:LogLine_669e3ce3,Block layer scsi generic|driver version
+551b389af440f2fd2b8a452668e7a03a57728a92e8873660934124da10a70f6e,[ <*>.<*>] io scheduler <*> registered (default),sepses:LogLine_cce2d5a1,io scheduler
+4c673c62803faa9dd92387d22069a6a070d962cb0f705e58d622a21357f3ca66,[ <*>.<*>] <*> <*>:<*>:<*>.<*>: Signaling PME through PCIe PME interrupt,sepses:LogLine_8605ad8c,signaling pme|PCIe PME interrupt
+2d663b5f10348f094c0190c8ad3aaf50e85708eb2e49e845a9163b8ee1ed37ec,[ <*>.<*>] <*> <*> service driver <*> loaded,sepses:LogLine_5899ec25,service driver
+31140a76ad29a9a9b1d3fb9df1bee4d1536928d66dae382a11d13f17aa04906b,[ <*>.<*>] pci_hotplug: PCI Hot Plug PCI Core version: <*>.<*>,sepses:LogLine_8cbb752f,PCI Hot Plug PCI Core version
+c012f8bfef9bdfb27ca13ddc92c756bb29375e0ea71ca8425f514abe7c4cdc8c,[ <*>.<*>] pciehp <*> Slot #<*> AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ LLActRep+,sepses:LogLine_f71a39ce,
+3e3d9b90746f5dd87c3860da914ed7abdf8d06edb5d8c1d22b4f651e533a2570,[ <*>.<*>] intel_idle: does not run on family <*> model <*>,sepses:LogLine_e58310fa,intel _ idle
+fd226101b0d64beb5e993613e62a53577ba6908a0de4cf57d05d27a95ff26e98,[ <*>.<*>] ACPI: AC Adapter [ACAD] (on-line),sepses:LogLine_d41f07d9,ac adapter
+e4c57ed8f4a4a503feeda0942074581a2077da5b04138c76cccaeb3ccfe18d07,[ <*>.<*>] input: Power Button as /devices/LNXSYSTM:<*>/LNXPWRBN:<*>/input/input<*>,sepses:LogLine_f2dc1a2f,Power Button
+f337af4cb5cbaf2c1db0541a5f47d67adb87665a98fc18eb18fee0ac5e03e6e3,[ <*>.<*>] GHES: HEST is not enabled!,sepses:LogLine_10f92079,hest be
+207c9c3b9e81e1d312f3cbcf3acc6141135e85e59bd9198c5e2f41c3d58142e2,"[ <*>.<*>] Serial: <*>/<*> driver, <*> ports, IRQ sharing enabled",sepses:LogLine_ea64f415,irq sharing enable
+28d45a3af2f2e6f1b093efddf81d80ee759006953637498d8b15dadcaab90d1b,"[ <*>.<*>] <*>:<*>: <*> at I/O <*> (irq = <*>, base_baud = <*>) is a 16550A",sepses:LogLine_7e28a5dc,base _ baud
+b65c9115f7e03681274ea24661aab1fd510fc8be84ec18ea93dc486fa4ebe0dd,[ <*>.<*>] Linux agpgart interface v0.<*>,sepses:LogLine_2614401b,linux agpgart interface v0
+d2f0940e1e16b9d8e961c3374ca7609318bdbedd874926d937b3931f05ab2e54,[ <*>.<*>] agpgart-intel <*>:<*>:<*>.<*>: Intel 440BX Chipset,sepses:LogLine_2fc7aca8,Intel 440BX Chipset
+d4e6e50cebd0db3b882e933efbf6cdd8fa4b67cbbedbb590260437a9f6bf5562,[ <*>.<*>] agpgart-intel <*>:<*>:<*>.<*>: AGP aperture is 256M @ 0x<*>,sepses:LogLine_38814d7b,agp aperture be 256M
+b6abe87648ce95f40783e7a895b00baaa86ed962e58501a7ecbbb23fe54d3d1f,[ <*>.<*>] loop: module loaded,sepses:LogLine_0ae41d87,module load
+7ab62859550a7557859bb1607c97a6312da77a0fb1d2fd603f02903b2fff2e34,[ <*>.<*>] <*> <*> version <*>,sepses:LogLine_48f9cb4d,
+12a7b913c2379bf8f85650720fc2fca8a1bdc3a80f2562eeb98fda9b98d0da43,[ <*>.<*>] scsi <*> ata_piix,sepses:LogLine_90246050,
+4c635a7ee8b3e90e9538426a83ed3c436d1ef87142515c9083b9d4736032824b,[ <*>.<*>] <*> PATA max UDMA/<*> cmd <*> ctl <*> bmdma <*> irq <*>,sepses:LogLine_fa004d8c,pata max UDMA
+b441bca9701097070af24448d8d2b09ccd61a40bba66e339b333d8bd2819dadd,[ <*>.<*>] libphy: Fixed MDIO Bus: probed,sepses:LogLine_557f1a34,fix MDIO Bus
+10239b1b66172f21ab34e702efad7f846ae961254d322255825b7004f793a53a,"[ <*>.<*>] tun: Universal TUN/TAP device driver, <*>.<*>",sepses:LogLine_0a220e22,Universal TUN/TAP device driver
+ab47e1e817715fbca3cbe5fd2855ad8fefc15c48c014d3bbfa4a6470c07b20fc,[ <*>.<*>] <*> (C) <*>-<*> <*> <*> <*>,sepses:LogLine_2db2502e,
+f51096eaa7cc6d30c785d20afbfadec11f75dfdbc2a35eb31c92561c2a54fc9a,[ <*>.<*>] PPP generic driver version <*>.<*>.<*>,sepses:LogLine_0946490e,PPP generic driver version
+cded4403f041b0d8a093d97bcaf5eb96bea0d2883dca5e634edd9faf2eda9ecc,[ <*>.<*>] <*> USB <*>.<*> <*> Host Controller <*> Driver,sepses:LogLine_2d1ed3f2,Host Controller
+349234742cfcb859db2a0f59ed0655a528bf9e52dc1133885bcdd7001328c553,[ <*>.<*>] <*> <*> <*> platform driver,sepses:LogLine_3416124f,platform driver
+a73119e557b01dcaa828d1f87800987fe945e685186c18d158c95acb237c8649,[ <*>.<*>] uhci_hcd: USB Universal Host Controller Interface driver,sepses:LogLine_0de14889,usb Universal Host Controller Interface driver
+b5f5706025d7a28ab7b24a4f9b344b059cd711cff1fc239781f8123628adb8ae,"[ <*>.<*>] i8042: PNP: PS/<*> Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq <*>,<*>",sepses:LogLine_ac4f9267,x64 irq
+80aafbadc87691f2be1974a62aff93b972fb6c9bf6d880752663284150d41e52,"[ <*>.<*>] serio: i8042 <*> port at 0x60,0x64 irq <*>",sepses:LogLine_82ad81cc,x64 irq
+65484d0136ce6f0281d19980c1b281235a602974891bc12f01bf35e611676bd9,[ <*>.<*>] mousedev: PS/<*> mouse device common for all mice,sepses:LogLine_dbaeb175,mouse device common
+ccd847e87704c85c77deb8a17976bd7f684f3c561a0ac65c2ab6d73e1df757c5,[ <*>.<*>] rtc_cmos <*>:<*>: rtc core: registered rtc_cmos as rtc<*>,sepses:LogLine_825dd9a6,rtc core|register rtc
+254795da19a7a268580c30f68527d4ef6b9da8b25e00c03dfa05d4e2d65d2c09,"[ <*>.<*>] rtc_cmos <*>:<*>: alarms up to one month, y3k, <*> bytes nvram, hpet irqs",sepses:LogLine_ea347d0a,byte nvram|hpet irq
+8bccfa01fc06a2c7894dc59a859d37eb1b974b567a4c5df25a55086340573596,[ <*>.<*>] i2c /dev entries driver,sepses:LogLine_8c4245cd,dev entry driver
+5b7a6f1dcbcc24f7cb52bfcb4afc632f16812ed2474069b50cf21f536693f1df,[ <*>.<*>] input: AT Translated Set <*> keyboard as /devices/platform/i8042/serio0/input/input<*>,sepses:LogLine_1c2b712b,translate set
+210e05c224c2a35cf458fecb7fb0c426a454c6187e758fbf93cb1924b4533b40,[ <*>.<*>] device-mapper: ioctl: <*>.<*>.<*>-ioctl (<*>-<*>-<*>) initialised: dm-devel@redhat.com,sepses:LogLine_5bb267ad,
+11593f4cf799993f9c6c6fb285b60920511a93138cfba2ef63c402bebfa7f0a6,[ <*>.<*>] ledtrig-cpu: registered to indicate activity on CPUs,sepses:LogLine_3332797e,indicate activity
+01256ac1ede6b6bbafe6e7fc0321ff1135930a82ea5a6768fd87b878e48e71cc,[ <*>.<*>] Loading compiled-in X.<*> certificates,sepses:LogLine_9a257afa,load compiled-in X.
+9e5349cc9d98b8ad69600b6b095807a4688ef0fcb9c976ad746a1f041aff02c7,[ <*>.<*>] Loaded X.<*> cert 'Build time autogenerated kernel key: <*>,sepses:LogLine_3ee4518c,load X.|build time autogenerated kernel key
+526547166c9dfc147cd97c87df9c84d410df8f6faf3345f8d38c4656cbee4167,[ <*>.<*>] zswap: loaded using pool lzo/zbud,sepses:LogLine_18f18ee6,load use pool lzo/zbud
+8d8c37f77b0819b5da69f512cd0b4cc63a2d020fd81e102319018e0892e1a67e,[ <*>.<*>] AppArmor: AppArmor sha1 policy hashing enabled,sepses:LogLine_c9165bad,AppArmor sha1 policy hash enable
+45ed39565b39ac6f48504caaf83d829eb700f80c3629df5d89da149e96c0c184,"[ <*>.<*>] ima: No TPM chip found, activating TPM-bypass!",sepses:LogLine_d7543f09,tpm chip find|activate tpm-bypass
+39050bf30e01f684f785f8b8af27508f360e0d01739d085688020b5e4b624b4b,[ <*>.<*>] ima: Allocated hash algorithm: sha<*>,sepses:LogLine_7adc29a9,allocate hash algorithm
+ae9c5c0c2f5717999662d068f3c4bcbe6545bac82027f75b3a4258c6ec817bff,[ <*>.<*>] evm: HMAC attrs: 0x<*>,sepses:LogLine_b86827a7,hmac attr
+94decbabb948ba3c534a86adbf5d4e77cd504df5e8b099b244e9df9f3e3232c9,[ <*>.<*>] Magic number: <*>:<*>:<*>,sepses:LogLine_7eec6703,magic number
+f3c5a7ed37240afa04a17987a3c6479c9d1dff04a10146bced308d8717fee8cb,[ <*>.<*>] rtc_cmos <*>:<*>: setting system clock to <*>-<*>-<*> <*>:<*>:<*> UTC (<*>),sepses:LogLine_08557253,setting system clock
+ad32336488cb81b410cd36b94315f9815d709a887f6f584de2c8ba31b0a897a5,"[ <*>.<*>] BIOS EDD facility v0.<*> <*>-Jun-<*>, <*> devices found",sepses:LogLine_a0b05f91,bio edd facility v0|device find
+d33f4add16179e6b3ddc82f79a51163968e91a401ff55dc788f6de4c6da5971e,[ <*>.<*>] PM: Hibernation image not present or could not be loaded.,sepses:LogLine_ba63cd59,hibernation image|be load
+8cfb99383378efef05a43863881efa2c81fea19e442f4347c0953f407428d7cb,"[ <*>.<*>] ata2.<*>: ATAPI: VMware Virtual IDE CDROM Drive, <*>, max UDMA/<*>",sepses:LogLine_01eee16c,VMware Virtual IDE CDROM Drive
+def46f0dca6dac322e86d54aad344e04999630bfc907dea47ada4d68e48ea9d2,[ <*>.<*>] ata2.<*>: configured for UDMA/<*>,sepses:LogLine_3b672541,
+8920e270bf2ec69ac8faea6a179229330286061558b9c449a89726f136209e44,[ <*>.<*>] scsi <*>:<*>:<*>:<*>: CD-ROM NECVMWar VMware IDE CDR10 <*>.<*> PQ: <*> ANSI: <*>,sepses:LogLine_a86df64a,cd-rom NECVMWar VMware IDE cdr10
+604366f3c0f812fb00f2deb9c4bdfb53ce356cd693eefb8a8e286a35987fed00,[ <*>.<*>] sr <*>:<*>:<*>:<*>: [sr0] scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray,sepses:LogLine_b81d7dbf,scsi3-mmc drive|writer dvd-ram cd/rw xa/form2 cdda tray
+38f89783c81455c9c257f1ff12ffb3718c938fafab68f5420537f0cfe1415960,[ <*>.<*>] cdrom: Uniform CD-ROM driver Revision: <*>.<*>,sepses:LogLine_3c032de4,Uniform cd-rom driver Revision
+b21aba55e30655629ecb45a08a2ef660cba7ad993df128064cd598d272646c9a,[ <*>.<*>] sr <*>:<*>:<*>:<*>: Attached scsi CD-ROM sr<*>,sepses:LogLine_74c6e44a,attach scsus cd-rom sr
+5efb9c78534e968b2a11c0c4586a261efa9db45cef4c2a364a744c6d87da0ff0,[ <*>.<*>] <*> <*>:<*>:<*>:<*>: Attached scsi generic <*> type <*>,sepses:LogLine_7fc4e243,attach scsus generic
+7a0b35ab5897994a51e2281a43c23c28d4a91f439197a944c4a3d8b6181c62ac,[ <*>.<*>] Write protecting the kernel read-only data: <*>,sepses:LogLine_326565b3,write protect|kernel read-only datum
+69bd35ac7206344c172834ab5fb9a2ad8c080a91b1d160435e9f9cab79103e7a,"[ <*>.<*>] random: <*> uninitialized urandom read (<*> bytes read, <*> bits of entropy available)",sepses:LogLine_4663c56f,uninitialized urandom read|byte read|entropy available
+38ca18b493ef034e6483fb4bbc3393be007b52e15268b01e512562322948eab5,[ <*>.<*>] FUJITSU Extended Socket Network Device Driver - version <*>.<*> - Copyright (c) <*> FUJITSU LIMITED,sepses:LogLine_01c27071,FUJITSU Extended Socket Network Device driver|FUJITSU LIMITED
+bc6ded0053158f937dec88cb77b2982739644ea47a0d15636b029e1a12e7a368,[ <*>.<*>] Floppy drive(s): fd0 is <*>.44M,sepses:LogLine_c3deae36,floppy drive|fd0 be
+8eb7ed448932d0cb480893b02ef36e1f38f9336ce0a6969cef2879b0b3d76e2b,[ <*>.<*>] FDC <*> is a post-<*> <*>,sepses:LogLine_955d9e3a,
+6dc162a62fbdfbe89242f7a2272cbd5795cb18d66776fdfedfb26d73c56e7970,[ <*>.<*>] [drm] Initialized drm <*>.<*>.<*> <*>,sepses:LogLine_78195a27,initialize drm
+8758a2ce416d1571f01e63181e544fcd538b77feb71e6b9be8e582796346bcf8,[ <*>.<*>] Fusion MPT base driver <*>.<*>.<*>,sepses:LogLine_3d3553ea,fusion mpt base driver
+98ae9cbc9a27c09071b62fee299937fb48cef5effdf2468a327ec18f7b3b8e1f,[ <*>.<*>] Copyright (c) <*>-<*> LSI Corporation,sepses:LogLine_a9765c9f,LSI Corporation
+14a3c074dff04ff40f846db69cac5828d67a2e1865b674c56b9f21cf8dffcbbd,[ <*>.<*>] VMware vmxnet3 virtual NIC driver - version <*>-k-NAPI,sepses:LogLine_bf208c9b,VMware vmxnet3 virtual nic driver
+7fe4b967b6a7fd8bef153388ee06f5bcd929e934ccd234e13d3e78f7fd24cac2,"[ <*>.<*>] vmxnet3 <*>:<*>:<*>.<*>: # of Tx queues : <*>, # of Rx queues : <*>",sepses:LogLine_b61183e3,tx queue|rx queue
+b0dbfbe9b089d89b38c74c3a03143ad9b6449010e705438a34ab0cb79141675e,[ <*>.<*>] Fusion MPT SPI Host driver <*>.<*>.<*>,sepses:LogLine_4acb21ed,fusion MPT SPI Host driver
+c3db67d436e7d0b3f79d409f61913b223b36d49082003500d3fe4c1766aa8ad1,[ <*>.<*>] vmxnet3 <*>:<*>:<*>.<*> <*> NIC Link is Up <*> Mbps,sepses:LogLine_f6738fb0,nic link be
+926ce2768217ba638bb591e0a4509d69ff82fea9885b9474339c1966acf243fc,[ <*>.<*>] mptbase: ioc0: Initiating bringup,sepses:LogLine_bfbb2f6d,initiate bringup
+3f8f60fa1936f8db804b2f0e759809dc22c4432039658b4d1bf196aa071e6350,[ <*>.<*>] input: VirtualPS/<*> VMware VMMouse as /devices/platform/i8042/serio1/input/input<*>,sepses:LogLine_b4e0009e,VMware VMMouse
+8f598e2d2e5af027d41f2ec806cce21e8ee8be698576eca84b347a353bb14879,[ <*>.<*>] vmxnet3 <*>:<*>:<*>.<*> ens160: renamed from eth<*>,sepses:LogLine_86c8a9e5,
+c58165bd3f265c3cc3705220b2a6168978f719d6e1d91e9c10c108df2c54b7e9,[ <*>.<*>] ioc0: LSI53C1030 B0: Capabilities={Initiator},sepses:LogLine_87cfa48c,lsi53c1030 b0
+8edb4f8728fe1e28f5d7075e949b2b7f70684edbae2081a72fe4878b2ae04e0c,"[ <*>.<*>] scsi host2: ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=<*>, MaxQ=<*>, IRQ=<*>",sepses:LogLine_d83f375a,scsus host2|lsi53c1030 b0
+f1e9daf1bf5e712480bae47c3912b2d1f227e94ea0370190c9fb3140c751b5a3,[ <*>.<*>] scsi <*>:<*>:<*>:<*>: Direct-Access VMware Virtual disk <*>.<*> PQ: <*> ANSI: <*>,sepses:LogLine_031ffec2,direct-access VMware Virtual disk
+208b7963b43a62d1fb97b6658212a607989f86c8e05495dc3649ee0ac426ba4e,[ <*>.<*>] scsi target2:<*>:<*>: <*> Domain Validation,sepses:LogLine_90533fb0,scsus target2|domain validation
+3e1ea75c3e75e35f02ef96d636ffa37a04af3ae37dc0ed0bb10e4dee8032ef18,[ <*>.<*>] [drm] DMA map mode: Using physical TTM page addresses.,sepses:LogLine_5d667c4a,dma map mode|use physical ttm page address
+0de66790f9ee867e660faf61e2010a9d185b5aa32d000376428e0849c0c25bb6,[ <*>.<*>] scsi target2:<*>:<*>: Domain Validation skipping write tests,sepses:LogLine_e2c06824,scsus target2|domain validation skip write test
+7c8f291b6eefeaa7bff67d7b76c6c0890b859b727e023b99415af4db722429a6,"[ <*>.<*>] scsi target2:<*>:<*>: FAST-<*> WIDE SCSI <*>.<*> MB/s ST (<*> ns, offset <*>)",sepses:LogLine_352c22da,scsus target2|WIDE SCSI|mb/s st
+5bb5747bd12ce033c3a3b4f648de4d5137ec7ee5e2d66af299e296afd6d20905,[ <*>.<*>] [drm] <*> <*>,sepses:LogLine_3578c8d2,
+6004f4244b26f3ca3b47187b76160aac3e8ddc20400795f683be80112295b2ae,[ <*>.<*>] [drm] <*> <*> <*>.,sepses:LogLine_a33e5597,
+f65295c635e0ccc0150602d1a74b2ab8256638723802fc4c8e7a9a6ab59394bc,[ <*>.<*>] [drm] Max GMR ids is <*>,sepses:LogLine_1e5de210,max GMR id be
+1ecfa21745db81614de2f241c2da8b6c6d9607b063dc913e0881c19ee1de660c,[ <*>.<*>] [drm] Max number of GMR pages is <*>,sepses:LogLine_331c2c9b,max number|GMR page be
+e8e14210c964371e3645a9d4dea4a4bc8945513ff132842d39b334043a284c2e,[ <*>.<*>] sd <*>:<*>:<*>:<*>: [sda] <*> <*>-byte logical blocks: (<*>.<*> GB/<*>.<*> GiB),sepses:LogLine_c2de576e,byte logical block
+50c14825f33defd7510b9085dcdc29ef91bfd6a156b8764fd2543c24df746a13,[ <*>.<*>] sd <*>:<*>:<*>:<*>: [sda] Write Protect is off,sepses:LogLine_ed6380b9,write Protect be
+ef680e527eeeb8eee534c4ee2800da57e56b46d13ce01df26a4aade594dacb9a,[ <*>.<*>] sd <*>:<*>:<*>:<*>: [sda] Mode Sense: <*> <*> <*> <*>,sepses:LogLine_437138ae,Mode sense
+e00ed658e42e36fe4d121f376ec9acdf3b416b8d0c72ac09279828818eabc7f5,[ <*>.<*>] sd <*>:<*>:<*>:<*>: [sda] <*> <*> <*>,sepses:LogLine_360d01e5,
+6c3750a07e6c21c666e1fd1a7bc6d9613c2b0252006b7da20e74659b2df3d5f1,[ <*>.<*>] sd <*>:<*>:<*>:<*>: [sda] Assuming drive cache: write through,sepses:LogLine_3b16214e,assume drive cache
+8cccf31ae01b543252cdc5b00dc79e0685ab123dc40bafd7bfe79e74e610aec7,[ <*>.<*>] [drm] Max dedicated hypervisor surface memory is <*> kiB,sepses:LogLine_e4772aab,max dedicate hypervisor surface memory be
+65810d0cb7e9c5d317c03e718bda00a82ce47312437afee26c3d67883a08a6ed,[ <*>.<*>] [drm] <*> <*> <*> size is <*> kiB,sepses:LogLine_20b97c8a,size be
+5b03b0d1a38a1e1760394fbc295ac16dbb9d10ed50bc48dd88d87ba7917b73c3,[ <*>.<*>] [TTM] Zone kernel: Available graphics memory: <*> kiB,sepses:LogLine_0a397137,Zone kernel|available graphic memory
+ff6e1e44e14d42a8ca9be725914dc2ae05e7f14f5c1986bc60fd57f4de9fc828,[ <*>.<*>] [TTM] Initializing pool allocator,sepses:LogLine_282e968d,initialize pool allocator
+96a581bce5bc6506d11a028a3d23ba5499decc72bbf557797fa1a8506d9d94ae,[ <*>.<*>] [TTM] Initializing DMA pool allocator,sepses:LogLine_ca7eece8,initialize DMA pool allocator
+05de9311bfeb84b8fb80bf3b011b6b821fe7ff5d6823ebdbe191507318fc6d35,[ <*>.<*>] [drm] Supports vblank timestamp caching Rev <*> (<*>.<*>.<*>).,sepses:LogLine_ce4d1ee6,support vblank timestamp caching rev
+0fbeea44de999b9c03cd7173b32d442b444ccda3685e89a247b6273eeda801e4,[ <*>.<*>] [drm] No driver support for vblank timestamp query.,sepses:LogLine_9865a5ff,driver support|vblank timestamp query
+5950bd8a8c8ed521f6e634a0df30c3e47f997c8e87f0693f74e13eca66b7e011,[ <*>.<*>] [drm] Screen Objects Display Unit initialized,sepses:LogLine_6f508271,screen object display unit initialize
+345c8570b96226c62f79f36fa5f877396c39a2a159358aa6e45462b41071a0a3,[ <*>.<*>] [drm] Fifo max 0x00040000 min 0x00001000 cap 0x0000077f,sepses:LogLine_1b215a98,Fifo max|min 0x00001000 cap 0x0000077f
+ea4c0f873efc04c95091159e8bdce848fecaa062bf30bd5729a8d64e7ada6630,[ <*>.<*>] fbcon: svgadrmfb (fb0) is primary device,sepses:LogLine_436073d9,be primary device
+da28fc1ad12ee357ba04bdfb83205f6a7ef273ecb62fc0881cb654fdcd4a7810,[ <*>.<*>] Console: switching to colour frame buffer device 100x<*>,sepses:LogLine_38b26182,colour frame buffer device
+91ba96b82c03465c67d7e9639c0c5f708c3c2ab703538fd7e3d03ec1d8a4d556,[ <*>.<*>] [drm] Initialized vmwgfx <*>.<*>.<*> <*> for <*>:<*>:0f.<*> on minor <*>,sepses:LogLine_6a14d689,initialize vmwgfx
+111cb65f04a635e0f53482ca93247913fdbb8445dd7686dfada4b4d092afed93,[ <*>.<*>] sda: sda1 sda2 < sda5 >,sepses:LogLine_19054e89,sda1 sda2
+38fbc7060b9aeae4bdfb0fdcf988eb9e0c152efe94cb1474ed3a39573aae381d,[ <*>.<*>] VMware PVSCSI driver - version <*>-k,sepses:LogLine_18923b39,VMware PVSCSI driver
+862f800ac1744adc843c15e7aaf4bdbb042ee63102c90979d51fbc5995f7a0a9,[ <*>.<*>] EXT4-fs (dm-<*>): mounted filesystem with ordered data mode. Opts: (null),sepses:LogLine_a7a49481,mount filesystem|order datum mode
+f4bce978460559486b8f3c1ad3055b42d5cc78ba53daa189babd301787890997,[ <*>.<*>] random: nonblocking pool is initialized,sepses:LogLine_6729c12b,nonblocking pool be initialize
+42ef51d700349ec5d2e03fb4cb6dbd1a2e15f6abeb3c435b175b2b77a682363e,[ <*>.<*>] lp: driver loaded but no devices found,sepses:LogLine_d3875ee0,driver loaded|device find
+84372d934ea432855fcd8e976dfe0cb4cc98911133543f9c7ecbe6c4a9a7d635,"[ <*>.<*>] nf_conntrack version <*>.<*>.<*> (<*> buckets, <*> max)",sepses:LogLine_ceb4e7c6,nf _ conntrack version
+19a62f58d9cb0e1b269f7f2acbd38dceb8e096d11388e9ab5e0088a3061d6361,[ <*>.<*>] EXT4-fs (dm-<*>): re-mounted. Opts: errors=remount-ro,sepses:LogLine_1a26fe39,
+9bac537833fd693358d0cc8cde55344af363780b73484c900f28b2883302b011,"[ <*>.<*>] vmw_vmci <*>:<*>:<*>.<*>: Found VMCI PCI device at 0x11080, irq <*>",sepses:LogLine_43375241,found vmci pci device
+2fbae0000b1aba41a414c8c3f60023f61cc0a6418b354f44887f56702e331fc1,[ <*>.<*>] vmw_vmci <*>:<*>:<*>.<*>: Using capabilities 0xc,sepses:LogLine_4abfa1dd,use capability 0xc
+0bf652f540158d82d0b5eb79f86e60f8bb2717aa51b03b6b52dfbb1426d83951,[ <*>.<*>] Guest personality initialized and is active,sepses:LogLine_51712743,personality initialize|be active
+e64c25cbbf08a055f36875bd4ba1e45a0da44377d79218d6cf9e90e9c98bce3d,"[ <*>.<*>] VMCI host device registered (name=vmci, major=<*>, minor=<*>)",sepses:LogLine_a79a69dc,vmci host device register
+5dc8c41a08fec3768eb0a01b401809439c59f5e2709dfc3bd28e955a195720e5,[ <*>.<*>] Initialized host personality,sepses:LogLine_d41808f7,initialize host personality
+2e152acb40aa355712197000ccbd9cec7a7816b4363600db512192a17f3f50b5,[ <*>.<*>] parport_pc <*>:<*>: reported by Plug and Play ACPI,sepses:LogLine_0701bc46,play acpi
+02093db1ffcc43cd1309a9458a72f2b0b65524db3069f1ae7bd29886a2415125,"[ <*>.<*>] parport0: PC-style at 0x378, irq <*> [PCSPP,TRISTATE]",sepses:LogLine_fcfe2eff,
+66805d3ac601025def3dd98aa684e264d86a94bc7f65e5f30b3a66c3211cff53,[ <*>.<*>] piix4_smbus <*>:<*>:<*>.<*>: SMBus Host Controller not enabled!,sepses:LogLine_5adb9314,piix4 _ smbus|smbus Host Controller
+696262b9fd4ceed9466810e6bb7a890021e72442226f2a9bfc372deff407bb30,[ <*>.<*>] ppdev: user-space parallel port driver,sepses:LogLine_3fadc048,user-space parallel port driver
+aa52bfea1edb9e6dc21d6de35ca0ef4084bf8e11af67b456012d296e452031f9,[ <*>.<*>] AVX version of gcm_enc/dec engaged.,sepses:LogLine_c2ed56a0,AVX version|enc/dec engage
+8dca50a251914e80cf01654bff95166a6ecf146b6d93f48f412a6a69eb5f1532,[ <*>.<*>] AES CTR mode by8 optimization enabled,sepses:LogLine_5efd1941,aes ctr mode by8 optimization enable
+04198e6a1e7e7b3c5316635148a1746a252015ef8e693acfd78711d60f9130fc,[ <*>.<*>] intel_rapl: no valid rapl domains found in package <*>,sepses:LogLine_1b5217dd,intel _ rapl|valid rapl domain find
+2571399f9887fd16f78fd4056b2be6e91493415fc8e45702d7f4470a78a4d94d,[ <*>.<*>] Adding 2093052k swap on /dev/mapper/fajar--server--vg-swap_<*>. Priority:<*> extents:<*> across:2093052k FS,sepses:LogLine_7bc0af0e,add 2093052k swap|vg-swap _
+c74c387d888f79b2c47b6fda728e75bf601c1b6c559617a3f68bc6c7ee5bee16,[ <*>.<*>] EXT4-fs (sda1): mounting ext2 file system using the ext4 subsystem,sepses:LogLine_ef88a2eb,mount ext2 file system use|ext4 subsystem
+9158a80aff0bcba2d63cc6256e9bc432fea3bff7d3a0a4e08ebc9b58623ff6f4,[ <*>.<*>] EXT4-fs (sda1): mounted filesystem without journal. Opts: (null),sepses:LogLine_d3789394,mount filesystem
+00ff6da3d961e3baa2e69c3fdfe82cb3d0a68816b7be4b211072aeeccf15bdb3,"[ <*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): apparmor=""STATUS"" operation=""profile_load"" profile=""unconfined"" <*> pid=<*> comm=""apparmor_parser""",sepses:LogLine_d4a7c861,
+a2c3fec12dc7c58216848575e69528f15f0bd4b7bc260456212537799933eb3f,"[ <*>.<*>] cgroup: new mount options do not match the existing superblock, will be ignored",sepses:LogLine_e69769ef,new mount option do|exist superblock|be ignore
+11b63ea11801de7c4cc5c0c18e378426c4bea6a045bc2d88119a21844dbd933b,"[ <*>.<*>] vmxnet3 <*>:<*>:<*>.<*> ens160: intr type <*>, mode <*>, <*> vectors allocated",sepses:LogLine_8eed12ae,intr type|vector allocate
+dbcef9f17e80a5e4b4513b07408816fb09737ddb79f9771b36d07f2b05a68934,[ <*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:<*>:<*>:<*>:<*>:<*>:<*>:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> PROTO=<*>,sepses:LogLine_1c76bbdf,UFW BLOCK
+266aeb7756fbf6032143468479c06284f79304b1462ebe704c006ef82e18a87f,[ <*>.<*>] nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.,sepses:LogLine_a04feb7c,nf _ conntrack|automatic helper assignment be deprecate|be remove|iptable CT target|attach helper
+e22aea04aeb7c091e84d9e90015eb60145ac599b31ba45aebccb88c4a0bc9e02,[ <*>.<*>] <*> <*> hash matches,sepses:LogLine_9f29b756,hash match
+5378ea1ab38c135f85516c7e960eec737b748917ab1e6a831985cb2136c691ac,"[ <*>.<*>] SGI XFS with ACLs, security attributes, realtime, no debug enabled",sepses:LogLine_c090d417,SGI xfs|security attribute|debug enable
+2a54efa9798382c2fe4c7a3bd6c402bc09246ce486298b63253e06d5ed0c765c,"[ <*>.<*>] JFS: nTxBlock = <*>, nTxLock = <*>",sepses:LogLine_47150e55,
+b77d2403d46ad8de804ca13cf56426bcf1ff673559ae671452c27b7511b48bdf,[ <*>.<*>] ntfs: driver <*>.<*>.<*> [Flags: R/O MODULE].,sepses:LogLine_95150cd3,r/o module
+6cc7a462987c59541079f5d6372514734850d0ea0a371fbe3bcfea2566c00d23,[ <*>.<*>] QNX4 filesystem <*>.<*>.<*> registered.,sepses:LogLine_fd918f0a,qnx4 filesystem
+c9531cac7a88ff8b27d2735f89aac9755ffcd71debcad2f83f4eed9d17188371,[ <*>.<*>] raid6: <*> <*> <*> MB/s,sepses:LogLine_7c1956f1,
+e7fa2884bdc48900f882e9a32b8b7cde51b16845bb04f541b0e64ee7b89aae44,[ <*>.<*>] raid6: using algorithm sse2x4 gen() <*> MB/s,sepses:LogLine_e9619ba7,use algorithm sse2x4 gen
+088142fd324929bdd4861b7a2bca1700c35c787735420d5ef69904f0d7265f12,"[ <*>.<*>] raid6: .... xor() <*> MB/s, rmw enabled",sepses:LogLine_50e3bf8c,rmw enable
+74b8f2cd55f7077016c9e33e2946a640f592c738656a7da2f09a4b59b8d3bc66,[ <*>.<*>] raid6: using ssse3x2 recovery algorithm,sepses:LogLine_80e67dec,use ssse3x2 recovery algorithm
+19fa9521dc41170301b90da91fd3ce5482aa79b1f3e4ebd2bd4c541886423f4a,[ <*>.<*>] xor: automatically using best checksumming function:,sepses:LogLine_84ddec77,checksumming function
+60db1bd6baf3b03e1abe0cc57bfec2b612c0c64c1ee7c1191fb4ffc6202fc287,[ <*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:ec:bd:1d:<*>:<*>:d4:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 SYN URGP=<*>,sepses:LogLine_7dabc3c3,UFW BLOCK
+1fbf49381121a72381c33e9a0be34a812f8ef0c78e570d1888a1980c4ab2a3ac,[<*>.<*>] lvm2-activation[<*>]: segfault at d0 ip <*> sp <*> error <*> in <*>,sepses:LogLine_336b65b9,d0 ip
+3d4b83448ebbe53b202c59e3afa390fdb7efcd903b80411c8f7b7c825b54a74f,"[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): apparmor=""STATUS"" <*> profile=""unconfined"" <*> pid=<*> comm=""apparmor_parser""",sepses:LogLine_bcd3a822,
+cdd72d5335073f8910951710e8fc969d96ca15cca80a65756d9d78badeb83f8e,"[<*>.<*>] SGI XFS with ACLs, security attributes, realtime, no debug enabled",sepses:LogLine_f159934b,SGI xfs|security attribute|debug enable
+3d0e60df5868b3872b4ff0cecf4c555f37917ac5cdb9789989650d63d3f5a574,"[<*>.<*>] JFS: nTxBlock = <*>, nTxLock = <*>",sepses:LogLine_1e5fd345,
+0c718415145a153b82cbc0aac04c29225943684383411b58e30697eb556cb209,[<*>.<*>] ntfs: driver <*>.<*>.<*> [Flags: R/O MODULE].,sepses:LogLine_5b80a6cb,r/o module
+4764a8828c0a4650fe38e44d4f2701402176da7882cb05bd1c117b645fec1666,[<*>.<*>] QNX4 filesystem <*>.<*>.<*> registered.,sepses:LogLine_d2c94d72,qnx4 filesystem
+215a0467f6322b88d2b2b4bf5b48e0a9d434bfe5c5787d8d7bce1fbc02b5f9de,[<*>.<*>] raid6: <*> <*> <*> MB/s,sepses:LogLine_9e9715b2,
+96bfe16dd5536e75fa0db1e63ff0967b2a0d3355d09ec12a23e098766c251a0e,[<*>.<*>] raid6: using algorithm sse2x4 gen() <*> MB/s,sepses:LogLine_d52c0bab,use algorithm sse2x4 gen
+33bf04112ef45b1c5e0e6bc0c6ec1fba3eca57592eac1edad3d48421242f01da,"[<*>.<*>] raid6: .... xor() <*> MB/s, rmw enabled",sepses:LogLine_93d67d64,rmw enable
+ae02865a8e4930319d489385e2ae2d3cc7873935f7434cae7ecb41ac6afe8d49,[<*>.<*>] raid6: using ssse3x2 recovery algorithm,sepses:LogLine_aabdb1b0,use ssse3x2 recovery algorithm
+3df9b1940adc0a7caefc41bda3705a41361b847efe88d164cdd64396613ea6bd,[<*>.<*>] xor: automatically using best checksumming function:,sepses:LogLine_111a01f8,checksumming function
+e588b4f580f381ef6e41ed399966cb4fc089227acd56a469bcbe3fa4a94bc989,[<*>.<*>] avx : <*>.<*> MB/sec,sepses:LogLine_b2d4854d,
+cd8d927e351764518a611e58961147b4c8a928b8d9c518ed84fa89b1ab2aa8bc,[<*>.<*>] Btrfs loaded,sepses:LogLine_7a05b312,btrf load
+5f04e1f6d276b604e54c514029d55f6cd5578963bd20524dd34234a025d3a556,[ <*>.<*>] Linux version <*>.<*>.<*>-<*>-generic (buildd@lcy01-amd64-<*>) (gcc version <*>.<*>.<*> (Ubuntu <*>.<*>.<*>-1ubuntu1~<*>.<*>.<*>)) #<*>-Ubuntu SMP Fri Jan <*> <*>:<*>:<*> UTC <*> (Ubuntu <*>.<*>.<*>-<*>.<*>-generic <*>.<*>.<*>),sepses:LogLine_a4bb9540,linux version|gcc version|ubuntu1 ~|Ubuntu SMP Fri Jan
+ac52d38564e8dfacac2f73e85884830ab2e2775145577084a88119014a8fa3b9,[ <*>.<*>] vmware: TSC freq read from hypervisor : <*>.<*> MHz,sepses:LogLine_ad608d98,TSC freq read
+c1b56a6ac9516b27e48bfed096befae750f4a6182cd823605f2b9103c592662b,[ <*>.<*>] vmware: Host bus clock speed read from hypervisor : <*> Hz,sepses:LogLine_26b13859,Host bus clock speed read
+e3a67f19332984068e08ad2c326c04904989c048ca10166b578b5249c6cbc00c,[ <*>.<*>] vmware: using sched offset of <*> ns,sepses:LogLine_4c61dc78,use sched offset
+a9e7a00179c74021c24b9c5818011598c379be2d4a33ec071853b75fa0a59cad,[ <*>.<*>] found SMP MP-table at [mem 0x000f6bf0-0x000f6bff],sepses:LogLine_27c9a81a,find smp mp-table|mem 0x000f6bf0-0x000f6bff
+227d55db5424f0024d0e6b921c513be782d06d89a73a98720ae1bedfa4c35116,[ <*>.<*>] ACPI: SRAT: Node <*> PXM <*> [mem <*>,sepses:LogLine_483df09c,
+58103426ebad84256c1035e5fb095df585a0215c45aa8fae59011ca970eac98b,[ <*>.<*>] Reserved but unavailable: <*> pages,sepses:LogLine_e2a8ecc6,
+fc8a1556948d6c8575d1ff05ae147882b3b02e024e4196141d4d31e7b1d8270e,[ <*>.<*>] random: get_random_bytes called from start_kernel+0x99/0x4fd with crng_init=<*>,sepses:LogLine_bfe7c01d,random _ byte call|start _ kernel
+8b460d0872155a670ea3fd4a7a14212e1e37471aeba6479c0e7432ceda840581,[ <*>.<*>] percpu: Embedded <*> pages/cpu s147456 r8192 d28672 u<*>,sepses:LogLine_e239aa8c,pages/cpu s147456 r8192 d28672 u
+848427ec64d169cf25890befbb65e59163983542da0539aedd46ba182215c81e,"[ <*>.<*>] Built <*> zonelists, mobility grouping on. Total pages: <*>",sepses:LogLine_6111a56b,mobility group|total page
+4cd825d4876569921439edd80d78d6b57c7c76500fba17a17fba23517df404c2,"[ <*>.<*>] NR_IRQS: <*>, nr_irqs: <*>, preallocated irqs: <*>",sepses:LogLine_448ffa05,nr _ irq|preallocated irq
+ea599189b4bab30e54f834422000c5e7690f096b6e06864eb85154777188e21b,[ <*>.<*>] APIC: Switch to symmetric I/O mode setup,sepses:LogLine_78932e3c,symmetric i/o mode setup
+0fba93b2da53f36b5ee0af7b4459e644b11bab49234901df68fcfcb4c22304e1,"[ <*>.<*>] Performance Events: SandyBridge events, core PMU driver.",sepses:LogLine_1c23df9b,Performance event|sandybridge event|core pmu driver
+0b92b80d742700278a7712e106686cc4f3add0ca6e59a5ce1e7704edf0f1c26e,[ <*>.<*>] Hierarchical SRCU implementation.,sepses:LogLine_39f2270c,hierarchical srcu implementation
+a552edd16166177ba121e5e14b6d9a73f3737f4152206413480b53bddf2c5085,[ <*>.<*>] NMI watchdog: Perf event create on CPU <*> failed with -<*>,sepses:LogLine_0fb2c1cc,NMI watchdog|perf event create
+4ede78c75fbd219953dbb0fd7d909a1d9fc99dca9e230b4940edceabbd5da7db,[ <*>.<*>] NMI watchdog: Perf NMI watchdog permanently disabled,sepses:LogLine_5fbc9904,NMI watchdog|Perf NMI watchdog
+3b442e42b473ba655746aee942d838ec926f5af7e1822524d5e55b0e72381f3d,[ <*>.<*>] smp: Bringing up secondary CPUs ...,sepses:LogLine_b2081125,secondary cpus
+d9020be9181dc6ee8d2671f81968b14b8b80fac900222d4fe4c70c9d19adb35c,[ <*>.<*>] x86/mm: Memory block size: 128MB,sepses:LogLine_515f329c,memory block size
+2aa7ab8a902a246fd7bd860b00898a24b642352f815862a0f688717f87f10cc6,[ <*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): state=initialized audit_enabled=<*> res=<*>,sepses:LogLine_74417e93,
+a26ac4d8a299529ee05f8f18c2b5654b7eb0733fb0e748efe9cec038f3db5a4c,[ <*>.<*>] ACPI: Added <*>,sepses:LogLine_51c961ec,
+cfe17f3632b69e714568bd4720aee20368d4fd4e2d0514a79c57093037ac917c,[ <*>.<*>] ACPI: BIOS _OSI(Darwin) query ignored,sepses:LogLine_115b40cd,bio _ OSI|query ignore
+818c2d363518e8fa4e3f5454b684687f74cc9bc85351caeab28e51a79d28eac6,[ <*>.<*>] pci <*>:<*>:0f.<*>: vgaarb: setting as boot VGA device,sepses:LogLine_5e00996b,boot VGA device
+ae846ec3b27812ca1625c3d6bba328b1e0a3b7fcb030b5249e1c324e9c139892,"[ <*>.<*>] pci <*>:<*>:0f.<*>: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none",sepses:LogLine_98eef31e,VGA device add
+95a76ce8b852b01b022fabc05ddc4e691c6baa4a68e1e74e0d4a21c6219abf7c,[ <*>.<*>] pci <*>:<*>:0f.<*>: vgaarb: bridge control possible,sepses:LogLine_6de95a49,bridge control possible
+9de35fbcc0b9927cbf60794a2d486b3a87a2e54388b16db323243337241b467d,[ <*>.<*>] EDAC <*> Ver: <*>.<*>.<*>,sepses:LogLine_473c0075,
+76cb33bb16717845843c1c3ddb07d8393e4226439064cbb5f807b8a37c51fdd2,[ <*>.<*>] NetLabel: protocols = UNLABELED CIPSOv4 CALIPSO,sepses:LogLine_e79f8145,protocol unlabeled cipsov4 CALIPSO
+606be8431dd967af7d75ba7155cd7697a3796e81022efddd5fda60ae7f11833a,[ <*>.<*>] pci <*>:<*>:0f.<*>: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff],sepses:LogLine_28c67659,Video device|shadowed rom|mem 0x000c0000-0x000dffff
+2629accf42675f0382ed71623b725fa98045914b4426468033e5178c0bf6e4d3,[ <*>.<*>] workingset: timestamp_bits=<*> max_order=<*> bucket_order=<*>,sepses:LogLine_f1c1ebff,
+128bccfed5922434b48a18ac564076b5d82613c1d69f78814d184d59439d5d89,[ <*>.<*>] pcieport <*>:<*>:<*>.<*>: Signaling PME with IRQ <*>,sepses:LogLine_ead743cb,signaling pme
+826c02c205abee5beceb59629c6b5978616d628679bfce412e9e793d9014d24f,[ <*>.<*>] intel_idle: Please enable MWAIT in BIOS SETUP,sepses:LogLine_4b4d22f6,intel _ idle|please enable MWAIT|BIOS SETUP
+39f32986215e7b330de93cafbfc1687702f8fc381593c4af6c3f83fc60e55a27,[ <*>.<*>] Segment Routing with IPv<*>,sepses:LogLine_26c4f486,Segment route
+745933be8a3decb54730c5077d6c6984207e84719fc6a066821445e72a78597f,[ <*>.<*>] mce: Using <*> MCE banks,sepses:LogLine_48176c35,MCE bank
+12e4d38a1d6e9a01da1fa6376d26657be80ab274ec686800ab3be22cd0d5e2e9,[ <*>.<*>] RAS: Correctable Errors collector initialized.,sepses:LogLine_329258f5,correctable error collector initialize
+ffccdfb1822d60dadfcb9c427f9263efe39d40808694948ebe790db035855417,"[ <*>.<*>] sched_clock: Marking stable (<*>, <*>)->(<*>, <*>)",sepses:LogLine_fac40153,mark stable
+98f14dc81dbe1dcdd6d2b2021ccc72d6dcbdc09d26ae702ece871c97903185e2,"[ <*>.<*>] ima: No TPM chip found, activating TPM-bypass! (rc=<*>)",sepses:LogLine_5826d90e,tpm chip find|activate tpm-bypass
+0739c173a8fde5ca2777e56f575876863709ff5b51101e6408e394f878b8cbfc,[ <*>.<*>] Freeing unused kernel image memory: <*>,sepses:LogLine_8cde047a,free unused kernel image memory
+edef71bdbd6fe0a60be6e774675fb84e5d8f62af057cd41a3bb8472fb9f6e557,"[ <*>.<*>] x86/mm: Checked W+X mappings: passed, no W+X pages found.",sepses:LogLine_0456e59a,check w+x mapping|W+X page find
+08da4f037086c3d9f1904d775b26ebf0f1759ff236ba277682435bb19abae4a0,[ <*>.<*>] x86/mm: Checking user space page tables,sepses:LogLine_03c80a6b,check user space page table
+c216bcbdfae50825e8741de78ead54940f3afc71aeb5f1988eb8171f9ed86133,[ <*>.<*>] tsc: Refined TSC clocksource calibration: <*>.<*> MHz,sepses:LogLine_18bc9693,refine tsc clocksource calibration
+123e4eae78b7922786f1dcaff016354c81c4fb710dff76af59261bdffcd52206,[ <*>.<*>] random: <*> uninitialized urandom read (<*> bytes read),sepses:LogLine_1a9dfbad,uninitialized urandom read|byte read
+9570783add9a3bd06ef53eb548cd9bdfe72eb4a09ca2b6a4350df1269d2f2a70,[ <*>.<*>] random: crng init done,sepses:LogLine_4213e9fc,crng init do
+ba3d7b54792d73ff3bdb7a6017d4923516b3c32cb325ee24ae60959c9fdb6a38,[ <*>.<*>] random: <*> urandom warning(s) missed due to ratelimiting,sepses:LogLine_e97f040c,urandom warning|miss due
+30fa385edf9870f5c9b87a791bfb3462b5b70876bb62afe54394c9a88e10bc23,"[ <*>.<*>] RAPL PMU: API unit is <*>^<*> Joules, <*> fixed counters, <*> ms ovfl timer",sepses:LogLine_19e86264,rapl pmu|API unit be|fix counter|ms ovfl timer
+f980d2759d931cef6c97d1f8f71906475d88e2621b4387d969c7e6627cc66fd2,[ <*>.<*>] RAPL PMU: hw unit of domain <*> <*>^<*> Joules,sepses:LogLine_45b03d6d,rapl pmu|hw unit
+2aaf4e7390610ba63b70c0159f8fffbcba86a178f910680455ce3e75e43921d2,[ <*>.<*>] EDAC sbridge: Seeking for: PCI ID <*>:3ca<*>,sepses:LogLine_06926213,edac sbridge|pci id
+4a8a8831b549053f5c400cf893fc1afd0c55c31dd77dd5595c9c3a4da7c1d639,[ <*>.<*>] nf_conntrack: default automatic helper assignment has been turned off for security reasons and CT-based firewall rule not found. Use the iptables CT target to attach helpers instead.,sepses:LogLine_12dda522,nf _ conntrack|default automatic helper assignment have be turn|security reason|ct-based firewall rule|iptable CT target|attach helper
+d3c00ccf33cd8caaefab9b58c42395ed5725b859175eee7384c9340ca2427657,[ <*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:ec:bd:1d:<*>:<*>:d4:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x02 PREC=0x00 TTL=<*> ID=<*> DF PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 CWR ECE SYN URGP=<*>,sepses:LogLine_75d8c06a,UFW BLOCK|df cwr ece syn
+292747beff8881c331f43ae969f5523c866cae3dd4e8ec67cebcea70d3ea00ad,[ <*>.<*>] [UFW BLOCK] IN=ens160 OUT= MAC=<*>:<*>:<*>:<*>:ef:d6:ec:bd:1d:<*>:<*>:d4:<*>:<*> SRC=<*> DST=<*> LEN=<*> TOS=0x00 PREC=0x00 TTL=<*> ID=<*> DF PROTO=TCP SPT=<*> DPT=<*> WINDOW=<*> RES=0x00 SYN URGP=<*>,sepses:LogLine_110787f8,UFW BLOCK|df syn
+a7d7bc996f32200228150cfd7bd7d63f176b18da9d2652cd0e472b16b56d7020,[<*>.<*>] systemd: <*> output lines suppressed due to ratelimiting,sepses:LogLine_31786e27,output line suppress due
+bce3736a7702c243ff640207def3702968b05fdfc5ef817d522fcca438b41a3e,[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): pid=<*> uid=<*> auid=<*> ses=<*> <*> <*> <*> <*> <*> <*> <*>,sepses:LogLine_2042590f,
+2f1a841dfa67c3478060577893503b8369a7c2b56b83943745153500887f7e98,[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): pid=<*> uid=<*> <*> <*> <*> <*> <*> <*>,sepses:LogLine_ff85adb6,
+196c18427ffdc225b02e01aa412e1e3320985d4731966381ce7a9cf277e6e794,[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): table=filter family=<*> entries=<*>,sepses:LogLine_c752e6c7,
+57f3118c1ec12f9ea9f6b7e323ba77bb88b4479466675238ff94a06b402b1f0c,"[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): arch=c000003e syscall=<*> success=yes exit=<*> a0=<*> a1=<*> a2=<*> <*> items=<*> ppid=<*> pid=<*> auid=<*> uid=<*> gid=<*> euid=<*> suid=<*> fsuid=<*> egid=<*> sgid=<*> fsgid=<*> tty=(none) ses=<*> comm=""iptables"" exe=""/sbin/xtables-multi"" key=(null)",sepses:LogLine_4ab79677,
+9bed50ded4f5fcb23e047dca28151193137978eece48ae4f45f0d56d546a4599,[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): <*>,sepses:LogLine_c91504ad,
+3ce8a1bdbdc9c4c8bf230d7603ea16cfcd123098a7f4cd9476f1cf8e9d66baf7,[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): audit_enabled=<*> old=<*> auid=<*> ses=<*> res=<*>,sepses:LogLine_d5ea42ee,
+ceebd7f27b86fe7012e907d01519dd1209bc286bf0297dcc3389e76b398f8d3e,[<*>.<*>] kauditd_printk_skb: <*> callbacks suppressed,sepses:LogLine_b79db228,callback suppress
+0af2e18b1d5a796338bd0c069f33b656e1a2d022396f01c255ecaecbb69f1b9b,"[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): auid=<*> uid=<*> gid=<*> ses=<*> pid=<*> <*> exe=""/var/lib/kibana/headless_shell-linux/headless_shell"" sig=<*> arch=c000003e syscall=<*> compat=<*> <*> code=0x<*>",sepses:LogLine_0f111e0a,
+2dbcca39d0370f0bb8cf114a4a8ca2dc4a1fe9282ecfe5257ef0b514ae021253,"[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): pid=<*> uid=<*> auid=<*> ses=<*> msg='op=adding group to <*> id=<*> exe=""/usr/sbin/groupadd"" hostname=fajar-server addr=? terminal=pts/<*> res=success'",sepses:LogLine_300db269,
+e1d397aaaf15ab2e89a0ff6ebbdf6a654960dc276005373e861ec13893b3b617,[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): pid=<*> uid=<*> auid=<*> ses=<*> <*> <*> <*> <*> hostname=fajar-server addr=? terminal=pts/<*> res=success',sepses:LogLine_576a5ca4,
+65238088f01024c9ac01e968d1182a8c07daf640db2b08a1b5f2e8038e8f6c40,"[<*>.<*>] audit: type=<*> audit(<*>.<*>:<*>): pid=<*> uid=<*> auid=<*> ses=<*> msg='op=change max age id=<*> exe=""/usr/bin/chage"" hostname=fajar-server addr=? terminal=pts/<*> res=success'",sepses:LogLine_c17746da,max age

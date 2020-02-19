@@ -1,0 +1,27 @@
+EventId,EventTemplate,Occurrences
+981274cf,[<*>]: INFO <*> Found <*>,2440
+13346cc1,[<*>]: NOTICE [sshd] <*> <*>,304
+4951e1a9,[<*>]: INFO Log rotation detected for <*>,8
+c6411c94,[<*>]: NOTICE [sshd] <*> <*> <*>,43
+97afbb42,[<*>]: INFO rollover performed on /var/log/fail2ban.log,1
+5cc618a8,[<*>]: INFO Stopping all jails,6
+706d5597,[<*>]: INFO Jail <*> <*>,30
+94931b5f,[<*>]: INFO <*> <*>,31
+a5f8ef66,[<*>]: INFO Changed logging target to /var/log/fail2ban.log for Fail2ban v0.<*>.<*>,3
+fafec3c9,[<*>]: INFO Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3',5
+b5eb3b1a,[<*>]: INFO Creating new jail <*>,15
+5b9dc7a4,[<*>]: INFO Jail <*> uses pyinotify,9
+a197594e,[<*>]: INFO Set jail log file encoding to UTF-<*>,18
+a2d89924,[<*>]: INFO Initiated 'pyinotify' backend,15
+993d3533,[<*>]: INFO <*> <*> = <*>,39
+6680125b,[<*>]: INFO Jail <*> is not a JournalFilter instance,10
+244d0a68,[<*>]: INFO --------------------------------------------------,2
+5b06d129,[<*>]: INFO Starting Fail2ban v0.<*>.<*>,2
+293194e3,[<*>]: INFO Jail <*> uses pyinotify {},6
+3c01f0af,"[<*>]: INFO Added logfile: <*> (pos = <*>, hash = <*>",4
+2c697fd9,"[<*>]: WARNING Determined IP using DNS Lookup: localhost = ['<*>', '::<*>']",47
+d61415e4,[<*>]: INFO Shutdown in progress...,1
+5f8feab5,[<*>]: INFO Removed logfile: <*>,2
+fddf8c4b,[<*>]: NOTICE <*> Flush ticket(s) with iptables-multiport,3
+8756d401,[<*>]: INFO Connection to database closed.,1
+89435e4a,[<*>]: INFO [sshd] Found <*> - <*>-<*>-<*> <*>:<*>:<*>,777

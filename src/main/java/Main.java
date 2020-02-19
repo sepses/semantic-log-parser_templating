@@ -28,11 +28,29 @@ public class Main {
     // *** temporary mappings between existing (stored) templateId and csv templateId
     private static Map<String, String> templateIdMappings = new HashMap<>();
 
-    private static String logTemplate = "./input/Logs/openSSH/OpenSSH_2k_A.log_templates.csv";
-    private static String logData = "./input/Logs/openSSH/OpenSSH_2k_A.log_structured.csv";
-    private static String existingTemplatesPath = "./input/templatesMapping.csv";
-    private static String ottrTemplatesPath = "./input/ottr/templates.stottr";
-    private static String instancesStottr = "./input/ottr/instances.stottr";
+    //    private static String logTemplate = "./input/Logs/openSSH/OpenSSH_2k_A.log_templates.csv";
+    //    private static String logData = "./input/Logs/openSSH/OpenSSH_2k_A.log_structured.csv";
+    //    private static String existingTemplatesPath = "./input/templatesMapping.csv";
+    //    private static String ottrTemplatesPath = "./input/ottr/templates.stottr";
+    //    private static String instancesStottr = "./input/ottr/instances.stottr";
+
+    private static String logTemplate = "./input/various/kern/kern-all.log_templates.csv";
+    private static String logData = "./input/various/kern/kern-all.log_structured.csv";
+    private static String instancesStottr = "./input/various/kern/kern-all-instances";
+    private static String existingTemplatesPath = "./input/various/kern/kern-mapping.csv";
+    private static String ottrTemplatesPath = "./input/various/kern/kern-templates.stottr";
+
+    //    private static String logTemplate = "./input/various/syslog/syslog-all.log_templates.csv";
+    //    private static String logData = "./input/various/syslog/syslog-all.log_structured.csv";
+    //    private static String existingTemplatesPath = "./input/various/syslog/syslog-mapping.csv";
+    //    private static String ottrTemplatesPath = "./input/various/syslog/syslog-templates.stottr";
+    //    private static String instancesStottr = "./input/various/syslog/syslog-all-instances";
+
+    //    private static String logTemplate = "./input/various/auth/auth-all.log_templates.csv";
+    //    private static String logData = "./input/various/auth/auth-all.log_structured.csv";
+    //    private static String existingTemplatesPath = "./input/various/auth/auth-mapping.csv";
+    //    private static String ottrTemplatesPath = "./input/various/auth/auth-templates.stottr";
+    //    private static String instancesStottr = "./input/various/auth/auth-all-instances";
 
     /**
      * Main function - will be updated later to allow args parameterization
@@ -187,8 +205,8 @@ public class Main {
             }
 
             if (found) {
-                ottrBody.append("\n\t sepses:" + type + "(?id, ?" + type.toLowerCase() + "),");
-                specificParams += ", xsd:string ?" + type.toLowerCase();
+                ottrBody.append("\n\t sepses:" + type + "(?id, ?" + type.toLowerCase() + paramCounts + "),");
+                specificParams += ", xsd:string ?" + type.toLowerCase() + paramCounts;
             } else {
                 ottrBody.append("\n\t sepses:UnknownConnection" + "(?id, ?param" + paramCounts + "),");
                 specificParams += ", xsd:string ?param" + paramCounts;
@@ -248,12 +266,19 @@ public class Main {
             }
 
             // *** creating standard log line template
+            //            if(logline.Content.contains("from 164.52.24.164 port 53342")) {
+            //                System.out.println("___");
+            //            }
+
+            String cleanContent = logline.Content.replace("\\", "_"); // clean up content
+            cleanContent = cleanContent.replace("\"", "_");
+            cleanContent = cleanContent.replace("'", "_");
             tmpLine = currentTemplate.templatingId + "(instance:Logline_" + UUID.randomUUID() + ",\"" + eventTime
-                    + "\",\"" + logline.Content + "\",\"" + currentTemplate.hash + "\"";
+                    + "\",\"" + cleanContent + "\",\"" + currentTemplate.hash + "\"";
 
             // *** process all parameters
             if (!paramValues.isEmpty()) {
-                String[] parameterValues = paramValues.split(",");
+                String[] parameterValues = paramValues.split("', '");
                 // default template put all in a list
                 if (currentTemplate.templatingId.equals("sepses:LogLine")) {
                     tmpLine += ", (";
@@ -312,6 +337,7 @@ public class Main {
         for (int counter = 0; counter < parameterValues.length; counter++) {
             String parameter = parameterValues[counter].trim();
             String paramValue = parameter.replaceAll("'", "");
+            paramValue = paramValue.replaceAll("[^a-zA-Z0-9._-]", "");
 
             tmpLine += "\"" + paramValue + "\"";
             if (counter < parameterValues.length - 1)
@@ -359,7 +385,8 @@ public class Main {
         try (CSVPrinter printer = new CSVPrinter(out, CSVFormat.DEFAULT.withHeader(HEADERS))) {
             templates.forEach(template -> {
                 try {
-                    printer.printRecord(template.hash, template.TemplateContent, template.templatingId, template.getKeywordString());
+                    printer.printRecord(template.hash, template.TemplateContent, template.templatingId,
+                            template.getKeywordString());
                 } catch (IOException e) {
                     LOG.error(e.toString());
                 }

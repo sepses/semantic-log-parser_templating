@@ -1,0 +1,103 @@
+EventId,EventTemplate,Occurrences
+c257f384,pam_unix(cron:session): session opened for user root by (uid=<*>),1662
+6e704123,pam_unix(cron:session): session closed for user root,1662
+9302fad4,Invalid user <*> from <*>,669
+6b674ff1,input_userauth_request: invalid user <*> [preauth],669
+0849a7d0,pam_unix(sshd:auth): check pass; user unknown,879
+e0a8b45a,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*>,876
+755dc626,Failed <*> for invalid user <*> from <*> port <*> ssh<*>,876
+c0a756ec,Received disconnect from <*> port <*>:<*>: <*> <*> <*>,883
+0054e5e2,Disconnected from <*> port <*> [preauth],696
+95184834,refused connect from <*> (<*>),298
+0a7846c3,Connection <*> by <*> port <*> [preauth],313
+21b7e1d1,"fatal: Unable to negotiate with <*> port <*>: no matching cipher found. Their offer: aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,arcfour128,arcfour,3des-cbc,none [preauth]",20
+54ff4343,pam_unix(sshd:auth): authentication failure; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*> <*>,132
+ada372e1,Failed password for <*> from <*> port <*> ssh<*>,133
+c926c7d9,Did not receive identification string from <*>,16
+6927e4a0,Bad protocol version identification '\<*>\253d\241EZC\333M\<*>\<*>^\<*>\<*>\<*> X\<*>>\<*>\<*>\<*><\<*>\<*>\<*>' from <*> port <*>,2
+bf9b6a0d,Bad protocol version identification <*> from <*> port <*>,5
+aa869e2e,error: Received disconnect from <*> port <*>:<*>: Service not available [preauth],1
+b542638e,message repeated <*> times: [ Failed password for root from <*> port <*> ssh2],3
+cc5fc443,error: maximum authentication attempts exceeded for root from <*> port <*> ssh2 [preauth],1
+bf9c63d7,Disconnecting: Too many authentication failures [preauth],1
+cbf938f4,PAM <*> more authentication failures; logname= uid=<*> euid=<*> tty=ssh ruser= rhost=<*> user=root,2
+2f2318e5,PAM service(sshd) ignoring max retries; <*> > <*>,1
+656c9596,Invalid user from <*>,2
+67bab5c1,input_userauth_request: invalid user [preauth],2
+5a9ee5c4,Failed password for invalid user from <*> port <*> ssh<*>,4
+d6c4c090,invalid public DH value: <= <*> [preauth],1
+e9a14f03,fatal: ssh_dispatch_run_fatal: Connection from <*> port <*>: incomplete message [preauth],1
+7aad7007,"Received disconnect from <*> port <*>:<*>: Normal Shutdown, Thank you for playing [preauth]",24
+759cf92f,Received disconnect from <*> port <*>:<*>: Client disconnecting normally [preauth],3
+f1e55f2a,Accepted password for fekaputr from <*> port <*> ssh<*>,22
+1ac6a9ee,pam_unix(sshd:session): session opened for user fekaputr by (uid=<*>),22
+3e503675,New session <*> of user fekaputr.,22
+254911f8,pam_unix(systemd-user:session): session opened for user fekaputr by (uid=<*>),21
+74d07e77,fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*>,15
+e4bceaa2,pam_unix(sudo:session): session opened for user root by fekaputr(uid=<*>),286
+7ffa85e4,pam_unix(sshd:session): session closed for user fekaputr,20
+f2bb95c7,New seat seat0.,4
+52d4ae92,Watching system buttons on /dev/input/event0 (Power Button),5
+8938d159,Server listening on <*> port <*>.,18
+bff67196,fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*>,95
+8b428b11,pam_unix(sudo:session): session closed for user root,283
+aeebac42,Disconnected from <*> port <*>,2
+2dd801d7,pam_unix(sudo:auth): auth could not identify password for [fekaputr],1
+5243dad2,fekaputr : TTY=pts/<*> ; PWD=/home/fekaputr ; USER=root ; COMMAND=/usr/bin/apt-get purge linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic,1
+da707c9e,fekaputr : (command continued) linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic,1
+016faa83,fekaputr : TTY=pts/<*> ; PWD=/home/fekaputr ; USER=root ; COMMAND=/usr/bin/apt-get purge linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic,2
+370ced88,fekaputr : (command continued) linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic,1
+87649ba7,fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*> <*>,131
+a65460a2,fekaputr : (command continued) linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic,1
+e9f4370c,fekaputr : TTY=pts/<*> ; PWD=/home/fekaputr ; USER=root ; COMMAND=/usr/bin/apt purge apache2.<*>-common apt-xapian-index aptitude aspell-en bsh-gcj dictionaries-common emacsen-common gksu icedtea-netx-common indicator-application libboost-filesystem1.<*>.<*> libboost-iostreams1.<*>.<*> libboost-program-options1.<*>.<*> libboost-system1.<*>.<*> libboost-thread1.<*>.<*> libcdparanoia0:amd64 libcommons-validator-java libcwidget3 libept1.<*>.<*>:amd64 libgcj12 libgcj16:amd64 libgd2-xpm:amd64 libgeoclue0:amd64 libgif4:amd64 libgksu2-<*> libgnome-keyring0:amd64 libicu48 libidl0:amd64 libiec61883-<*>:amd64 libmysqlclient18:amd64 libnotify4:amd64 libpcrecpp0:amd64 libpython3.<*>-minimal:amd64 libsamplerate0:amd64 libshout3:amd64 libsigc++<*>.<*>-0c2a:amd64 libsnappy1 libspeex1:amd64 libstartup-notification0:amd64 libt1-<*> libtag1v5-vanilla:amd64 libtiff4:amd64 libxapian22 libxcb-util1:amd64 linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic,1
+9f2e08c1,fekaputr : (command continued) linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic,1
+445915cc,fekaputr : (command continued) linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-image-extra-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic,1
+22a4ced2,fekaputr : (command continued) linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic linux-modules-extra-<*>.<*>.<*>-<*>-generic mysql-server-<*>.<*> notification-daemon openjdk-<*>-jre-headless:amd64 openjdk-<*>-jre-headless:amd64 oracle-java7-set-default perl-modules python3.<*> python3.<*>-minimal systemd-services velocity wordpress xterm y-ppa-manager,1
+903531a0,Received signal <*>; terminating.,4
+ada9c773,pam_unix(systemd-user:session): session closed for user fekaputr,8
+40eceec1,pam_systemd(sshd:session): Failed to release session: Interrupted system call,1
+168e7166,Removed session <*>.,16
+210f0e15,PAM unable to <*> <*> cannot open shared object file: No such file or directory,2
+9841f12c,PAM adding faulty module: <*>,2
+fbd481cd,delete user 'systemd-bus-proxy',1
+6b7f9446,removed group 'systemd-bus-proxy' owned by 'systemd-bus-proxy',1
+80dcbc68,removed shadow group 'systemd-bus-proxy' owned by 'systemd-bus-proxy',1
+affc6ff0,Successful su for postgres by root,1
+606cd931,+ ??? root:postgres,1
+77428942,pam_unix(su:session): session opened for user postgres by (uid=<*>),1
+7b6022fa,pam_systemd(su:session): Cannot create session: Already running in a session,1
+48e7f75c,pam_unix(su:session): session closed for user postgres,1
+26b1a3de,user 'root' (login 'fekaputr' on pts/<*>) <*> to group <*>,2
+b72edb09,group added to /etc/group: <*> GID=<*>,6
+7b1cd48d,group added to /etc/gshadow: <*>,6
+724c882e,new group: <*> GID=<*>,6
+74f6c0c1,"new user: <*> UID=<*>, GID=<*>, <*> <*>",5
+c1056d3a,change user <*> password,4
+82466679,changed password expiry for <*>,4
+daaae457,user saned added by root to group scanner,1
+4f3050d4,Watching system buttons on /dev/input/event1 (AT Translated Set <*> keyboard),2
+24e5bf62,rexec line <*>: Deprecated option <*>,2350
+5ff0ad5e,reprocess config line <*>: Deprecated option <*>,510
+38dda80a,Invalid user <*> from <*> port <*>,204
+2552eb03,Disconnected from <*> user <*> <*> port <*> [preauth],200
+cc0d4f22,fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*> <*> <*> <*>,3
+f000e4fa,Connection closed by <*> user <*> <*> port <*> [preauth],21
+cf94a865,Did not receive identification string from <*> port <*>,6
+723587a4,pam_unix(sudo:auth): authentication failure; logname=fekaputr uid=<*> euid=<*> tty=/dev/pts/<*> ruser=fekaputr rhost= user=fekaputr,2
+94546794,Disconnected from user fekaputr <*> port <*>,13
+4ef4ebe6,fekaputr : TTY=pts/<*> ; <*> ; USER=root ; <*> <*> <*> <*>,22
+d99aa8f9,"Registered Authentication Agent for unix-process:<*>:<*> (system bus name :<*>.<*> [/usr/bin/pkttyagent --notify-fd <*> --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C.UTF-<*>)",5
+cd0bc9b6,Operator of unix-process:<*>:<*> successfully authenticated as unix-user:fekaputr to gain ONE-SHOT authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::<*>.<*> [systemctl <*> apache2] (owned by unix-user:fekaputr),5
+35340d74,"Unregistered Authentication Agent for unix-process:<*>:<*> (system bus name :<*>.<*>, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale C.UTF-<*>) (disconnected from bus)",5
+78b3fa21,fekaputr : TTY=pts/<*> ; PWD=/var/www ; USER=root ; COMMAND=/bin/mv cv.html ekaw14-queries.html index.html links.html research.html teaching.html tester.html old-website/,1
+4a8d65bf,fekaputr : TTY=pts/<*> ; PWD=/var/www/wordpress ; USER=root ; COMMAND=/bin/chown www-data:www-data cityspin-net juang-id obaris-org -R,1
+e39644c2,add 'fekaputr' to group 'www-data',1
+359f11c8,add 'fekaputr' to shadow group 'www-data',1
+ce4ff18e,"Unable to negotiate with <*> port <*>: no matching cipher found. Their offer: aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,arcfour128,arcfour,3des-cbc,none [preauth]",4
+274644bc,fekaputr : TTY=pts/<*> ; PWD=/var/log ; USER=root ; COMMAND=/bin/cp alternatives.log alternatives.log.<*> alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz apache2 apport.log apport.log.<*> apport.log.<*>.gz apport.log.<*>.gz apt auth.log auth.log.<*> auth.log.<*>.gz auth.log.<*>.gz auth.log.<*>.gz boot boot.log btmp btmp.<*> dbconfig-common denyhosts denyhosts.<*> denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz dist-upgrade dmesg dmesg.<*> dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dpkg.log dpkg.log.<*> dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz fail2ban.log fail2ban.log.<*> fail2ban.log.<*>.gz fail2ban.log.<*>.gz,1
+63bca440,fekaputr : (command continued) fail2ban.log.<*>.gz faillog fontconfig.log fsck installer journal kern.log kern.log.<*> kern.log.<*>.gz kern.log.<*>.gz kern.log.<*>.gz landscape lastlog mail.err mail.log mongodb mysql mysql.err mysql.log mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz mysql.log.<*>.gz news postgresql syslog syslog.<*> syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz syslog.<*>.gz sysstat tallylog ufw.log ufw.log.<*> ufw.log.<*>.gz ufw.log.<*>.gz ufw.log.<*>.gz unattended-upgrades upgrade upstart vmware-install.log vmware-tools-upgrader.log vmware-vmsvc-root.<*>.log vmware-vmsvc-root.<*>.log vmware-vmsvc-root.<*>.log vmware-vmsvc-root.log vmware-vmsvc.<*>.log vmware-vmsvc.<*>.log vmware-vmsvc.<*>.log vmware-vmsvc.log vmware-vmtoolsd-root.log wtmp wtmp.<*> /home/fekaputr/log-backup/,2
+a189c27a,fekaputr : TTY=pts/<*> ; PWD=/var/log ; USER=root ; COMMAND=/bin/cp -rf alternatives.log alternatives.log.<*> alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz alternatives.log.<*>.gz apache2 apport.log apport.log.<*> apport.log.<*>.gz apport.log.<*>.gz apt auth.log auth.log.<*> auth.log.<*>.gz auth.log.<*>.gz auth.log.<*>.gz boot boot.log btmp btmp.<*> dbconfig-common denyhosts denyhosts.<*> denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz denyhosts.<*>.gz dist-upgrade dmesg dmesg.<*> dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dmesg.<*>.gz dpkg.log dpkg.log.<*> dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz dpkg.log.<*>.gz fail2ban.log fail2ban.log.<*> fail2ban.log.<*>.gz fail2ban.log.<*>.gz,1
+fd03fc20,Invalid user from <*> port <*>,2
+51e68d3a,Connection closed by invalid user <*> port <*> [preauth],2
+19a6fb73,fekaputr : TTY=pts/<*> ; <*> ; USER=root ; COMMAND=/usr/bin/auditbeat setup -e -E <*> -E output.elasticsearch.hosts=[localhost:<*>] -E <*> -E <*> -E setup.kibana.host=localhost:<*>,11
+5e32d106,fekaputr : TTY=pts/<*> ; PWD=/etc/logstash ; USER=root ; COMMAND=/usr/bin/auditbeat setup -e -E output.file.enabled=true -E setup.kibana.host=localhost:<*>,1

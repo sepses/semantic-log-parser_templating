@@ -1,0 +1,48 @@
+EventId,EventTemplate,Occurrences
+a7cbdcfa,Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*> <*> Gecko/<*> <*>,126
+8004b04d,Mozilla/<*>.<*> <*> <*> <*> <*> rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>,727
+ee44e5e2,WordPress/<*>.<*>.<*>; <*>,55
+23497c84,Mozilla/<*>.<*> (compatible; <*> <*>,137
+81546f84,"Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; Nexus 5X Build/MMB29P) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Mobile Safari/<*>.<*> (compatible; Googlebot/<*>.<*>; +http://www.google.com/bot.html)",64
+336d5ebc,-,10
+5d612ed7,Mozilla/<*>.<*> <*> <*> <*> rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>,45
+dad68822,"Mozilla/<*>.<*> <*> <*> <*> <*> (KHTML, like Gecko) <*> Safari/<*>.<*>",408
+ebc120b7,WordPress/<*>.<*>; http://cityspin.net,4
+e646b8d3,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) <*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",85
+3a27c588,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows <*> <*>,6
+622b702f,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; SV1),6
+7760a983,"Mozilla/<*>.<*> (Windows NT <*>.<*>; Win64; x64) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>",605
+5274c8e2,"Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*> <*> (KHTML, like Gecko) <*> <*>",92
+580df61c,HTTP Banner Detection (https://security.ipip.net),1
+5284b579,Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64; <*> Gecko/<*> <*>,7
+1619f2ce,"Mozilla/<*>.<*> (compatible; DotBot/<*>.<*>; http://www.opensiteexplorer.org/dotbot, help@moz.com)",12
+bdce0741,Mozilla/<*>.<*> (Windows; U; Windows NT <*>.<*>; en-US; rv:<*>) Gecko/<*> Firefox/<*>.<*>.<*> (.NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>),236
+b7b06ba1,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64; x64) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> OPR<*>",5
+5b25848e,Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> Gecko/<*> <*>,366
+a4d28e2e,Mozilla/<*>.<*> (compatible; MSIE <*> Windows <*>,9
+b0429251,Opera/<*>.<*> (Windows NT <*>.<*>; WOW64; MRA <*>.<*> (build <*>)) Presto/<*>.<*>.<*> Version/<*>.<*>,2
+8e940288,"() { :;};echo; /bin/bash -c \"" echo <*> | md5sum\""",4
+bc126963,Opera/<*>.<*> (Windows NT <*>.<*>; MRA <*>.<*> (build <*>)) Presto/<*>.<*>.<*> Version/<*>.<*>,1
+a77f2b77,"Mozilla/<*>.<*> (Windows NT <*>.<*>) <*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> OPR<*>",4
+b7e8c996,Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; rv:<*>.<*>) like Gecko,1
+e09716d6,"Mozilla/<*>.<*> (Macintosh; Intel Mac OS X <*>_<*>_<*>) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> Edge/<*>.<*>",3
+76c62731,"Mozilla/<*>.<*> (Macintosh; U; <*> Mac OS X <*>_<*>_<*>) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*> Edge/<*>.<*>",4
+54ff5829,"Mozilla/<*>.<*> (Linux; Android <*>.<*>; FRD-AL00 Build/HUAWEIFRD-AL00; wv) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile MQQBrowser/<*>.<*> TBS/<*> Safari/<*>.<*> MicroMessenger<*> NetType/WIFI Language/zh_CN",5
+ba1eb8ee,Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; ru) Opera <*>.<*>,3
+d2495a7e,Googlebot/<*>.<*> (+http://www.google.com/bot.html),4
+e6815d3a,Googlebot-Image/<*>.<*>,3
+ccc3ab74,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>+ (KHTML, like Gecko) BingPreview/<*>.0b",26
+63e4e417,msnbot/<*>.0b (+http://search.msn.com/msnbot.htm),1
+bc6e6f16,"Hello, world",1
+5f88d156,"Mozilla/<*>.<*> (Windows NT <*>.<*>; WOW64) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> <*> <*>",3
+13de70b5,"Mozilla/<*>.<*> (iPhone; CPU iPhone OS <*>_<*> like Mac OS X) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Mobile/15A372 Safari/<*>.<*>",1
+688427e0,"Mozilla/<*>.<*> (iPad; CPU OS <*>_<*>_<*> like Mac OS X) AppleWebKit/<*>.<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Mobile/14D27 Safari/<*>.<*>",1
+366170e0,Mozilla/<*>.<*> (Windows NT <*>.<*>; Win64; x64; Trident/<*>.<*>; rv:<*>.<*>) like Gecko,2
+bc799e35,"Mozilla/<*>.<*> (Linux; U; Android <*>.<*>.<*>; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> baidu.sogo.uc.UCBrowser<*> UWS<*> Mobile Safari/<*>.<*> AliApp(DingTalk/<*>.<*>.<*>) com.alibaba.android.rimet/<*> Channel/<*> language/zh-CN",15
+4fd1f5c1,GigablastOpenSource/<*>.<*>,2
+6585cc76,"Mozilla/<*>.<*>(Linux;Android <*>.<*>.<*>;OPPO A33 Build/LMY47V;wv) AppleWebKit/<*>.<*>(KHTML,link Gecko) Version/<*>.<*> Chrome<*> Mobile Safari/<*>.<*> Mb2345Browser/<*>.<*>",1
+efb3b061,"Mozilla/<*>.<*> AppleWebKit/<*>.<*> (KHTML, like Gecko; compatible; Googlebot/<*>.<*>; +http://www.google.com/bot.html) Chrome<*> Safari/<*>.<*>",2
+a2c67076,"Mozilla/<*>.<*> (Unknown; Linux x86_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) <*> <*>",10
+1ca3ac8c,python-requests/<*>.<*>.<*>,3
+9d7f03e6,Mozilla/<*>.<*> (Windows NT <*>.<*>; rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*> (IndeedBot <*>.<*>),1
+96d589b1,Go-http-client/<*>.<*>,1
